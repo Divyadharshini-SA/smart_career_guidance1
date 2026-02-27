@@ -1,0 +1,931 @@
+test_type,topic,level,question,option_a,option_b,option_c,option_d,answer,source
+aptitude,Percentages,easy,What is 20% of 150?,25,30,35,20,30,indiabix
+aptitude,Percentages,easy,What percent of 80 is 20?,20%,25%,30%,15%,25%,indiabix
+aptitude,Percentages,easy,What is 10% of 500?,40,50,60,45,50,indiabix
+aptitude,Percentages,easy,What is 25% of 200?,40,50,60,45,50,indiabix
+aptitude,Percentages,easy,What is 5% of 400?,15,20,25,30,20,indiabix
+aptitude,Percentages,easy,What is 50% of 90?,40,45,50,55,45,indiabix
+aptitude,Percentages,easy,What is 15% of 300?,40,45,50,55,45,indiabix
+aptitude,Percentages,easy,What percent is 50 of 200?,20%,25%,30%,15%,25%,indiabix
+aptitude,Percentages,easy,What is 30% of 600?,160,170,180,190,180,indiabix
+aptitude,Percentages,easy,What percent of 120 is 60?,40%,45%,50%,55%,50%,indiabix
+aptitude,Percentages,medium,Price increased by 10% then decreased by 10%. Net change?,-1%,0%,+1%,-2%,-1%,indiabix
+aptitude,Percentages,medium,A student scored 450 out of 600. Percentage?,70%,72%,75%,78%,75%,indiabix
+aptitude,Percentages,medium,If 30% of a number is 90 what is the number?,270,280,300,320,300,indiabix
+aptitude,Percentages,medium,Population of a town is 10000. It increases 10% annually. After 2 years?,11000,12000,12100,11500,12100,indiabix
+aptitude,Percentages,medium,A shopkeeper marks price 20% above CP and gives 10% discount. Profit%?,8%,10%,12%,15%,8%,indiabix
+aptitude,Percentages,medium,If 60% of a number is 48 what is 75% of that number?,55,60,65,70,60,indiabix
+aptitude,Percentages,medium,A number increased by 20% becomes 84. Find original number.,60,65,70,75,70,indiabix
+aptitude,Percentages,medium,What is 12.5% of 800?,90,95,100,105,100,indiabix
+aptitude,Percentages,medium,In an election A gets 60% votes. Total votes 5000. A gets?,2800,3000,3200,3500,3000,indiabix
+aptitude,Percentages,medium,Two numbers are 20% and 30% more than a third number. First is what % of second?,91.67%,92%,93%,90%,91.67%,indiabix
+aptitude,Percentages,hard,If A's salary is 25% more than B then B's is what % less than A?,20%,25%,15%,10%,20%,indiabix
+aptitude,Percentages,hard,The price of sugar rises by 25%. By what % must consumption be reduced to keep expenditure same?,20%,25%,15%,10%,20%,indiabix
+aptitude,Percentages,hard,A's income is 40% more than B's. B's income is what % less than A's?,28.57%,30%,25%,35%,28.57%,indiabix
+aptitude,Percentages,hard,In a class 40% are boys. Girls are 30 more than boys. Total students?,150,200,250,300,150,indiabix
+aptitude,Percentages,hard,A mixture has milk and water in 3:1. What % of mixture should be replaced with water to make 50% water?,33.33%,25%,40%,50%,33.33%,indiabix
+aptitude,Percentages,hard,If x% of y is 100 and y% of z is 200 then z/x=?,1,2,3,4,2,indiabix
+aptitude,Percentages,hard,After 3 successive discounts of 10% 20% and 30% what is final price on Rs 1000?,496,504,510,520,504,indiabix
+aptitude,Percentages,hard,A vendor sells 20 articles for Rs 240 and gains 20%. Find CP of each article.,8,9,10,12,10,indiabix
+aptitude,Percentages,hard,A is 50% more than B and B is 50% more than C. A is what % more than C?,75%,100%,125%,150%,125%,indiabix
+aptitude,Percentages,hard,If 15% of 40 is greater than 25% of a number by 2 find the number?,20,18,16,14,14,indiabix
+aptitude,Percentages,easy,What is 40% of 250?,90,95,100,105,100,indiabix
+aptitude,Percentages,easy,What is 75% of 80?,55,60,65,70,60,indiabix
+aptitude,Percentages,easy,What percent of 50 is 5?,10%,12%,15%,8%,10%,indiabix
+aptitude,Percentages,medium,A got 30% increase in salary to Rs 26000. Original salary?,18000,20000,22000,24000,20000,indiabix
+aptitude,Percentages,medium,If 8% of a number is 4 what is 40% of that number?,20,25,30,35,20,indiabix
+aptitude,Percentages,easy,What is 1% of 10000?,10,100,1000,50,100,indiabix
+aptitude,Percentages,easy,What is 35% of 200?,60,65,70,75,70,indiabix
+aptitude,Percentages,medium,A number decreased by 25% becomes 75. Find original number.,90,95,100,105,100,indiabix
+aptitude,Percentages,hard,In a test Raj scored 15% more than Priya. Priya scored 20% less than Raj. Raj scored 460. Priya scored?,392,400,380,410,400,indiabix
+aptitude,Percentages,medium,Tax increased from 5% to 6%. New tax amount on Rs.10000?,1000,600,1200,500,600,indiabix
+aptitude,Percentages,easy,What is 60% of 90?,50,54,56,58,54,indiabix
+aptitude,Percentages,easy,What is 80% of 75?,55,60,65,70,60,indiabix
+aptitude,Percentages,medium,A man spends 60% of income. Income increases 20% and expenses increase 10%. Savings increase %?,35%,40%,45%,50%,35%,indiabix
+aptitude,Percentages,hard,Two candidates in election get 60% and 40% votes respectively. Winner wins by 240 votes. Total votes?,1200,1100,1000,900,1200,indiabix
+aptitude,Percentages,medium,A reduction of 20% in price enables a man to buy 5 more kg for Rs 200. Price per kg before reduction?,10,8,12,15,10,indiabix
+aptitude,Percentages,hard,A shopkeeper cheats 10% while buying and 10% while selling. Gain%?,21%,20%,15%,10%,21%,indiabix
+aptitude,Percentages,easy,What is 45% of 80?,34,36,38,40,36,indiabix
+aptitude,Percentages,easy,What percent of 200 is 50?,20%,25%,30%,35%,25%,indiabix
+aptitude,Percentages,medium,A bag contains 600 coins. 30% are 50p coins. How many 50p coins?,160,170,180,190,180,indiabix
+aptitude,Percentages,hard,Water evaporates 2% per hour from a tank of 800 litres. How much remains after 2 hours?,768,766,770,764,768,indiabix
+aptitude,Profit & Loss,easy,CP=Rs.100 SP=Rs.120. Profit%?,15%,20%,25%,10%,20%,indiabix
+aptitude,Profit & Loss,easy,CP=Rs.200 Loss=10%. SP=?,170,175,180,185,180,indiabix
+aptitude,Profit & Loss,easy,SP=Rs.110 Profit=10%. CP=?,90,95,100,105,100,indiabix
+aptitude,Profit & Loss,easy,CP=Rs.50 SP=Rs.40. Loss%?,15%,20%,25%,10%,20%,indiabix
+aptitude,Profit & Loss,easy,A shopkeeper buys 10 oranges for Rs.10 and sells 8 for Rs.10. Gain%?,20%,25%,30%,15%,25%,indiabix
+aptitude,Profit & Loss,easy,If CP=SP profit or loss is?,0%,5%,10%,Cannot determine,0%,indiabix
+aptitude,Profit & Loss,easy,CP=Rs.150 Profit=Rs.30. Profit%?,15%,20%,25%,10%,20%,indiabix
+aptitude,Profit & Loss,easy,SP=Rs.80 Loss=20%. CP=?,90,95,100,105,100,indiabix
+aptitude,Profit & Loss,easy,A man sells for Rs.132 gaining 10%. His CP is?,110,115,120,125,120,indiabix
+aptitude,Profit & Loss,easy,Profit on selling price is 20%. Profit % on CP is?,20%,25%,22%,18%,25%,indiabix
+aptitude,Profit & Loss,medium,A sells to B at 20% profit. B sells to C at 10% loss. C pays Rs.1080. A's CP?,800,900,1000,1100,1000,indiabix
+aptitude,Profit & Loss,medium,Marked price Rs.500 discount 20% profit 25%. CP=?,300,320,340,360,320,indiabix
+aptitude,Profit & Loss,medium,A trader marks goods 20% above CP and allows 10% discount. Gain%?,8%,10%,12%,6%,8%,indiabix
+aptitude,Profit & Loss,medium,Cost of 12 pens equals SP of 10 pens. Gain%?,16%,18%,20%,22%,20%,indiabix
+aptitude,Profit & Loss,medium,By selling 45 items a man gains SP of 9 items. Gain%?,20%,25%,18%,15%,25%,indiabix
+aptitude,Profit & Loss,medium,A machine is sold for Rs.5060 at a gain of 10%. Its CP is?,4500,4600,4700,4800,4600,indiabix
+aptitude,Profit & Loss,medium,A sells a bicycle to B at 14% gain. B sells to C at 5% loss. C pays Rs.1083. A's CP?,800,850,900,950,900,indiabix
+aptitude,Profit & Loss,medium,A grocer sells rice at a profit of 10% and uses weights 20% less. Actual gain%?,37.5%,40%,35%,30%,37.5%,indiabix
+aptitude,Profit & Loss,medium,On selling 17 balls at Rs.720 there is loss equal to CP of 5 balls. CP of a ball?,45,50,55,60,45,indiabix
+aptitude,Profit & Loss,medium,Ratio of CP to MP is 2:3. Discount offered is 10%. Profit%?,35%,40%,45%,50%,35%,indiabix
+aptitude,Profit & Loss,hard,A man purchased goods worth Rs.6000 and sold 1/2 at 10% gain and remaining at 5% loss. Overall?,3.5% gain,3% gain,2.5% gain,2% gain,2.5% gain,indiabix
+aptitude,Profit & Loss,hard,A dishonest dealer uses 900gm instead of 1kg and sells at CP. Gain%?,11.11%,10%,9%,12%,11.11%,indiabix
+aptitude,Profit & Loss,hard,Two articles sold at same price. One at 20% profit other at 20% loss. Net result?,4% loss,4% gain,No profit no loss,2% gain,4% loss,indiabix
+aptitude,Profit & Loss,hard,A man sold two horses for Rs.1710 gaining 25% on one and losing 10% on other. CP were equal. Net profit or loss?,6.25% gain,5% gain,4% loss,7.5% gain,6.25% gain,indiabix
+aptitude,Profit & Loss,hard,Cost of 20 articles equals SP of 16. Gain%?,25%,20%,15%,30%,25%,indiabix
+aptitude,Profit & Loss,hard,A trader gives 4% discount on marked price still makes 20% profit. If MP is Rs.500 CP is?,400,350,300,420,400,indiabix
+aptitude,Profit & Loss,hard,A man buys oranges at Rs.5 for 8 and sells at Rs.6 for 8. Gain or Loss%?,20% gain,16.67% gain,15% gain,10% gain,20% gain,indiabix
+aptitude,Profit & Loss,hard,A person incurs 5% loss by selling for Rs.1140. At what price to gain 5%?,1260,1240,1220,1200,1260,indiabix
+aptitude,Profit & Loss,hard,A shopkeeper sells 200 metres cloth for Rs.9000 making profit of Rs.5 per metre. CP per metre?,35,40,45,50,40,indiabix
+aptitude,Profit & Loss,hard,A merchant mixes 26 kg of rice at Rs.20/kg with 30 kg at Rs.36/kg and sells mixture at 30% profit. SP per kg?,35.76,36,37,38,35.76,indiabix
+aptitude,Profit & Loss,easy,If CP=Rs.400 and loss=Rs.60 SP=?,320,330,340,350,340,indiabix
+aptitude,Profit & Loss,easy,A man gains 20% by selling an article for Rs.240. CP=?,180,190,200,210,200,indiabix
+aptitude,Profit & Loss,medium,An article sold at Rs.396 at 10% discount on MP. MP is?,420,430,440,450,440,indiabix
+aptitude,Profit & Loss,medium,A shop offers 2 items at Rs.100 with 30% profit. How much profit total?,60,58,54,50,60,indiabix
+aptitude,Profit & Loss,easy,SP is Rs.720 and loss is 10%. CP is?,790,800,810,820,800,indiabix
+aptitude,Profit & Loss,easy,CP of 15 items equals SP of 12 items. Gain%?,20%,25%,30%,15%,25%,indiabix
+aptitude,Profit & Loss,medium,A man loses 20% by selling for Rs.800. For 20% gain sell at?,1100,1150,1200,1250,1200,indiabix
+aptitude,Profit & Loss,hard,A bought item at 20% discount. Sold at 30% profit on MP. Actual profit %?,62.5%,60%,58%,55%,62.5%,indiabix
+aptitude,Profit & Loss,hard,A person sells at Rs.920 gaining 15%. What would be % gain if sold at Rs.960?,20%,22%,18%,19%,20%,indiabix
+aptitude,Profit & Loss,medium,Trader marks goods 25% above cost and allows 10% discount. His gain is?,12.5%,15%,10%,13.5%,12.5%,indiabix
+aptitude,Time & Work,easy,A can do work in 10 days B in 15 days. Together in?,5,6,7,8,6,indiabix
+aptitude,Time & Work,easy,A can do work in 20 days. He works for 4 days. Work done?,1/5,1/4,1/3,1/6,1/5,indiabix
+aptitude,Time & Work,easy,A and B together finish in 12 days. A alone in 18 days. B alone in?,24,30,36,42,36,indiabix
+aptitude,Time & Work,easy,If 5 persons can do 5 units of work in 5 days then 10 persons can do 10 units in?,5,10,15,20,5,indiabix
+aptitude,Time & Work,easy,A can do a piece of work in 4 hours B and C together in 3 hours A and C together in 2 hours. B alone in?,12,10,8,6,12,indiabix
+aptitude,Time & Work,easy,A tap fills tank in 6 hours and B empties it in 8 hours. Together tank fills in?,24,22,20,18,24,indiabix
+aptitude,Time & Work,easy,X can do work in 15 days Y in 10 days. If Y works for 5 days remaining work done by X in?,7.5,8,8.5,9,7.5,indiabix
+aptitude,Time & Work,easy,A alone takes 4 times as long as A and B together. B alone takes 3 days. A alone?,4,5,6,8,4,indiabix
+aptitude,Time & Work,easy,12 workers can finish in 10 days. 8 workers take?,12,14,15,16,15,indiabix
+aptitude,Time & Work,easy,A does 2/3 of work in 12 days. Remaining work in?,4,5,6,7,6,indiabix
+aptitude,Time & Work,medium,A can do a work in 10 days B in 15 days C in 20 days. Together in?,4,5,6,7,4,indiabix
+aptitude,Time & Work,medium,A and B together can do work in 12 days. B and C in 15 days. C and A in 20 days. All three together in?,10,8,6,5,10,indiabix
+aptitude,Time & Work,medium,A pipe fills tank in 6 hrs and another empties in 10 hrs. Net fill time?,15,16,18,20,15,indiabix
+aptitude,Time & Work,medium,12 men can do work in 8 days. How many men to finish in 6 days?,14,16,18,20,16,indiabix
+aptitude,Time & Work,medium,A does 1/3 work in 5 days B does 2/5 in 10 days. Together finish remaining in?,3,4,5,6,4,indiabix
+aptitude,Time & Work,medium,4 men and 6 women finish in 8 days. 3 men and 7 women finish in 10 days. Men and women ratio of efficiency?,1.5:1,2:1,1:2,1:1.5,1.5:1,indiabix
+aptitude,Time & Work,medium,A can finish in 18 days B in 15 days. B worked for 10 days. A finishes rest in?,6,7,8,9,6,indiabix
+aptitude,Time & Work,medium,A and B do work in 45 days. B and C in 40 days. A and C in 60 days. B alone in?,72,120,90,180,120,indiabix
+aptitude,Time & Work,medium,Two pipes A and B fill tank in 20 min and 30 min. C empties in 15 min. All open time to fill?,120,60,30,180,120,indiabix
+aptitude,Time & Work,medium,Efficiency of A is twice that of B. Both together finish in 14 days. A alone?,21,18,14,16,21,indiabix
+aptitude,Time & Work,hard,A is 50% more efficient than B. A starts and after 5 days B joins. Work completed in 11 days. Total days?,11,12,13,14,11,indiabix
+aptitude,Time & Work,hard,6 men and 8 boys can do work in 10 days. 26 men and 48 boys in 2 days. Time for 15 men and 20 boys?,4,5,6,7,4,indiabix
+aptitude,Time & Work,hard,A machine can print 1000 books in 12 hours. How long for 3 machines to print 7000 books?,26,27,28,29,28,indiabix
+aptitude,Time & Work,hard,Worker A takes 8 hours for 5 units. B takes 7 hours for 6 units. How long for A and B to produce 22 units?,11,10,9,12,11,indiabix
+aptitude,Time & Work,hard,A pump can remove 5 gallons per minute. Pipe adds 10 gallons per minute. If tank has 3000 gallons and both work how long to empty?,600,500,400,300,600,indiabix
+aptitude,Time & Work,hard,A and B together do work in 8 days. With C they finish in 6 days. C and D finish in 12 days. All four together finish in?,48/7,4,5,6,48/7,indiabix
+aptitude,Time & Work,hard,Ram can do work in 20 days Shyam in 30 days. They start together but Ram leaves 5 days before end. Total days?,20,19,18,17,20,indiabix
+aptitude,Time & Work,hard,Tank has 3 inlet pipes A B C. A fills in 2hrs B in 3hrs C in 4hrs. All open how long?,12/13,1,2,3,12/13,indiabix
+aptitude,Time & Work,hard,Contractor employs 20 men to do work in 24 days. After 8 days 5 more men added. Completed in?,18,19,20,21,18,indiabix
+aptitude,Time & Work,hard,A can do 1/5 work in 3 days B can do 1/3 work in 5 days. Together do 2/3 work in?,6,7,8,9,6,indiabix
+aptitude,Time & Work,easy,If 3 workers take 9 days for 27 units how many days for 45 units with 5 workers?,9,10,8,7,9,indiabix
+aptitude,Time & Work,easy,A takes 6 days B takes 8 days. A starts B joins on day 3. Finish on day?,7,8,6,5,7,indiabix
+aptitude,Time & Work,medium,Work can be done by 24 men in 15 days. After 10 days 12 men leave. Days to finish?,20,25,30,35,20,indiabix
+aptitude,Time & Work,medium,A does 4/5 of work in 20 days rest is done by B in 3 days. Together they would finish in?,25/3,10,12,15,25/3,indiabix
+aptitude,Time & Work,easy,A and B together take 8 days. A alone takes 12. B alone takes?,24,20,18,16,24,indiabix
+aptitude,Time & Work,medium,Two pipes fill tank in 6 and 4 hrs. Third drains in 8 hrs. All open to fill?,48/11,4,5,6,48/11,indiabix
+aptitude,Time & Work,hard,10 men can complete work in 7 days. How many days 14 men to complete same work?,5,6,7,8,5,indiabix
+aptitude,Time & Work,medium,A starts and after 4 days B joins. B works for 3 days. A did 7/10 of work. A's total days?,10,12,14,16,14,indiabix
+aptitude,Time & Work,hard,In a fort there are 1200 soldiers. Provisions for 30 days. After 10 days 300 more soldiers came. Provisions last?,16,18,20,22,16,indiabix
+aptitude,Time & Work,easy,A can do work in 8 days B twice as fast. Together they finish in?,8/3,3,4,5,8/3,indiabix
+aptitude,Speed & Distance,easy,Train travels 360 km in 4 hrs. Speed in km/h?,80,90,100,70,90,indiabix
+aptitude,Speed & Distance,easy,Speed=60 km/h Time=2.5 hrs. Distance?,120,140,150,160,150,indiabix
+aptitude,Speed & Distance,easy,Distance=200km Speed=50km/h. Time?,3,4,5,6,4,indiabix
+aptitude,Speed & Distance,easy,A man walks 20km in 4 hours. Speed?,4,5,6,7,5,indiabix
+aptitude,Speed & Distance,easy,Convert 72 km/h to m/s?,18,20,22,24,20,indiabix
+aptitude,Speed & Distance,easy,Convert 15 m/s to km/h?,54,52,50,48,54,indiabix
+aptitude,Speed & Distance,easy,Train 300m long passes pole in 30 seconds. Speed in km/h?,36,40,44,48,36,indiabix
+aptitude,Speed & Distance,easy,Two cars start from same point in opposite directions at 40 and 50 km/h. Distance after 3 hrs?,240,270,300,330,270,indiabix
+aptitude,Speed & Distance,easy,If a car travels 100km at 50km/h and 100km at 100km/h average speed?,66.67,70,75,80,66.67,indiabix
+aptitude,Speed & Distance,easy,A cyclist covers 700m in 3.5 min. Speed km/h?,10,12,14,16,12,indiabix
+aptitude,Speed & Distance,medium,Two trains 200m and 150m cross each other in opposite direction at 60 and 48 km/h. Time in seconds?,10,11,12,13,10,indiabix
+aptitude,Speed & Distance,medium,Boat speed in still water 15 km/h stream 5 km/h. Upstream speed?,10,12,14,16,10,indiabix
+aptitude,Speed & Distance,medium,A train crosses 250m bridge in 30 sec at 60km/h. Length of train?,250,300,200,350,250,indiabix
+aptitude,Speed & Distance,medium,Car A starts at 8am at 40km/h. Car B starts at 9am at 60km/h. B overtakes A at?,11am,10am,12pm,1pm,11am,indiabix
+aptitude,Speed & Distance,medium,Boat goes 30km upstream in 6 hrs and 36km downstream in 6 hrs. Speed of stream?,2,3,4,5,3,indiabix
+aptitude,Speed & Distance,medium,A and B start towards each other at 40 and 60 km/h. Distance 200 km. Meet after?,2 hrs,2.5 hrs,3 hrs,1.5 hrs,2 hrs,indiabix
+aptitude,Speed & Distance,medium,Train 300m crosses platform 600m in 90 sec. Speed m/s?,10,12,14,16,10,indiabix
+aptitude,Speed & Distance,medium,A thief is spotted 200m away and runs at 10km/h. Police chase at 12km/h. Catch in?,6 min,7 min,8 min,10 min,6 min,indiabix
+aptitude,Speed & Distance,medium,A covers 1/3rd of journey at 10km/h and rest at 20km/h. Average speed?,15,14,13,16,15,indiabix
+aptitude,Speed & Distance,medium,Walking 3/4 usual speed a man is 20 min late. Usual time?,60,70,80,90,60,indiabix
+aptitude,Speed & Distance,hard,A and B start at same time from P and Q 200km apart. A at 40km/h B at 60km/h. First meeting point from P?,80km,100km,120km,90km,80km,indiabix
+aptitude,Speed & Distance,hard,Trains start from A and B 180km apart. First train at 60km/h and second 80km/h. They meet after?,128.57km from A,100km,90km,80km,128.57km from A,indiabix
+aptitude,Speed & Distance,hard,A passenger train 440m long takes 2 min to pass 3 platforms of 55m 45m and 300m. Speed km/h?,72,60,48,36,72,indiabix
+aptitude,Speed & Distance,hard,A man rows downstream 30km in 4 hrs. Upstream 18km in 6 hrs. Speed in still water?,6,6.5,7,7.5,6,indiabix
+aptitude,Speed & Distance,hard,Two runners start at same time opposite ends of 3km course. They meet first at 1.8km from A. Speed ratio?,2:3,3:2,1:2,2:1,2:3,indiabix
+aptitude,Speed & Distance,hard,A train overtakes two persons walking at 2 and 4 km/h in 9 and 10 sec. Length?,50m,60m,70m,80m,50m,indiabix
+aptitude,Speed & Distance,hard,A motorcyclist covers half at 30km/h and half at 60km/h. Total distance 120km. Time saved vs constant 45km/h?,10,8,6,4,4,indiabix
+aptitude,Speed & Distance,hard,Train passes two people walking same direction in 8 and 10 sec at 2 and 4 km/h. Length and speed?,100m 38km/h,90m 40km/h,80m 36km/h,100m 40km/h,100m 38km/h,indiabix
+aptitude,Speed & Distance,hard,A motorboat covers 40km upstream in 8 hrs and 36km downstream in 6hrs. Speed of boat and stream?,5.5 and 0.5,5 and 1,6 and 0.5,4 and 1,5.5 and 0.5,indiabix
+aptitude,Speed & Distance,hard,A runner runs N laps at a speed reducing 10% each lap. If first lap takes 40 sec how long for 3 laps?,114.4,112,110,108,114.4,indiabix
+aptitude,Speed & Distance,easy,Sound travels 330 m/s. Thunder heard 5 sec after lightning. Distance in km?,1.65,1.5,1.75,2,1.65,indiabix
+aptitude,Speed & Distance,easy,If train travels 1.5km in 1 min its speed km/h?,60,75,80,90,90,indiabix
+aptitude,Speed & Distance,medium,A walks at 4km/h. After 1 hr B cycles at 12km/h. After how long B catches A?,0.5 hr,1 hr,1.5 hrs,2 hrs,0.5 hr,indiabix
+aptitude,Speed & Distance,medium,Two ships start toward each other 300km apart at 20 and 30km/h. A seagull flies between them at 60km/h until ships meet. Total distance seagull?,360km,320km,300km,280km,360km,indiabix
+aptitude,Speed & Distance,easy,A train 150m long passes a stationary man in 15 sec. Speed km/h?,36,40,44,48,36,indiabix
+aptitude,Speed & Distance,medium,A bus starts at 7am and second bus at 9am in same direction at 40 and 60km/h. When does second bus overtake?,1pm,2pm,3pm,4pm,1pm,indiabix
+aptitude,Speed & Distance,hard,Two trains of 180m and 220m run on parallel tracks towards each other at 60 and 40km/h. Time to cross?,16.2 sec,20 sec,18 sec,14 sec,16.2 sec,indiabix
+aptitude,Speed & Distance,medium,A goes to office at 30km/h returns at 20km/h. Average speed?,24,25,26,27,24,indiabix
+aptitude,Speed & Distance,easy,Travelling at 60km/h reaches in 5hrs. At 75km/h reaches in?,4,4.5,3,3.5,4,indiabix
+aptitude,Speed & Distance,hard,Two birds fly in opposite directions around a 1km circle. One at 10m/s other at 15m/s. Meet every?,40 sec,45 sec,50 sec,35 sec,40 sec,indiabix
+aptitude,Number Series,easy,Next: 2 6 12 20 ?,28,30,32,26,30,indiabix
+aptitude,Number Series,easy,Next: 1 4 9 16 25 ?,30,36,42,49,36,indiabix
+aptitude,Number Series,easy,Next: 3 6 9 12 ?,13,14,15,16,15,indiabix
+aptitude,Number Series,easy,Next: 5 10 20 40 ?,60,80,100,70,80,indiabix
+aptitude,Number Series,easy,Next: 1 2 4 7 11 ?,14,16,18,20,16,indiabix
+aptitude,Number Series,easy,Next: 100 90 81 73 ?,66,67,68,69,66,indiabix
+aptitude,Number Series,easy,Next: 2 3 5 8 13 ?,18,19,20,21,21,indiabix
+aptitude,Number Series,easy,Next: 1 3 7 15 31 ?,60,62,63,64,63,indiabix
+aptitude,Number Series,easy,Next: 7 14 21 28 ?,33,35,37,39,35,indiabix
+aptitude,Number Series,easy,Next: 1 8 27 64 ?,100,125,150,175,125,indiabix
+aptitude,Number Series,medium,Next: 3 6 11 18 27 ?,36,38,40,42,38,indiabix
+aptitude,Number Series,medium,Next: 1 6 13 22 33 ?,44,46,48,50,46,indiabix
+aptitude,Number Series,medium,Next: 4 9 20 43 ?,88,90,92,94,90,indiabix
+aptitude,Number Series,medium,Next: 2 5 11 23 47 ?,95,96,97,98,95,indiabix
+aptitude,Number Series,medium,Next: 1 2 6 24 120 ?,720,620,520,820,720,indiabix
+aptitude,Number Series,medium,Next: 11 13 17 19 23 29 ?,31,33,35,37,31,indiabix
+aptitude,Number Series,medium,Next: 5 11 23 47 95 ?,189,191,193,195,191,indiabix
+aptitude,Number Series,medium,Missing: 2 _ 8 16 32,4,6,8,10,4,indiabix
+aptitude,Number Series,medium,Next: 10 9 8 6 3 ?,0,-1,-2,-3,-1,indiabix
+aptitude,Number Series,medium,Next: 1 4 10 22 46 ?,94,96,98,100,94,indiabix
+aptitude,Number Series,hard,Next: 7 26 63 124 215 ?,342,356,368,400,342,indiabix
+aptitude,Number Series,hard,Next: 2 3 10 15 26 ?,35,37,39,41,35,indiabix
+aptitude,Number Series,hard,Next: 6 10 14 18 24 28 32 36 ?,42,43,44,45,42,indiabix
+aptitude,Number Series,hard,Find wrong term: 3 5 7 12 17 19,12,17,3,19,12,indiabix
+aptitude,Number Series,hard,Next: 0 2 8 26 80 ?,242,244,246,248,242,indiabix
+aptitude,Number Series,hard,Next: 4 6 12 14 28 30 ?,60,62,64,66,60,indiabix
+aptitude,Number Series,hard,Wrong term: 10 14 28 32 64 68 132,132,64,28,14,132,indiabix
+aptitude,Number Series,hard,Next in: 2 9 28 65 126 ?,217,218,219,220,217,indiabix
+aptitude,Number Series,hard,Find missing: 3 7 6 14 9 21 12 ?,28,30,32,34,28,indiabix
+aptitude,Number Series,hard,Next: 8 15 24 35 48 ?,60,63,65,68,63,indiabix
+aptitude,Number Series,easy,Next: 50 45 40 35 ?,25,28,30,32,30,indiabix
+aptitude,Number Series,easy,Next: 2 4 8 16 32 ?,64,68,72,76,64,indiabix
+aptitude,Number Series,medium,Next: 3 12 27 48 75 ?,108,112,116,120,108,indiabix
+aptitude,Number Series,medium,Next: 1 1 2 3 5 8 ?,11,12,13,14,13,indiabix
+aptitude,Number Series,easy,Next: 0 1 3 6 10 ?,13,14,15,16,15,indiabix
+aptitude,Number Series,medium,Next: 144 121 100 81 64 ?,49,36,47,51,49,indiabix
+aptitude,Number Series,hard,Find wrong: 1 5 14 30 55 91 140,140,91,55,30,140,indiabix
+aptitude,Number Series,easy,Next: 4 8 12 16 ?,18,20,22,24,20,indiabix
+aptitude,Number Series,medium,Next: 1 3 4 7 11 18 ?,28,29,30,31,29,indiabix
+aptitude,Number Series,hard,Next: 0 6 24 60 120 ?,210,222,240,260,210,indiabix
+aptitude,Logical Reasoning,easy,Find odd one out: Apple Mango Potato Banana,Apple,Mango,Potato,Banana,Potato,indiabix
+aptitude,Logical Reasoning,easy,If COLD=WARM then SLOW=?,FAST,QUICK,RAPID,SWIFT,FAST,indiabix
+aptitude,Logical Reasoning,easy,Find odd one out: Triangle Square Pentagon Cube,Triangle,Square,Pentagon,Cube,Cube,indiabix
+aptitude,Logical Reasoning,easy,If CAT is coded as 3120 then DOG is?,4157,4167,4187,4197,4157,indiabix
+aptitude,Logical Reasoning,easy,Pointing to a girl Ram says she is daughter of my mother's only son. Relation?,Daughter,Sister,Niece,Cousin,Daughter,indiabix
+aptitude,Logical Reasoning,easy,3 3 5 4 4 3 5 ? (find missing),5,4,3,2,5,indiabix
+aptitude,Logical Reasoning,easy,Find odd one out: January March May June July,June,July,March,May,June,indiabix
+aptitude,Logical Reasoning,easy,Complete: AZ BY CX ?,DW,DX,DY,DZ,DW,indiabix
+aptitude,Logical Reasoning,easy,Series: 1Z 2Y 3X 4W ?,5V,5U,6V,4V,5V,indiabix
+aptitude,Logical Reasoning,easy,If North becomes East then South becomes?,West,North,East,South-East,West,indiabix
+aptitude,Logical Reasoning,medium,All roses are flowers. Some flowers fade. Conclusion?,All roses fade,Some roses fade,No roses fade,Cannot determine,Cannot determine,indiabix
+aptitude,Logical Reasoning,medium,If + means * and * means + then 5+3*2=?,17,21,19,15,17,indiabix
+aptitude,Logical Reasoning,medium,In a row A is 10th from left B is 12th from right. Total 25. Between them?,3,4,5,6,3,indiabix
+aptitude,Logical Reasoning,medium,5 people in row. A is left of B. C is right of D. E is between A and B. B is right of E. Who is leftmost?,D,A,C,E,D,indiabix
+aptitude,Logical Reasoning,medium,All cats are animals. All animals are birds. Conclusion?,All cats are birds,Some cats are birds,No cats are birds,Cannot determine,All cats are birds,indiabix
+aptitude,Logical Reasoning,medium,If + means - and - means * and * means / then 8+4-2*4=?,0,-6,8,6,0,indiabix
+aptitude,Logical Reasoning,medium,Six persons A B C D E F. C is sister of F. B is brother of E's husband. D is father of A and grandfather of F. Who is grandmother?,E,B,A,F,E,indiabix
+aptitude,Logical Reasoning,medium,ABCDE are sitting in circle. A is 2nd to right of D. B is opposite to D. C is between A and B. Opposite to C is?,E,A,B,D,E,indiabix
+aptitude,Logical Reasoning,medium,If in a code SUMMER=SULMER then WINTER=?,WINTWE,WINTRE,WINTWR,WINRTE,WINTRE,indiabix
+aptitude,Logical Reasoning,medium,Some stones are not rocks. All rocks are rivers. Conclusion?,Some stones are rivers,Some rivers are stones,No stones are rivers,Cannot determine,Cannot determine,indiabix
+aptitude,Logical Reasoning,hard,If + means / and - means * and * means + and / means - then: 3+15-2*5/8=?,12.5,13,14,15,12.5,indiabix
+aptitude,Logical Reasoning,hard,In a family A is father of B. B is sister of C. C is married to D. E is son of D. D is father of F. How is E related to A?,Grandson,Nephew,Son,Great grandson,Grandson,indiabix
+aptitude,Logical Reasoning,hard,7 books in a shelf. A is 3rd from left. B is between E and A. C is between F and D. G is to right of F. What is the order?,FEACBDG,EFABCDG,FEABDCG,FECABDG,FEACBDG,indiabix
+aptitude,Logical Reasoning,hard,Six friends sit in two rows of 3 each facing each other. A is not at end. B faces C. D is between A and C. E faces B. Who is at corner with D?,A and C,F and B,A and F,A and E,A and F,indiabix
+aptitude,Logical Reasoning,hard,All trains are buses. Some buses are trucks. Some trucks are cars. Conclusion I: Some trains are cars. Conclusion II: Some buses are cars.,Only I,Only II,Both I and II,Neither I nor II,Neither I nor II,indiabix
+aptitude,Logical Reasoning,hard,In a code MONKEY=XDJMNB. What is TIGER coded as?,QDFHS,PDFHS,QDEHS,QDFHS,QDFHS,indiabix
+aptitude,Logical Reasoning,hard,A is 40m south of B. C is 30m east of A. D is 50m north of C. How far is D from B?,10m,20m,30m,40m,10m,indiabix
+aptitude,Logical Reasoning,hard,10 friends sit in circle all facing center. A is 4th to right of G. B is between A and C. D is 3rd to left of E. F is between E and G. H and I are not neighbors. Who is opposite A?,F,G,D,E,F,indiabix
+aptitude,Logical Reasoning,hard,Some A are B. No B are C. Some C are D. All D are A. Conclusion: Some A are not C?,True,False,Cannot determine,Partially true,True,indiabix
+aptitude,Logical Reasoning,hard,Direction: Starting from point X I walked 2km north then 3km east then 1km south then 2km east then 2km south. Distance from X?,5km,6km,7km,8km,5km,indiabix
+aptitude,Logical Reasoning,easy,Find odd: 2 3 5 7 9 11,2,9,11,3,9,indiabix
+aptitude,Logical Reasoning,easy,If 1=5 2=25 3=125 then 4=?,625,600,500,700,625,indiabix
+aptitude,Logical Reasoning,medium,A walks 5km north then 4km east. Distance from start?,sqrt(41),6,7,8,sqrt(41),indiabix
+aptitude,Logical Reasoning,medium,Mirror image of time 12:45 on clock face is?,11:15,12:15,11:45,10:15,11:15,indiabix
+aptitude,Logical Reasoning,easy,Find missing: ACE GIK MOQ ?,SWU,STV,STV,TVX,STV,indiabix
+aptitude,Logical Reasoning,medium,Cube is painted red on all faces then cut into 27 equal pieces. How many cubes have exactly 2 red faces?,12,8,6,4,12,indiabix
+aptitude,Logical Reasoning,hard,In a test A is 16th from top and 29th from bottom. Rank from bottom if 3 more students are added above A?,32,33,34,35,32,indiabix
+aptitude,Logical Reasoning,easy,Which does not belong: Doctor Engineer Nurse Teacher?,Teacher,Nurse,Doctor,Engineer,Teacher,indiabix
+aptitude,Logical Reasoning,medium,12 o clock position on a clock the angle between hours and minutes after 15 min is?,90,82.5,87.5,80,82.5,indiabix
+aptitude,Logical Reasoning,hard,5 friends P Q R S T in a row. P is not adjacent to Q or R. T is not adjacent to R. Q and R are adjacent. Which is possible order?,SQPRT,SQRPT,PQRST,TSPQR,SQPRT,indiabix
+aptitude,Blood Relations,easy,Ram's father is Shyam. Shyam's sister is Gita. What is Gita to Ram?,Aunt,Mother,Sister,Cousin,Aunt,indiabix
+aptitude,Blood Relations,easy,A is B's sister. B is C's brother. C is D's son. How is A related to D?,Daughter,Sister,Niece,Granddaughter,Daughter,indiabix
+aptitude,Blood Relations,easy,Introducing a man a woman says his wife is only daughter of my mother. How is man related to woman?,Brother,Father,Husband,Son-in-law,Husband,indiabix
+aptitude,Blood Relations,easy,A man says this lady is my wife's mother's only daughter. How is lady related to man?,Mother-in-law,Sister,Wife,Daughter,Wife,indiabix
+aptitude,Blood Relations,easy,Pointing to photograph Seema says he is only son of my grandfather. How is person in photo related to Seema?,Brother,Uncle,Father,Cousin,Brother,indiabix
+aptitude,Blood Relations,easy,A and B are brothers. C and D are sisters. A's son is D's brother. How is B related to C?,Uncle,Brother,Father,Grandfather,Uncle,indiabix
+aptitude,Blood Relations,easy,P is father of Q. Q is sister of R. S is mother of Q. How is P related to S?,Husband,Brother,Father,Uncle,Husband,indiabix
+aptitude,Blood Relations,easy,Pointing to Suresh a girl says he is son of only child of my grandfather. How is girl related to Suresh?,Sister,Aunt,Daughter,Cousin,Sister,indiabix
+aptitude,Blood Relations,easy,A is B's brother. C is A's mother. D is C's father. E is B's son. How is D related to E?,Great grandfather,Grandfather,Father,Uncle,Great grandfather,indiabix
+aptitude,Blood Relations,easy,Ravi is the son of Meena's father's sister. How is Meena related to Ravi?,Cousin,Aunt,Sister,Niece,Cousin,indiabix
+aptitude,Blood Relations,medium,A said to B his mother is wife of my father's son. A has no brothers. How is B's mother related to A?,Wife,Daughter,Mother-in-law,Sister-in-law,Wife,indiabix
+aptitude,Blood Relations,medium,Looking at a portrait a man says the person's mother is the wife of my father's son. I have no siblings. Whose portrait?,Son,Daughter,Father,Nephew,Son,indiabix
+aptitude,Blood Relations,medium,A family has 3 members. P is Q's sister. R is Q's father. How many male members at least?,1,2,3,0,1,indiabix
+aptitude,Blood Relations,medium,In a family of 6 P is son of Q Q is wife of R R is son of S S is married to T T is mother of U. Who is U to R?,Sister or brother,Mother,Father,Aunt,Sister or brother,indiabix
+aptitude,Blood Relations,medium,B is brother of A. M is sister of A. P is brother of M. T is father of B. S is mother of P. How is T related to S?,Husband,Father,Son,Brother,Husband,indiabix
+aptitude,Blood Relations,medium,Pointing to man in photo a woman says his mother's only son is my son's father. How is woman related to man?,Sister,Mother,Aunt,Wife,Wife,indiabix
+aptitude,Blood Relations,medium,A and B are children of C. If D is husband of A and E is son of D then C is E's?,Grandfather or grandmother,Father,Mother,Aunt,Grandfather or grandmother,indiabix
+aptitude,Blood Relations,medium,X is son of Y. Y is brother of Z. Z is mother of A. A is sister of B. How is B related to X?,Cousin,Nephew,Brother,Uncle,Cousin,indiabix
+aptitude,Blood Relations,medium,Pointing to woman Raj says she is only daughter of man who is father of my wife's husband. Who is woman to Raj?,Wife,Sister,Daughter,Mother,Sister,indiabix
+aptitude,Blood Relations,medium,A+B means A is daughter of B. A-B means A is husband of B. A*B means A is son of B. If P+Q-R*S then P is S's?,Granddaughter,Daughter,Niece,Sister-in-law,Granddaughter,indiabix
+aptitude,Blood Relations,hard,In a group of persons A is brother of B. C is father of D. E is mother of A. D is sister of B. How many male can we confirm?,1,2,3,4,1,indiabix
+aptitude,Blood Relations,hard,P$Q means P is father of Q. P#Q means P is mother of Q. P*Q means P is sister of Q. If A$B#C*D then how is A related to D?,Maternal grandfather,Paternal grandfather,Father,Grandfather,Maternal grandfather,indiabix
+aptitude,Blood Relations,hard,P@Q means P is wife of Q. P+Q means P is son of Q. P-Q means P is brother of Q. If T@R+S-U then T is U's?,Sister-in-law,Mother,Daughter-in-law,Aunt,Sister-in-law,indiabix
+aptitude,Blood Relations,hard,A family tree: J is the father of K and L. K is married to M. M is the sister of N. N is the son of O. O is the father-in-law of K. How is J related to N?,Uncle,No direct relation,Father-in-law,Brother,Uncle,indiabix
+aptitude,Blood Relations,hard,In a family P is Q's father. Q is R's husband. R is S's mother. T is S's brother. How many generations represented?,2,3,4,5,3,indiabix
+aptitude,Blood Relations,hard,A is grandmother of B. C is daughter of A. D is son of B. E is husband of C. How is E related to D?,Uncle,Grandfather,Grand uncle,No relation,Grand uncle,indiabix
+aptitude,Blood Relations,hard,If P*Q means P is father of Q and P-Q means P is wife of Q and P+Q means P is mother of Q then in M*N-O+P N is P's?,Father,Grandfather,Maternal grandfather,Uncle,Father,indiabix
+aptitude,Blood Relations,hard,5 siblings A B C D E. A is sister of B. C is brother of D. D is sister of A. E is brother of C. What is the minimum number of sisters?,2,3,4,1,3,indiabix
+aptitude,Blood Relations,hard,Decipher: M%N means M is wife of N. M&N means M is son of N. M#N means M is mother of N. If A#B%C&D then A is D's?,Daughter-in-law,Mother-in-law,Aunt,Sister,Mother-in-law,indiabix
+aptitude,Blood Relations,hard,Family has P Q R S T U. P is married to Q. R and S are children of P. T is Q's father. U is T's son. How is R related to U?,Nephew or niece,Cousin,Sibling,Grandchild,Nephew or niece,indiabix
+aptitude,Blood Relations,easy,If Ravi's brother is Rahul and Rahul's sister is Rekha who is Rekha to Ravi?,Sister,Brother,Cousin,Aunt,Sister,indiabix
+aptitude,Blood Relations,easy,A is B's husband B is C's sister D is C's mother. How is A related to D?,Son-in-law,Brother,Nephew,Uncle,Son-in-law,indiabix
+aptitude,Blood Relations,medium,A is B's uncle B is C's father D is A's son. How is D related to B?,Cousin,Uncle,Nephew,Brother,Cousin,indiabix
+aptitude,Blood Relations,medium,Pointing at girl Rohit said her mother is wife of my father's only son. Rohit has no siblings. Relation of girl to Rohit?,Daughter,Sister,Wife,Niece,Daughter,indiabix
+aptitude,Blood Relations,easy,Mother of Ram is sister of Geeta. Geeta's son is Raju. What is Raju to Ram?,Cousin,Nephew,Brother,Uncle,Cousin,indiabix
+aptitude,Blood Relations,easy,Suman is Raman's son. Ram is Suman's grandfather. Meena is Ram's only daughter-in-law. Meena is Raman's?,Wife,Mother,Sister,Aunt,Wife,indiabix
+aptitude,Blood Relations,medium,In photo Jayant says the man is son of my wife's only sister's husband. How is man related to Jayant?,Nephew,Son,Cousin,Brother-in-law,Nephew,indiabix
+aptitude,Blood Relations,hard,A is B's father. B is C's husband. D is E's son. C is D's only daughter. A is grandfather of E?,True,False,Cannot determine,Partially true,True,indiabix
+aptitude,Blood Relations,easy,My mother's sister's son is my?,Cousin,Uncle,Brother,Nephew,Cousin,indiabix
+aptitude,Blood Relations,hard,In a family: wife of brother-in-law of your mother is your?,Aunt,Mother,Cousin,No relation,Aunt,indiabix
+aptitude,Verbal Ability,easy,Synonym of Eloquent?,Fluent,Silent,Angry,Confused,Fluent,indiabix
+aptitude,Verbal Ability,easy,Antonym of Abundant?,Scarce,Plenty,Rich,Ample,Scarce,indiabix
+aptitude,Verbal Ability,easy,Synonym of Benevolent?,Kind,Cruel,Strict,Harsh,Kind,indiabix
+aptitude,Verbal Ability,easy,Antonym of Ancient?,Modern,Old,Antique,Classic,Modern,indiabix
+aptitude,Verbal Ability,easy,Synonym of Diligent?,Lazy,Hardworking,Careless,Slow,Hardworking,indiabix
+aptitude,Verbal Ability,easy,Antonym of Transparent?,Opaque,Clear,Obvious,Visible,Opaque,indiabix
+aptitude,Verbal Ability,easy,Synonym of Serene?,Calm,Noisy,Wild,Angry,Calm,indiabix
+aptitude,Verbal Ability,easy,Antonym of Trivial?,Important,Small,Minor,Insignificant,Important,indiabix
+aptitude,Verbal Ability,easy,Correct spelling?,Recieve,Receive,Recive,Receve,Receive,indiabix
+aptitude,Verbal Ability,easy,Choose correct sentence:,She don't know,She doesn't knows,She doesn't know,She not knows,She doesn't know,indiabix
+aptitude,Verbal Ability,medium,Correct spelling?,Accomodate,Accommodate,Acomodate,Accommadate,Accommodate,indiabix
+aptitude,Verbal Ability,medium,Idiom: Bite the bullet means?,Be brave in pain,Eat fast,Miss chance,Give up,Be brave in pain,indiabix
+aptitude,Verbal Ability,medium,Idiom: Hit the sack means?,Go to bed,Hit someone,Pack bags,Start work,Go to bed,indiabix
+aptitude,Verbal Ability,medium,Idiom: Break the ice means?,Start conversation,Break something,Cool down,Be rude,Start conversation,indiabix
+aptitude,Verbal Ability,medium,Fill in: The committee ___ divided in their opinion.,was,were,is,are,were,indiabix
+aptitude,Verbal Ability,medium,Neither the teacher nor students ___ present.,was,were,is,are,were,indiabix
+aptitude,Verbal Ability,medium,Choose correct: He is more taller / He is taller / He is most tallest / He is more tall,He is more taller,He is taller,He is most tallest,He is more tall,He is taller,indiabix
+aptitude,Verbal Ability,medium,Synonym of Obstinate?,Stubborn,Flexible,Gentle,Humble,Stubborn,indiabix
+aptitude,Verbal Ability,medium,Antonym of Magnanimous?,Mean,Generous,Noble,Forgiving,Mean,indiabix
+aptitude,Verbal Ability,medium,One word substitution for one who knows many languages?,Polyglot,Bilingual,Multilingual,Linguist,Polyglot,indiabix
+aptitude,Verbal Ability,hard,Fill in: Not only did she sing ___ she also danced.,but,but also,or,and also,but also,indiabix
+aptitude,Verbal Ability,hard,Identify error: He is one of those students who always (A) work (B) hard for exams (C). No error (D),A,B,C,D,A,indiabix
+aptitude,Verbal Ability,hard,Passive voice: They are building a new mall.,A new mall is being built,A new mall was built,A new mall has been built,A new mall will be built,A new mall is being built,indiabix
+aptitude,Verbal Ability,hard,Reported speech: He said I will come tomorrow.,He said he would come next day,He said he will come tomorrow,He told he would come tomorrow,He said he came next day,He said he would come next day,indiabix
+aptitude,Verbal Ability,hard,Synonym of Ignominious?,Humiliating,Glorious,Proud,Respectful,Humiliating,indiabix
+aptitude,Verbal Ability,hard,Antonym of Loquacious?,Silent,Talkative,Verbose,Expressive,Silent,indiabix
+aptitude,Verbal Ability,hard,Idiom: Crocodile tears means?,Fake emotions,Real sadness,Angry tears,Joy,Fake emotions,indiabix
+aptitude,Verbal Ability,hard,Fill in: Scarcely had she left ___ it started raining.,when,than,before,after,when,indiabix
+aptitude,Verbal Ability,hard,Identify the figure of speech: Life is a dream.,Metaphor,Simile,Personification,Hyperbole,Metaphor,indiabix
+aptitude,Verbal Ability,hard,One word: A person who believes that self-interest is the basis of morality?,Egotist,Altruist,Narcissist,Hedonist,Egotist,indiabix
+aptitude,Verbal Ability,easy,Antonym of Cowardice?,Bravery,Timid,Fear,Weak,Bravery,indiabix
+aptitude,Verbal Ability,easy,Synonym of Haughty?,Arrogant,Humble,Polite,Kind,Arrogant,indiabix
+aptitude,Verbal Ability,medium,Fill in: I wish I ___ a millionaire.,am,was,were,had been,were,indiabix
+aptitude,Verbal Ability,medium,Antonym of Verbose?,Concise,Wordy,Lengthy,Detailed,Concise,indiabix
+aptitude,Verbal Ability,easy,Correct spelling?,Grammer,Grammar,Grammarr,Gramar,Grammar,indiabix
+aptitude,Verbal Ability,medium,Idiom: Burn the midnight oil means?,Work late,Start fire,Waste oil,Work fast,Work late,indiabix
+aptitude,Verbal Ability,hard,Fill in: Had I known earlier ___ helped.,I would have,I will have,I would,I had,I would have,indiabix
+aptitude,Verbal Ability,easy,Synonym of Amicable?,Friendly,Hostile,Rude,Cold,Friendly,indiabix
+aptitude,Verbal Ability,medium,Idiom: A dime a dozen means?,Very common,Very rare,Very expensive,Very precious,Very common,indiabix
+aptitude,Verbal Ability,hard,Choose correct voice: She teaches English (passive)?,English is taught by her,English was taught by her,English has been taught,English is being taught,English is taught by her,indiabix
+technical,Python,easy,Which keyword defines a function in Python?,func,def,define,function,def,geeksforgeeks
+technical,Python,easy,What is output of print(type([]))?,<class 'list'>,<class 'tuple'>,list,array,<class 'list'>,geeksforgeeks
+technical,Python,easy,Which is used for single line comment?,//,#,/*,--,#,geeksforgeeks
+technical,Python,easy,How to create empty list in Python?,list[],list(),{},(),list(),geeksforgeeks
+technical,Python,easy,Which operator is used for exponentiation?,^,**,*,^^,**,geeksforgeeks
+technical,Python,easy,What does len() function return?,Last element,Length of object,Data type,Memory address,Length of object,geeksforgeeks
+technical,Python,easy,How to convert string to integer?,str(),int(),float(),convert(),int(),geeksforgeeks
+technical,Python,easy,What is output of print(10//3)?,3.33,3,4,2,3,geeksforgeeks
+technical,Python,easy,Which is NOT a Python data type?,list,dict,array,tuple,array,geeksforgeeks
+technical,Python,easy,What is output of print('Hello'*3)?,Hello3,HelloHelloHello,Error,Hello Hello Hello,HelloHelloHello,geeksforgeeks
+technical,Python,medium,Output of: [x**2 for x in range(5) if x%2==0]?,[0 4 16],[0 1 4],[4 16],[0 4],[0 4 16],geeksforgeeks
+technical,Python,medium,What does 'self' refer to in Python class?,Class itself,Current object,Parent class,Module,Current object,geeksforgeeks
+technical,Python,medium,Which method adds element at end of list?,add(),insert(),append(),extend(),append(),geeksforgeeks
+technical,Python,medium,What is lambda function?,Named function,Anonymous function,Recursive function,Built-in function,Anonymous function,geeksforgeeks
+technical,Python,medium,Which is correct way to open a file in read mode?,open('file' r),open('file' 'r'),open('file' mode=r),open('file'),open('file' 'r'),geeksforgeeks
+technical,Python,medium,What is output of print(bool(0))?,True,False,None,Error,False,geeksforgeeks
+technical,Python,medium,Which exception is raised when dividing by zero?,ValueError,ZeroDivisionError,ArithmeticError,TypeError,ZeroDivisionError,geeksforgeeks
+technical,Python,medium,What is output of list(range(2 10 2))?,2 4 6 8,2 4 6 8 10,0 2 4 6 8,2 6 10,2 4 6 8,geeksforgeeks
+technical,Python,medium,Which keyword is used for inheritance?,inherits,extends,class Base:,class Child(Parent):,class Child(Parent):,geeksforgeeks
+technical,Python,medium,What is output of: d={1:'a' 2:'b'} print(d.get(3 'not found'))?,Error,None,not found,3,not found,geeksforgeeks
+technical,Python,hard,What is output of: print([i for i in range(10) if i%2==0 if i%3==0])?,0 6,[0 6],0 2 6,[0],[ 0 6],geeksforgeeks
+technical,Python,hard,What is a decorator in Python?,A function that returns another function,A class method,A special variable,A module,A function that returns another function,geeksforgeeks
+technical,Python,hard,What is output of: a=1;b=2;a b=b a;print(a b)?,1 2,2 1,Error,2 2,2 1,geeksforgeeks
+technical,Python,hard,What is a generator in Python?,A function with return,A function with yield,A class that generates,A built-in function,A function with yield,geeksforgeeks
+technical,Python,hard,What is the output of: x=[1 2 3];y=x;y[0]=10;print(x[0])?,1,10,Error,None,10,geeksforgeeks
+technical,Python,hard,What does *args do in function definition?,Sends keyword arguments,Sends variable number of arguments,Sends only one argument,Error,Sends variable number of arguments,geeksforgeeks
+technical,Python,hard,Which is correct about __init__ method?,Called after object creation,Called during object creation,Called when object deleted,Optional always,Called during object creation,geeksforgeeks
+technical,Python,hard,What is output: print(type(lambda x:x))?,<class 'function'>,<class 'lambda'>,Error,<class 'method'>,<class 'function'>,geeksforgeeks
+technical,Python,hard,What is shallow copy vs deep copy?,Same reference vs new copy,New copy vs same reference,Both same reference,Both new copies,Same reference vs new copy,geeksforgeeks
+technical,Python,hard,What is GIL in Python?,Global Integer Lock,Global Interpreter Lock,General Interpreter Library,Global Instance Lock,Global Interpreter Lock,geeksforgeeks
+technical,Python,easy,Which method removes and returns last element of list?,remove(),del(),pop(),discard(),pop(),geeksforgeeks
+technical,Python,easy,What is output of print(3==3.0)?,False,True,Error,None,True,geeksforgeeks
+technical,Python,medium,How to merge two dictionaries d1 and d2 in Python 3.9+?,d1+d2,d1|d2,d1.merge(d2),merge(d1 d2),d1|d2,geeksforgeeks
+technical,Python,medium,What is output: x='hello';print(x[::-1])?,hello,olleh,Error,hell,olleh,geeksforgeeks
+technical,Python,easy,Which function is used to read input from user?,scan(),read(),input(),get(),input(),geeksforgeeks
+technical,Python,medium,What is output of: print(type({1 2 3}))?,<class 'dict'>,<class 'set'>,<class 'list'>,<class 'tuple'>,<class 'set'>,geeksforgeeks
+technical,Python,hard,What is metaclass in Python?,Subclass of class,Class of a class,Base class,Static class,Class of a class,geeksforgeeks
+technical,Python,easy,How to check if key exists in dict d?,key in d,d.has(key),d.exists(key),d.contains(key),key in d,geeksforgeeks
+technical,Python,medium,What is output: print(0.1+0.2==0.3)?,True,False,Error,None,False,geeksforgeeks
+technical,Python,hard,What is difference between is and ==?,is checks type == checks value,is checks identity == checks equality,Both same,== checks type is checks value,is checks identity == checks equality,geeksforgeeks
+technical,Data Structures,easy,Which uses LIFO?,Queue,Stack,Tree,Graph,Stack,geeksforgeeks
+technical,Data Structures,easy,Array indexing starts from?,1,0,-1,Depends,0,geeksforgeeks
+technical,Data Structures,easy,Which data structure uses FIFO?,Stack,Queue,Tree,Heap,Queue,geeksforgeeks
+technical,Data Structures,easy,What is a linked list?,Array of pointers,Nodes connected via pointers,Circular array,Fixed size array,Nodes connected via pointers,geeksforgeeks
+technical,Data Structures,easy,Time complexity of accessing array element by index?,O(n),O(log n),O(1),O(n^2),O(1),geeksforgeeks
+technical,Data Structures,easy,What is a binary tree?,Tree with 2 levels,Tree where each node has at most 2 children,Tree with 2 roots,Tree with exactly 2 children,Tree where each node has at most 2 children,geeksforgeeks
+technical,Data Structures,easy,Which traversal visits root first then left then right?,Inorder,Postorder,Preorder,Level order,Preorder,geeksforgeeks
+technical,Data Structures,easy,What is the full form of DSA?,Data System Architecture,Data Structures and Algorithms,Database Structure Analysis,Dynamic System Analysis,Data Structures and Algorithms,geeksforgeeks
+technical,Data Structures,easy,Which is a non-linear data structure?,Array,Queue,Tree,Stack,Tree,geeksforgeeks
+technical,Data Structures,easy,What is a hash table?,Array with sorting,Key-value pair storage with hashing,Linked list variant,Tree structure,Key-value pair storage with hashing,geeksforgeeks
+technical,Data Structures,medium,Which is NOT a linear data structure?,Array,LinkedList,Tree,Queue,Tree,geeksforgeeks
+technical,Data Structures,medium,In BST inorder traversal gives?,Sorted descending,Sorted ascending,Random,Level order,Sorted ascending,geeksforgeeks
+technical,Data Structures,medium,What is height of balanced binary tree with n nodes?,O(n),O(log n),O(n^2),O(sqrt n),O(log n),geeksforgeeks
+technical,Data Structures,medium,Which data structure is used in BFS?,Stack,Queue,Heap,Graph,Queue,geeksforgeeks
+technical,Data Structures,medium,What is time complexity of inserting at end of doubly linked list with tail pointer?,O(1),O(n),O(log n),O(n^2),O(1),geeksforgeeks
+technical,Data Structures,medium,In a max heap what is at root?,Minimum element,Maximum element,Middle element,Last element,Maximum element,geeksforgeeks
+technical,Data Structures,medium,What is a deque?,Double ended queue,Duplicate queue,Divided queue,Default queue,Double ended queue,geeksforgeeks
+technical,Data Structures,medium,What is time complexity of searching in BST (worst case)?,O(1),O(log n),O(n),O(n^2),O(n),geeksforgeeks
+technical,Data Structures,medium,Which traversal is used to delete a binary tree?,Preorder,Inorder,Postorder,Level order,Postorder,geeksforgeeks
+technical,Data Structures,medium,What is a trie used for?,Sorting numbers,String searching and prefix matching,Graph traversal,Matrix operations,String searching and prefix matching,geeksforgeeks
+technical,Data Structures,hard,Space complexity of recursive fibonacci?,O(1),O(n),O(log n),O(n^2),O(n),geeksforgeeks
+technical,Data Structures,hard,What is AVL tree?,Self-balancing BST,Unbalanced tree,Complete binary tree,Red-black tree,Self-balancing BST,geeksforgeeks
+technical,Data Structures,hard,Time complexity of finding kth smallest in BST?,O(n),O(k),O(log n),O(k log n),O(n),geeksforgeeks
+technical,Data Structures,hard,What is a B-tree used for?,In-memory sorting,Disk-based storage,Network routing,Array sorting,Disk-based storage,geeksforgeeks
+technical,Data Structures,hard,In skip list search complexity is?,O(n),O(log n),O(n log n),O(1),O(log n),geeksforgeeks
+technical,Data Structures,hard,What is segment tree used for?,String matching,Range query operations,Graph operations,Heap operations,Range query operations,geeksforgeeks
+technical,Data Structures,hard,Amortized complexity of push in dynamic array?,O(n),O(1),O(log n),O(n^2),O(1),geeksforgeeks
+technical,Data Structures,hard,What is a Fenwick tree (BIT) used for?,Sorting,Prefix sum queries,Graph search,String matching,Prefix sum queries,geeksforgeeks
+technical,Data Structures,hard,Minimum number of nodes in AVL tree of height h?,Fibonacci-like,2^h,h+1,h*2,Fibonacci-like,geeksforgeeks
+technical,Data Structures,hard,Time complexity of union-find with path compression?,O(log n),O(alpha n),O(n),O(1),O(alpha n),geeksforgeeks
+technical,Data Structures,easy,What is overflow in stack?,Empty stack operation,Adding element to full stack,Removing from empty stack,Array out of bounds,Adding element to full stack,geeksforgeeks
+technical,Data Structures,easy,Which traversal gives sorted output for BST?,Preorder,Postorder,Inorder,Level order,Inorder,geeksforgeeks
+technical,Data Structures,medium,What is time complexity of merging two sorted linked lists?,O(m+n),O(m*n),O(m log n),O(n),O(m+n),geeksforgeeks
+technical,Data Structures,medium,Minimum number of edges in connected graph with n nodes?,n-1,n,n+1,n/2,n-1,geeksforgeeks
+technical,Data Structures,easy,Stack is implemented using?,Array or linked list,Only array,Only linked list,Queue,Array or linked list,geeksforgeeks
+technical,Data Structures,medium,What is sparse matrix?,Matrix with mostly zeros,Matrix with mostly non-zeros,Square matrix,Identity matrix,Matrix with mostly zeros,geeksforgeeks
+technical,Data Structures,hard,LRU cache can be implemented using?,Array and stack,Doubly linked list and hash map,BST and queue,Heap and array,Doubly linked list and hash map,geeksforgeeks
+technical,Data Structures,easy,What is leaf node in tree?,Node with children,Node with no children,Root node,Parent node,Node with no children,geeksforgeeks
+technical,Data Structures,medium,Time complexity of heapify operation?,O(1),O(log n),O(n),O(n log n),O(log n),geeksforgeeks
+technical,Data Structures,hard,What is topological sort used for?,Undirected graphs,DAG ordering,Finding shortest path,Cycle detection,DAG ordering,geeksforgeeks
+technical,Algorithms,easy,Time complexity of binary search?,O(n),O(log n),O(n^2),O(1),O(log n),geeksforgeeks
+technical,Algorithms,easy,Which sorting is fastest on average?,Bubble,Selection,Quick,Insertion,Quick,geeksforgeeks
+technical,Algorithms,easy,What is brute force approach?,Try all possibilities,Try best solution,Divide and conquer,Greedy approach,Try all possibilities,geeksforgeeks
+technical,Algorithms,easy,Time complexity of bubble sort (worst case)?,O(n),O(n log n),O(n^2),O(log n),O(n^2),geeksforgeeks
+technical,Algorithms,easy,Which is divide and conquer algorithm?,Bubble sort,Merge sort,Selection sort,Insertion sort,Merge sort,geeksforgeeks
+technical,Algorithms,easy,What does greedy algorithm do?,Optimises globally,Makes locally optimal choice,Uses recursion,Uses dynamic programming,Makes locally optimal choice,geeksforgeeks
+technical,Algorithms,easy,What is recursion?,Function calling itself,Function calling other,Loop,Iteration,Function calling itself,geeksforgeeks
+technical,Algorithms,easy,Time complexity of linear search?,O(1),O(log n),O(n),O(n^2),O(n),geeksforgeeks
+technical,Algorithms,easy,What is base case in recursion?,First call,Last call,Termination condition,Middle call,Termination condition,geeksforgeeks
+technical,Algorithms,easy,Which algorithm is used to find shortest path?,DFS,BFS,Both,Neither,BFS,geeksforgeeks
+technical,Algorithms,medium,Dijkstra's algorithm is used for?,Shortest path,Sorting,Searching,Hashing,Shortest path,geeksforgeeks
+technical,Algorithms,medium,Which sorting has best worst-case O(n log n)?,Quick,Bubble,Merge,Selection,Merge,geeksforgeeks
+technical,Algorithms,medium,Dynamic programming is based on?,Greedy,Divide and conquer,Memoization,Backtracking,Memoization,geeksforgeeks
+technical,Algorithms,medium,What is time complexity of building max heap from array?,O(n log n),O(n),O(n^2),O(log n),O(n),geeksforgeeks
+technical,Algorithms,medium,Which algorithm finds MST?,Kruskal and Prim,Floyd-Warshall,Bellman-Ford,DFS,Kruskal and Prim,geeksforgeeks
+technical,Algorithms,medium,What is backtracking?,Recursive solving by trying options,Greedy approach,DP approach,Divide and conquer,Recursive solving by trying options,geeksforgeeks
+technical,Algorithms,medium,Time complexity of counting sort?,O(n+k),O(n log n),O(n),O(n^2),O(n+k),geeksforgeeks
+technical,Algorithms,medium,Floyd-Warshall algorithm finds?,Single source shortest,All pairs shortest,MST,Topological sort,All pairs shortest,geeksforgeeks
+technical,Algorithms,medium,What is amortized analysis?,Average case over sequence of ops,Worst case,Best case,Space complexity,Average case over sequence of ops,geeksforgeeks
+technical,Algorithms,medium,KMP algorithm is used for?,Shortest path,Pattern matching,Sorting,Graph traversal,Pattern matching,geeksforgeeks
+technical,Algorithms,hard,What is NP-complete problem?,Solvable in polynomial time,Verifiable in polynomial time and NP-hard,Not solvable,Solvable in exponential time,Verifiable in polynomial time and NP-hard,geeksforgeeks
+technical,Algorithms,hard,Master theorem is used to solve?,Sorting recurrences,Divide and conquer recurrences,Graph problems,DP problems,Divide and conquer recurrences,geeksforgeeks
+technical,Algorithms,hard,Time complexity of Strassen's matrix multiplication?,O(n^3),O(n^2.81),O(n^2),O(n^2 log n),O(n^2.81),geeksforgeeks
+technical,Algorithms,hard,What is bi-directional search?,Search from both source and target,Search two graphs,Search twice,Parallel BFS,Search from both source and target,geeksforgeeks
+technical,Algorithms,hard,Huffman coding is example of?,Greedy algorithm,DP,Divide and conquer,Backtracking,Greedy algorithm,geeksforgeeks
+technical,Algorithms,hard,What is competitive ratio in online algorithms?,Worst ratio to optimal offline,Best case ratio,Average performance,Space ratio,Worst ratio to optimal offline,geeksforgeeks
+technical,Algorithms,hard,Travelling salesman problem is?,P class,NP-complete,NP-hard,Polynomial,NP-hard,geeksforgeeks
+technical,Algorithms,hard,What is randomized quicksort expected time?,O(n log n),O(n^2),O(n),O(n^2 log n),O(n log n),geeksforgeeks
+technical,Algorithms,hard,What is approximation algorithm?,Exact solution in less time,Near-optimal solution for NP problems,Heuristic without guarantee,Exponential time solution,Near-optimal solution for NP problems,geeksforgeeks
+technical,Algorithms,hard,Ford-Fulkerson algorithm computes?,Shortest path,Maximum flow,MST,Topological sort,Maximum flow,geeksforgeeks
+technical,Algorithms,easy,What is space complexity?,Memory used by algorithm,Time taken,Number of steps,Number of variables,Memory used by algorithm,geeksforgeeks
+technical,Algorithms,easy,Big O notation represents?,Exact time,Upper bound on time,Lower bound,Average case,Upper bound on time,geeksforgeeks
+technical,Algorithms,medium,What is stable sort?,Preserves relative order of equal elements,Sorts descending,Sorts integers only,Fastest sort,Preserves relative order of equal elements,geeksforgeeks
+technical,Algorithms,medium,Which is NOT comparison-based sort?,Quick,Merge,Radix,Heap,Radix,geeksforgeeks
+technical,Algorithms,easy,Insertion sort best case time complexity?,O(n^2),O(n log n),O(n),O(1),O(n),geeksforgeeks
+technical,Algorithms,medium,What is tail recursion?,Recursive call is last operation,First call,Middle call,No base case,Recursive call is last operation,geeksforgeeks
+technical,Algorithms,hard,What is external sorting?,Sorting data on disk,Sorting externally visible data,Sorting external API data,Sorting with extra memory,Sorting data on disk,geeksforgeeks
+technical,Algorithms,easy,Which algorithm uses stack internally?,BFS,DFS,Dijkstra,Prim,DFS,geeksforgeeks
+technical,Algorithms,medium,Time complexity of topological sort?,O(V+E),O(V^2),O(E log V),O(V log V),O(V+E),geeksforgeeks
+technical,Algorithms,hard,What is branch and bound technique used for?,Sorting,Optimization problems,String matching,Graph coloring,Optimization problems,geeksforgeeks
+technical,DBMS,easy,Which SQL command retrieves data?,INSERT,SELECT,UPDATE,DELETE,SELECT,geeksforgeeks
+technical,DBMS,easy,Primary key allows NULL values?,Yes,No,Sometimes,Depends on DB,No,geeksforgeeks
+technical,DBMS,easy,Full form of DBMS?,Data Byte Management System,Data Base Management System,Data Base Monitoring System,None,Data Base Management System,geeksforgeeks
+technical,DBMS,easy,What is a foreign key?,Primary key of same table,Key referencing primary key of another table,Unique key,Composite key,Key referencing primary key of another table,geeksforgeeks
+technical,DBMS,easy,Which SQL clause is used to filter rows?,HAVING,GROUP BY,WHERE,ORDER BY,WHERE,geeksforgeeks
+technical,DBMS,easy,What does DISTINCT keyword do in SQL?,Remove duplicates,Sort data,Filter nulls,Group data,Remove duplicates,geeksforgeeks
+technical,DBMS,easy,Which SQL command adds new row?,INSERT,ADD,CREATE,PUT,INSERT,geeksforgeeks
+technical,DBMS,easy,What is a view in SQL?,Physical table,Virtual table based on query,Index,Stored procedure,Virtual table based on query,geeksforgeeks
+technical,DBMS,easy,Which join returns all records from left table?,INNER JOIN,RIGHT JOIN,LEFT JOIN,FULL JOIN,LEFT JOIN,geeksforgeeks
+technical,DBMS,easy,What does SQL stand for?,Structured Query Language,Simple Query Language,Sequential Query Language,Standard Query Language,Structured Query Language,geeksforgeeks
+technical,DBMS,medium,Which SQL clause filters groups?,WHERE,HAVING,GROUP BY,ORDER BY,HAVING,geeksforgeeks
+technical,DBMS,medium,ACID stands for?,Atomicity Consistency Isolation Durability,Auto Consistency Index Data,Atomic Concurrent Isolation Durability,None,Atomicity Consistency Isolation Durability,geeksforgeeks
+technical,DBMS,medium,Which normal form removes transitive dependency?,1NF,2NF,3NF,BCNF,3NF,geeksforgeeks
+technical,DBMS,medium,What is a deadlock in DBMS?,Two processes waiting indefinitely,Slow query,Data corruption,Connection error,Two processes waiting indefinitely,geeksforgeeks
+technical,DBMS,medium,What is indexing in database?,Sorting data,Data structure to speed up queries,Creating backups,Joining tables,Data structure to speed up queries,geeksforgeeks
+technical,DBMS,medium,Difference between DELETE and TRUNCATE?,DELETE is slower TRUNCATE is faster and non-rollback,Both same,DELETE is faster,TRUNCATE can be rolled back,DELETE is slower TRUNCATE is faster and non-rollback,geeksforgeeks
+technical,DBMS,medium,What is a stored procedure?,SQL query,Pre-compiled SQL stored in DB,View,Index,Pre-compiled SQL stored in DB,geeksforgeeks
+technical,DBMS,medium,Which type of JOIN returns matching records from both tables?,INNER JOIN,LEFT JOIN,RIGHT JOIN,CROSS JOIN,INNER JOIN,geeksforgeeks
+technical,DBMS,medium,What is ER diagram?,Entity Relationship diagram,Error Report diagram,Execution Route diagram,None,Entity Relationship diagram,geeksforgeeks
+technical,DBMS,medium,What is a trigger in DBMS?,SQL command,Auto-executed procedure on DB event,Index type,View type,Auto-executed procedure on DB event,geeksforgeeks
+technical,DBMS,hard,What is two-phase locking?,Lock all then unlock all,Growing phase then shrinking phase,Random locking,No locking,Growing phase then shrinking phase,geeksforgeeks
+technical,DBMS,hard,What is CAP theorem?,Consistency Availability Partition tolerance tradeoff,Three ACID properties,Three types of joins,Three normal forms,Consistency Availability Partition tolerance tradeoff,geeksforgeeks
+technical,DBMS,hard,What is a B+ tree index?,Binary tree,Tree where all data is in leaves,Hash index,Linear index,Tree where all data is in leaves,geeksforgeeks
+technical,DBMS,hard,What is serializability in transactions?,Executing serially,Concurrent execution equivalent to serial,Rollback support,Isolation,Concurrent execution equivalent to serial,geeksforgeeks
+technical,DBMS,hard,What is MVCC in databases?,Multi Version Concurrency Control,Multiple Value Cache Control,Main Version Copy Control,None,Multi Version Concurrency Control,geeksforgeeks
+technical,DBMS,hard,What is data partitioning?,Splitting database vertically only,Dividing data across multiple storage units,Replicating data,Joining tables,Dividing data across multiple storage units,geeksforgeeks
+technical,DBMS,hard,What is difference between clustered and non-clustered index?,Clustered reorders physical data non-clustered doesn't,Both same,Non-clustered reorders physical,Clustered is slower,Clustered reorders physical data non-clustered doesn't,geeksforgeeks
+technical,DBMS,hard,What is eventual consistency?,Immediate consistency,System becomes consistent over time,Never consistent,Strict consistency,System becomes consistent over time,geeksforgeeks
+technical,DBMS,hard,What is a materialized view?,Regular view,View with stored query results,View with triggers,Empty view,View with stored query results,geeksforgeeks
+technical,DBMS,hard,Boyce-Codd Normal Form (BCNF) is stronger than?,1NF,2NF,3NF,4NF,3NF,geeksforgeeks
+technical,DBMS,easy,What is NULL in SQL?,Zero,Empty string,Unknown or missing value,False,Unknown or missing value,geeksforgeeks
+technical,DBMS,easy,Which SQL function counts rows?,SUM(),COUNT(),AVG(),MAX(),COUNT(),geeksforgeeks
+technical,DBMS,medium,What is referential integrity?,Foreign key must match primary key,Primary key must be unique,All keys must be same type,Tables must be normalized,Foreign key must match primary key,geeksforgeeks
+technical,DBMS,medium,What does ROLLBACK do in SQL?,Save transaction,Undo transaction,Commit changes,Create savepoint,Undo transaction,geeksforgeeks
+technical,DBMS,easy,Which SQL keyword removes table?,DELETE,DROP,REMOVE,ERASE,DROP,geeksforgeeks
+technical,DBMS,medium,What is difference between UNION and UNION ALL?,UNION removes duplicates UNION ALL keeps all,UNION ALL removes duplicates,Both same,UNION is faster,UNION removes duplicates UNION ALL keeps all,geeksforgeeks
+technical,DBMS,hard,What is a phantom read in transactions?,Reading deleted data,Reading data that appeared due to another transaction,Reading wrong data,Reading no data,Reading data that appeared due to another transaction,geeksforgeeks
+technical,DBMS,easy,Which clause sorts result in SQL?,GROUP BY,ORDER BY,SORT BY,ARRANGE BY,ORDER BY,geeksforgeeks
+technical,DBMS,medium,What is a composite key?,Single primary key,Primary key with multiple columns,Foreign key,Unique key with multiple columns,Primary key with multiple columns,geeksforgeeks
+technical,DBMS,hard,What is lock granularity?,Type of lock,Size of data unit being locked,Lock speed,Lock queue,Size of data unit being locked,geeksforgeeks
+technical,Networking,easy,HTTP default port?,21,22,80,443,80,geeksforgeeks
+technical,Networking,easy,DNS converts?,IP to MAC,Domain name to IP,IP to Domain,MAC to IP,Domain name to IP,geeksforgeeks
+technical,Networking,easy,Full form of IP?,Internet Protocol,Internal Protocol,Internet Port,Internal Path,Internet Protocol,geeksforgeeks
+technical,Networking,easy,Which protocol is used for email sending?,SMTP,POP3,IMAP,FTP,SMTP,geeksforgeeks
+technical,Networking,easy,What does WWW stand for?,World Wide Web,World Width Web,Wide World Web,World Web Wire,World Wide Web,geeksforgeeks
+technical,Networking,easy,What is a router?,Connects devices in LAN,Connects different networks,Amplifies signal,Converts analog to digital,Connects different networks,geeksforgeeks
+technical,Networking,easy,HTTPS uses which port?,80,8080,443,22,443,geeksforgeeks
+technical,Networking,easy,What is MAC address?,IP address version,Physical hardware address,Domain name,Port number,Physical hardware address,geeksforgeeks
+technical,Networking,easy,Which device broadcasts to all devices in network?,Hub,Switch,Router,Bridge,Hub,geeksforgeeks
+technical,Networking,easy,What is bandwidth?,Speed of internet,Maximum data transfer rate,Frequency of signal,Network size,Maximum data transfer rate,geeksforgeeks
+technical,Networking,medium,Which OSI layer handles routing?,Physical,Data Link,Network,Transport,Network,geeksforgeeks
+technical,Networking,medium,Which protocol is connectionless?,TCP,FTP,UDP,HTTP,UDP,geeksforgeeks
+technical,Networking,medium,What is subnetting used for?,Increase bandwidth,Divide large network,Encrypt data,Compress data,Divide large network,geeksforgeeks
+technical,Networking,medium,What is the difference between TCP and UDP?,TCP is reliable UDP is not,UDP is reliable TCP is not,Both reliable,Both unreliable,TCP is reliable UDP is not,geeksforgeeks
+technical,Networking,medium,What is a firewall?,Antivirus,Network security system,Router type,Switch type,Network security system,geeksforgeeks
+technical,Networking,medium,How many layers in OSI model?,5,6,7,8,7,geeksforgeeks
+technical,Networking,medium,What is NAT in networking?,Network Address Translation,Network Access Terminal,Normal Address Transfer,None,Network Address Translation,geeksforgeeks
+technical,Networking,medium,Which layer of OSI is responsible for end-to-end communication?,Network,Transport,Session,Application,Transport,geeksforgeeks
+technical,Networking,medium,What is ARP protocol?,Translates domain to IP,Translates IP to MAC,Translates MAC to IP,Assigns IP addresses,Translates IP to MAC,geeksforgeeks
+technical,Networking,medium,What is a VPN?,Virtual Private Network,Very Private Node,Virtual Port Network,None,Virtual Private Network,geeksforgeeks
+technical,Networking,hard,What is BGP protocol?,Border Gateway Protocol,Byte Gateway Protocol,Basic Gateway Protocol,None,Border Gateway Protocol,geeksforgeeks
+technical,Networking,hard,What is DHCP?,Dynamic Host Configuration Protocol,Dynamic Host Connection Protocol,Data Host Configuration Protocol,None,Dynamic Host Configuration Protocol,geeksforgeeks
+technical,Networking,hard,What is difference between latency and bandwidth?,Same thing,Latency is delay bandwidth is rate,Bandwidth is delay latency is rate,Both measure speed,Latency is delay bandwidth is rate,geeksforgeeks
+technical,Networking,hard,What is STP in networking?,Shortest path,Spanning Tree Protocol,Secure Transfer Protocol,None,Spanning Tree Protocol,geeksforgeeks
+technical,Networking,hard,What is a DMZ in network security?,Demilitarized Zone,Data Management Zone,Dynamic Memory Zone,None,Demilitarized Zone,geeksforgeeks
+technical,Networking,hard,What is CDN?,Content Delivery Network,Central Data Node,Core Distributed Network,None,Content Delivery Network,geeksforgeeks
+technical,Networking,hard,What is the difference between symmetric and asymmetric encryption?,Same key vs different keys,Speed difference,Length difference,Both use public key,Same key vs different keys,geeksforgeeks
+technical,Networking,hard,What is a zero-day vulnerability?,Known vulnerability,Unknown vulnerability being exploited,Old vulnerability,Patched vulnerability,Unknown vulnerability being exploited,geeksforgeeks
+technical,Networking,hard,What is MPLS?,Multiprotocol Label Switching,Multiple Protocol Layer System,Main Protocol Link System,None,Multiprotocol Label Switching,geeksforgeeks
+technical,Networking,hard,What is anycast routing?,One-to-many,One-to-nearest,One-to-one,Many-to-many,One-to-nearest,geeksforgeeks
+technical,Networking,easy,What is an IP address?,Website name,Unique identifier for device on network,Email address,Password,Unique identifier for device on network,geeksforgeeks
+technical,Networking,easy,Which protocol is used for file transfer?,HTTP,FTP,SMTP,DNS,FTP,geeksforgeeks
+technical,Networking,medium,What is full form of TCP?,Transmission Control Protocol,Transfer Control Protocol,Terminal Control Protocol,None,Transmission Control Protocol,geeksforgeeks
+technical,Networking,medium,Private IP ranges include?,10.0.0.0-10.255.255.255,200.0.0.0-200.255.0.0,8.8.8.0-8.8.8.255,50.0.0.0-50.255.255.255,10.0.0.0-10.255.255.255,geeksforgeeks
+technical,Networking,easy,What does LAN stand for?,Local Area Network,Large Area Network,Linked Area Network,None,Local Area Network,geeksforgeeks
+technical,Networking,medium,What is ping command used for?,Send email,Test network connectivity,Transfer files,Check disk,Test network connectivity,geeksforgeeks
+technical,Networking,hard,What is ICMP protocol mainly used for?,File transfer,Error messages and network diagnostics,Encryption,Routing,Error messages and network diagnostics,geeksforgeeks
+technical,Networking,easy,What is a switch in networking?,Connects different networks,Connects devices and sends to specific MAC,Amplifies signal,Assigns IP,Connects devices and sends to specific MAC,geeksforgeeks
+technical,Networking,medium,What is port 22 used for?,HTTP,FTP,SSH,SMTP,SSH,geeksforgeeks
+technical,Networking,hard,What is link state routing protocol example?,RIP,OSPF,BGP,EIGRP,OSPF,geeksforgeeks
+technical,OOP,easy,Which OOP concept hides internal details?,Inheritance,Polymorphism,Encapsulation,Abstraction,Encapsulation,geeksforgeeks
+technical,OOP,easy,Child class inheriting parent class is called?,Polymorphism,Encapsulation,Inheritance,Abstraction,Inheritance,geeksforgeeks
+technical,OOP,easy,Method overriding is example of?,Compile-time polymorphism,Runtime polymorphism,Encapsulation,Inheritance,Runtime polymorphism,geeksforgeeks
+technical,OOP,easy,What is a constructor?,Method called on object destruction,Method called on object creation,Static method,Private method,Method called on object creation,geeksforgeeks
+technical,OOP,easy,What is abstract class?,Class with no methods,Class with at least one abstract method,Class with only static methods,Final class,Class with at least one abstract method,geeksforgeeks
+technical,OOP,easy,What is an interface in OOP?,Class with implementations,Contract with only method signatures,Concrete class,Static class,Contract with only method signatures,geeksforgeeks
+technical,OOP,easy,What is object in OOP?,Template/blueprint,Instance of a class,Static method,Module,Instance of a class,geeksforgeeks
+technical,OOP,easy,What is class in OOP?,Instance,Object,Blueprint/template for objects,Module,Blueprint/template for objects,geeksforgeeks
+technical,OOP,easy,Which modifier makes method accessible only within class?,public,protected,private,default,private,geeksforgeeks
+technical,OOP,easy,What is IS-A relationship?,Composition,Inheritance,Association,Aggregation,Inheritance,geeksforgeeks
+technical,OOP,medium,Method overloading is example of?,Runtime polymorphism,Compile-time polymorphism,Inheritance,Abstraction,Compile-time polymorphism,geeksforgeeks
+technical,OOP,medium,What is difference between abstract class and interface?,Abstract can have implementations interface cannot (before Java 8),Both same,Interface can have implementations,Abstract cannot have constructors,Abstract can have implementations interface cannot (before Java 8),geeksforgeeks
+technical,OOP,medium,What is multiple inheritance?,One class inheriting from many,Many classes one parent,One-to-one,None,One class inheriting from many,geeksforgeeks
+technical,OOP,medium,What is diamond problem in OOP?,Problem with circular inheritance,Ambiguity in multiple inheritance,Memory issue,Compilation error,Ambiguity in multiple inheritance,geeksforgeeks
+technical,OOP,medium,What is HAS-A relationship?,Inheritance,Composition,Polymorphism,Abstraction,Composition,geeksforgeeks
+technical,OOP,medium,What is method hiding vs method overriding?,Hiding is static methods overriding is instance methods,Both same,Overriding is static,Hiding is instance,Hiding is static methods overriding is instance methods,geeksforgeeks
+technical,OOP,medium,What is the purpose of 'super' keyword?,Access current class,Access parent class,Create object,Static method,Access parent class,geeksforgeeks
+technical,OOP,medium,What is operator overloading?,Using same operator for different types,Creating new operators,Inheriting operators,None,Using same operator for different types,geeksforgeeks
+technical,OOP,medium,What is covariant return type?,Returning different type than parent,Returning same or subtype as parent,Returning null,Returning void,Returning same or subtype as parent,geeksforgeeks
+technical,OOP,medium,What is coupling in OOP?,Degree of dependency between classes,Speed of execution,Number of methods,Memory usage,Degree of dependency between classes,geeksforgeeks
+technical,OOP,hard,Which design pattern ensures single instance of class?,Factory,Observer,Singleton,Decorator,Singleton,geeksforgeeks
+technical,OOP,hard,What is Observer design pattern?,One class inherits another,One object notifies many dependents of state change,Creating objects,Encapsulating algorithms,One object notifies many dependents of state change,geeksforgeeks
+technical,OOP,hard,What is Factory design pattern?,Creates objects without specifying exact class,Ensures single instance,Adds behavior dynamically,Defines algorithm skeleton,Creates objects without specifying exact class,geeksforgeeks
+technical,OOP,hard,What is Decorator pattern?,Inheritance of class,Adds behavior to object dynamically,Creates single instance,Notifies observers,Adds behavior to object dynamically,geeksforgeeks
+technical,OOP,hard,What is SOLID principles?,5 OOP design principles,3 design patterns,Database principles,Security principles,5 OOP design principles,geeksforgeeks
+technical,OOP,hard,What is Liskov Substitution Principle?,Subclass should be replaceable for parent class,All methods public,No inheritance,Only interfaces,Subclass should be replaceable for parent class,geeksforgeeks
+technical,OOP,hard,What is Dependency Injection?,Hardcoding dependencies,Injecting dependencies from outside,Creating objects inside class,Static dependencies,Injecting dependencies from outside,geeksforgeeks
+technical,OOP,hard,What is the difference between Strategy and State pattern?,Strategy selects algorithm State changes behavior based on state,Both same,State selects algorithm,No difference,Strategy selects algorithm State changes behavior based on state,geeksforgeeks
+technical,OOP,hard,What is cohesion in software design?,Low coupling,High degree of relatedness within a module,Number of classes,Speed of code,High degree of relatedness within a module,geeksforgeeks
+technical,OOP,hard,What is Law of Demeter?,Each unit should have limited knowledge,Maximum inheritance,All methods public,Static classes only,Each unit should have limited knowledge,geeksforgeeks
+technical,OOP,easy,What is polymorphism?,Many forms of single entity,Same form,One method,Static only,Many forms of single entity,geeksforgeeks
+technical,OOP,easy,What is encapsulation?,Binding data and methods together,Only data,Only methods,Inheritance,Binding data and methods together,geeksforgeeks
+technical,OOP,medium,What is final keyword in Java/C++?,Variable can change,Prevents inheritance or overriding,Creates object,Allocates memory,Prevents inheritance or overriding,geeksforgeeks
+technical,OOP,medium,What is static method?,Method per object,Method shared by all objects,Abstract method,Private method,Method shared by all objects,geeksforgeeks
+technical,OOP,easy,What is destructor?,Initializes object,Cleans up before object destroyed,Creates object,Static method,Cleans up before object destroyed,geeksforgeeks
+technical,OOP,medium,What is association in OOP?,Objects dependent on each other's existence,Objects using each other,Inheritance,Polymorphism,Objects using each other,geeksforgeeks
+technical,OOP,hard,What is Template Method pattern?,Override specific steps of algorithm in subclass,Create objects,Notify observers,Single instance,Override specific steps of algorithm in subclass,geeksforgeeks
+technical,OOP,easy,Can interface be instantiated?,Yes,No,Sometimes,Depends,No,geeksforgeeks
+technical,OOP,medium,What is Mixin in OOP?,Multiple inheritance mechanism,Type of inheritance,Design pattern,Abstract class,Multiple inheritance mechanism,geeksforgeeks
+technical,OOP,hard,What is difference between Proxy and Adapter pattern?,Proxy controls access Adapter converts interface,Both same,Adapter controls access,No difference,Proxy controls access Adapter converts interface,geeksforgeeks
+technical,Operating Systems,easy,Which is NOT an OS?,Linux,Windows,Oracle,macOS,Oracle,geeksforgeeks
+technical,Operating Systems,easy,What is OS?,Hardware only,Software managing hardware and software resources,Programming language,Database,Software managing hardware and software resources,geeksforgeeks
+technical,Operating Systems,easy,What is a process?,Program in execution,Stored program,File,Thread,Program in execution,geeksforgeeks
+technical,Operating Systems,easy,What is a thread?,Heavy process,Lightweight process within a process,Independent program,OS component,Lightweight process within a process,geeksforgeeks
+technical,Operating Systems,easy,What is virtual memory?,Extra RAM,Using disk as extension of RAM,GPU memory,Cache,Using disk as extension of RAM,geeksforgeeks
+technical,Operating Systems,easy,What is a semaphore?,Sorting algorithm,Synchronization primitive,File system,Network protocol,Synchronization primitive,geeksforgeeks
+technical,Operating Systems,easy,What does CPU stand for?,Central Processing Unit,Core Processing Unit,Control Processing Unit,Central Program Unit,Central Processing Unit,geeksforgeeks
+technical,Operating Systems,easy,What is context switching?,Changing CPU from one process to another,Changing memory,Changing files,Changing threads to processes,Changing CPU from one process to another,geeksforgeeks
+technical,Operating Systems,easy,What is deadlock?,Process running too fast,Processes waiting for each other indefinitely,Memory overflow,CPU overload,Processes waiting for each other indefinitely,geeksforgeeks
+technical,Operating Systems,easy,What is a scheduler in OS?,Memory allocator,Decides which process runs when,File manager,Network manager,Decides which process runs when,geeksforgeeks
+technical,Operating Systems,medium,Deadlock requires which conditions?,Mutual Exclusion only,All 4 Coffman conditions,Only circular wait,Only no preemption,All 4 Coffman conditions,geeksforgeeks
+technical,Operating Systems,medium,Which page replacement has least page faults theoretically?,FIFO,LRU,Optimal,LFU,Optimal,geeksforgeeks
+technical,Operating Systems,medium,What is thrashing in OS?,CPU doing useful work,Excessive page swapping,Memory leak,Thread starvation,Excessive page swapping,geeksforgeeks
+technical,Operating Systems,medium,What is the difference between preemptive and non-preemptive scheduling?,Preemptive can interrupt non-preemptive cannot,Non-preemptive can interrupt,Both same,Preemptive is slower,Preemptive can interrupt non-preemptive cannot,geeksforgeeks
+technical,Operating Systems,medium,What is a critical section?,Section of code accessing shared resources,Fastest code,Memory section,CPU register,Section of code accessing shared resources,geeksforgeeks
+technical,Operating Systems,medium,What is mutex?,Multiple exclusion,Mutual exclusion locking mechanism,Memory allocator,None,Mutual exclusion locking mechanism,geeksforgeeks
+technical,Operating Systems,medium,What is the purpose of page table?,Stores files,Maps virtual to physical addresses,Stores processes,Cache data,Maps virtual to physical addresses,geeksforgeeks
+technical,Operating Systems,medium,What is RAID in storage?,Random Access In Disk,Redundant Array of Inexpensive Disks,Rapid Array of Independent Drives,None,Redundant Array of Inexpensive Disks,geeksforgeeks
+technical,Operating Systems,medium,What is a zombie process?,Process waiting to be killed,Process that finished but parent not read exit status,Sleeping process,Background process,Process that finished but parent not read exit status,geeksforgeeks
+technical,Operating Systems,medium,What is inode in file system?,File name,File metadata structure,Directory,Hard link,File metadata structure,geeksforgeeks
+technical,Operating Systems,hard,What is Belady's anomaly?,More frames = fewer page faults always,More frames can increase page faults with FIFO,LRU always optimal,Optimal impossible,More frames can increase page faults with FIFO,geeksforgeeks
+technical,Operating Systems,hard,What is difference between process and thread in terms of memory?,Threads share memory processes don't,Processes share memory threads don't,Both share,Neither share,Threads share memory processes don't,geeksforgeeks
+technical,Operating Systems,hard,What is priority inversion?,High priority waits for low priority,Low priority preempted,Both same priority,No priorities,High priority waits for low priority,geeksforgeeks
+technical,Operating Systems,hard,What is TLB in OS?,Translation Lookaside Buffer,Transfer Layer Buffer,Thread Local Block,None,Translation Lookaside Buffer,geeksforgeeks
+technical,Operating Systems,hard,What is the difference between hard and soft real-time systems?,Hard has strict deadlines soft has flexible deadlines,Both have strict deadlines,Soft is stricter,No difference,Hard has strict deadlines soft has flexible deadlines,geeksforgeeks
+technical,Operating Systems,hard,What is copy-on-write?,Copy all on create,Copy only when modified,Never copy,Continuous copy,Copy only when modified,geeksforgeeks
+technical,Operating Systems,hard,What is hypervisor?,OS component,Software that creates virtual machines,File system,Network driver,Software that creates virtual machines,geeksforgeeks
+technical,Operating Systems,hard,What is memory segmentation?,Dividing memory into variable-size segments,Dividing into fixed pages,Random memory access,Memory compression,Dividing memory into variable-size segments,geeksforgeeks
+technical,Operating Systems,hard,What is banker's algorithm used for?,Sorting,Deadlock avoidance,Memory allocation,Page replacement,Deadlock avoidance,geeksforgeeks
+technical,Operating Systems,hard,What is a spinlock?,Lock that causes waiting by spinning,Heavy mutex,File lock,Network lock,Lock that causes waiting by spinning,geeksforgeeks
+technical,Operating Systems,easy,What is multiprogramming?,Running multiple programs simultaneously (interleaved),Running one program,Parallel execution,Distributed computing,Running multiple programs simultaneously (interleaved),geeksforgeeks
+technical,Operating Systems,easy,What is a file system?,Manages hardware,Organizes and stores files on disk,Network component,Process scheduler,Organizes and stores files on disk,geeksforgeeks
+technical,Operating Systems,medium,What is the purpose of cache memory?,Permanent storage,Fast temporary storage between CPU and RAM,Long-term memory,Virtual memory,Fast temporary storage between CPU and RAM,geeksforgeeks
+technical,Operating Systems,medium,What is starvation in OS?,CPU overload,Process never gets CPU time,Memory overflow,Deadlock,Process never gets CPU time,geeksforgeeks
+technical,Operating Systems,easy,What does RAM stand for?,Read Access Memory,Random Access Memory,Rapid Access Memory,Read And Memory,Random Access Memory,geeksforgeeks
+technical,Operating Systems,medium,What is a system call?,OS function callable by user programs,User function,Hardware instruction,Network call,OS function callable by user programs,geeksforgeeks
+technical,Operating Systems,hard,What is preemptive multitasking?,OS can take CPU from process,Process controls when to give up CPU,Only single task,Parallel execution,OS can take CPU from process,geeksforgeeks
+technical,Operating Systems,easy,What is the role of kernel in OS?,User interface,Core OS that manages resources,Network manager,Only file management,Core OS that manages resources,geeksforgeeks
+technical,Operating Systems,medium,What is swapping in OS?,Replacing damaged data,Moving process from memory to disk temporarily,Network swapping,Thread switching,Moving process from memory to disk temporarily,geeksforgeeks
+technical,Operating Systems,hard,What is difference between logical and physical address?,Logical is generated by CPU physical is actual RAM address,Same thing,Physical is generated by CPU,No difference,Logical is generated by CPU physical is actual RAM address,geeksforgeeks
+technical,Web Development,easy,Full form of HTML?,Hyper Text Markup Language,High Text Markup Language,Hyper Transfer Markup Language,None,Hyper Text Markup Language,geeksforgeeks
+technical,Web Development,easy,CSS stands for?,Cascading Style Sheets,Computer Style Sheets,Colorful Style Sheets,Creative Style Sheets,Cascading Style Sheets,geeksforgeeks
+technical,Web Development,easy,Which HTML tag creates hyperlink?,<link>,<href>,<a>,<url>,<a>,geeksforgeeks
+technical,Web Development,easy,Which CSS property changes text color?,font-color,text-color,color,foreground,color,geeksforgeeks
+technical,Web Development,easy,What does DOM stand for?,Document Object Model,Data Object Model,Document Oriented Model,Dynamic Object Model,Document Object Model,geeksforgeeks
+technical,Web Development,easy,Which HTTP method is for retrieving data?,POST,PUT,GET,DELETE,GET,geeksforgeeks
+technical,Web Development,easy,What is JavaScript?,Markup language,Styling language,Programming language for web,Database language,Programming language for web,geeksforgeeks
+technical,Web Development,easy,What is a cookie in web?,Stored file,Small data stored in browser,Image file,JavaScript function,Small data stored in browser,geeksforgeeks
+technical,Web Development,easy,What does API stand for?,Application Programming Interface,Application Process Interface,Automated Programming Interface,None,Application Programming Interface,geeksforgeeks
+technical,Web Development,easy,What is responsive design?,Fixed layout,Design adapting to screen size,Fast loading,Animated design,Design adapting to screen size,geeksforgeeks
+technical,Web Development,medium,Which HTTP method is used to send data to server?,GET,POST,PUT,DELETE,POST,geeksforgeeks
+technical,Web Development,medium,What is REST API?,Real State Transfer,Representational State Transfer,Remote State Transfer,None,Representational State Transfer,geeksforgeeks
+technical,Web Development,medium,REST API is stateless means?,Server stores session,Each request is independent,Client stores all,Both store,Each request is independent,geeksforgeeks
+technical,Web Development,medium,What is AJAX?,Asynchronous JavaScript And XML,Automatic JavaScript Action,Advanced Java Access,None,Asynchronous JavaScript And XML,geeksforgeeks
+technical,Web Development,medium,What is the difference between GET and POST?,GET sends data in URL POST in body,POST sends data in URL GET in body,Both send in URL,Both send in body,GET sends data in URL POST in body,geeksforgeeks
+technical,Web Development,medium,What is a session in web applications?,Browser window,Server-side user state storage,Cookie type,URL parameter,Server-side user state storage,geeksforgeeks
+technical,Web Development,medium,What is JWT?,Java Web Token,JSON Web Token,Java Wrapper Type,JSON Wrapper Type,JSON Web Token,geeksforgeeks
+technical,Web Development,medium,What is CORS?,Cross-Origin Resource Sharing,Cross-Origin Request Security,Create Origin Resource Sharing,None,Cross-Origin Resource Sharing,geeksforgeeks
+technical,Web Development,medium,What is the purpose of package.json in Node.js?,Config file with dependencies,CSS file,HTML file,Database config,Config file with dependencies,geeksforgeeks
+technical,Web Development,medium,What is difference between localStorage and sessionStorage?,localStorage persists sessionStorage cleared on tab close,Both persist,Both cleared on close,sessionStorage persists,localStorage persists sessionStorage cleared on tab close,geeksforgeeks
+technical,Web Development,hard,What is server-side rendering vs client-side rendering?,SSR renders on server CSR renders in browser,Both same,CSR renders on server,No difference,SSR renders on server CSR renders in browser,geeksforgeeks
+technical,Web Development,hard,What is WebSocket?,One-way communication,Bi-directional real-time communication,File transfer protocol,Database protocol,Bi-directional real-time communication,geeksforgeeks
+technical,Web Development,hard,What is OAuth?,Password protocol,Authorization framework,Encryption standard,Database protocol,Authorization framework,geeksforgeeks
+technical,Web Development,hard,What is a microservices architecture?,Single large service,Small independent services,Database architecture,Frontend architecture,Small independent services,geeksforgeeks
+technical,Web Development,hard,What is GraphQL?,Database query language,API query language as alternative to REST,HTML version,CSS version,API query language as alternative to REST,geeksforgeeks
+technical,Web Development,hard,What is a CDN and why use it?,Central Database Network for speed,Content Delivery Network to reduce latency,Cloud Data Network,None,Content Delivery Network to reduce latency,geeksforgeeks
+technical,Web Development,hard,What is the difference between authentication and authorization?,Authentication = who you are authorization = what you can do,Same thing,Authorization = who you are,No difference,Authentication = who you are authorization = what you can do,geeksforgeeks
+technical,Web Development,hard,What is SQL injection?,Normal SQL query,Malicious SQL in input field,SQL optimization,Database backup,Malicious SQL in input field,geeksforgeeks
+technical,Web Development,hard,What is a reverse proxy?,Client-side proxy,Server-side proxy hiding backend servers,Network device,Load balancer only,Server-side proxy hiding backend servers,geeksforgeeks
+technical,Web Development,hard,What is idempotent HTTP method?,Method returning same result repeated calls,One-time method,Fast method,Secure method,Method returning same result repeated calls,geeksforgeeks
+technical,Web Development,easy,What does src attribute in img tag specify?,Image style,Image source path,Image size,Image alt text,Image source path,geeksforgeeks
+technical,Web Development,easy,Which CSS property makes element invisible but keeps space?,visibility:hidden,display:none,opacity:1,hidden:true,visibility:hidden,geeksforgeeks
+technical,Web Development,medium,What is event bubbling in JavaScript?,Events going from child to parent,Events going from parent to child,Stopping events,Creating events,Events going from child to parent,geeksforgeeks
+technical,Web Development,medium,What is promise in JavaScript?,Guaranteed result,Async operation result object,Function,Variable,Async operation result object,geeksforgeeks
+technical,Web Development,easy,What is the function of <head> tag in HTML?,Displays content,Contains metadata and links,Creates tables,Makes forms,Contains metadata and links,geeksforgeeks
+technical,Web Development,medium,What is virtual DOM in React?,Actual DOM copy,Lightweight copy of real DOM for performance,Server DOM,Database,Lightweight copy of real DOM for performance,geeksforgeeks
+technical,Web Development,hard,What is Content Security Policy?,Access control,HTTP header to prevent XSS attacks,CORS policy,Cookie policy,HTTP header to prevent XSS attacks,geeksforgeeks
+technical,Web Development,easy,Which JavaScript method adds element to end of array?,push(),pop(),shift(),unshift(),push(),geeksforgeeks
+technical,Web Development,medium,What is async/await in JavaScript?,Synchronous code,Cleaner syntax for promises,Loop type,Object method,Cleaner syntax for promises,geeksforgeeks
+technical,Web Development,hard,What is HSTS in web security?,HTTP Strict Transport Security,High Speed Transport System,HTTP Session Transfer Security,None,HTTP Strict Transport Security,geeksforgeeks
+soft_skill,Communication,easy,Active listening means?,Waiting for your turn,Fully concentrating on speaker,Multitasking,Interrupting,Fully concentrating on speaker,general
+soft_skill,Communication,easy,Best approach to resolve team conflict?,Ignore it,Escalate immediately,Open discussion,Avoid the person,Open discussion,general
+soft_skill,Communication,easy,Effective communication requires?,Only speaking skills,Speaking and listening skills,Only listening,Writing only,Speaking and listening skills,general
+soft_skill,Communication,easy,Body language accounts for what % of communication?,55%,38%,7%,20%,55%,general
+soft_skill,Communication,easy,What is feedback in communication?,Criticism,Response to communication,Suggestion,Order,Response to communication,general
+soft_skill,Communication,easy,Which is a barrier to effective communication?,Clear language,Noise and distraction,Listening,Eye contact,Noise and distraction,general
+soft_skill,Communication,easy,What is verbal communication?,Gestures,Spoken or written words,Body language,Silence,Spoken or written words,general
+soft_skill,Communication,easy,What is the sender in communication model?,Receiver,Originator of message,Medium,Channel,Originator of message,general
+soft_skill,Communication,easy,Empathy in communication means?,Agreeing with everything,Understanding others feelings,Feeling sorry,Judging others,Understanding others feelings,general
+soft_skill,Communication,easy,Tone of voice falls under which communication?,Verbal,Non-verbal,Written,Visual,Non-verbal,general
+soft_skill,Communication,medium,In a presentation focus primarily on?,Reading slides,Audience engagement,Memorising content,Speed of delivery,Audience engagement,general
+soft_skill,Communication,medium,What is assertive communication?,Aggressive,Expressing thoughts respecting others,Passive,Manipulative,Expressing thoughts respecting others,general
+soft_skill,Communication,medium,Paraphrasing in communication means?,Repeating word for word,Restating in your own words,Translating,Summarizing briefly,Restating in your own words,general
+soft_skill,Communication,medium,What is the 7-38-55 rule in communication?,7% words 38% tone 55% body language,7% body 38% words 55% tone,All equal,55% words 38% body 7% tone,7% words 38% tone 55% body language,general
+soft_skill,Communication,medium,What is downward communication in organization?,Employee to manager,Manager to employee,Peer to peer,External communication,Manager to employee,general
+soft_skill,Communication,medium,What is jargon as communication barrier?,Technical language unknown to listener,Loud voice,Poor handwriting,Slow internet,Technical language unknown to listener,general
+soft_skill,Communication,medium,What is grapevine communication?,Formal communication,Informal communication through unofficial channels,Written communication,Digital communication,Informal communication through unofficial channels,general
+soft_skill,Communication,medium,What is cross-cultural communication challenge?,Language and cultural differences,Technical problems,Physical distance,Time zones,Language and cultural differences,general
+soft_skill,Communication,medium,In business email what should subject line be?,Long and detailed,Clear and concise,Empty,Casual,Clear and concise,general
+soft_skill,Communication,medium,What is active voice vs passive voice in writing?,Active is clearer and direct passive is indirect,Both same,Passive is clearer,No preference,Active is clearer and direct passive is indirect,general
+soft_skill,Communication,hard,What is Johari Window model?,Memory model,Self-awareness and communication model with 4 panes,Leadership model,Motivation model,Self-awareness and communication model with 4 panes,general
+soft_skill,Communication,hard,What is the difference between persuasion and manipulation?,Persuasion is ethical manipulation is not,Both same,Manipulation is ethical,No difference,Persuasion is ethical manipulation is not,general
+soft_skill,Communication,hard,What is metacommunication?,Communication about communication,Fast communication,Silent communication,Written communication,Communication about communication,general
+soft_skill,Communication,hard,What is the Shannon-Weaver communication model?,Circular model,Linear transmission model with noise,Network model,Dynamic model,Linear transmission model with noise,general
+soft_skill,Communication,hard,What is transactional analysis in communication?,Financial analysis,People communicate from Parent Adult Child ego states,Statistical analysis,Technical analysis,People communicate from Parent Adult Child ego states,general
+soft_skill,Communication,hard,What is proxemics in communication?,Study of vocal tone,Study of personal space in communication,Study of gestures,Study of eye contact,Study of personal space in communication,general
+soft_skill,Communication,hard,What is cognitive dissonance in communication?,Clear thinking,Mental discomfort from conflicting beliefs,Sharp memory,Fast processing,Mental discomfort from conflicting beliefs,general
+soft_skill,Communication,hard,What is framing effect in communication?,Speaker's position,How presentation of info affects decision,Picture frame,TV show,How presentation of info affects decision,general
+soft_skill,Communication,hard,What is paralinguistics?,Study of written language,Voice qualities and non-verbal vocal aspects,Study of body language,Study of silence,Voice qualities and non-verbal vocal aspects,general
+soft_skill,Communication,hard,What is dialogic communication?,One-way communication,Two-way mutual understanding communication,Written only,Silent communication,Two-way mutual understanding communication,general
+soft_skill,Communication,easy,What is feedback sandwich technique?,Two criticisms around praise,Two praises around criticism,Only criticism,Only praise,Two praises around criticism,general
+soft_skill,Communication,easy,What is first impression in communication?,Not important,Formed in first 7 seconds,Takes hours,Based only on words,Formed in first 7 seconds,general
+soft_skill,Communication,medium,What is the purpose of elevator pitch?,Long sales presentation,Brief compelling introduction in 30-60 seconds,Technical explanation,Team meeting,Brief compelling introduction in 30-60 seconds,general
+soft_skill,Communication,medium,What is written communication advantage over verbal?,More permanent and less likely to be misunderstood,Faster,More personal,Cheaper,More permanent and less likely to be misunderstood,general
+soft_skill,Communication,easy,Nodding head while listening shows?,Disagreement,Active engagement and understanding,Boredom,Confusion,Active engagement and understanding,general
+soft_skill,Communication,medium,What is noise in communication model?,Music,Anything that distorts message,Volume level,Silence,Anything that distorts message,general
+soft_skill,Communication,hard,What is Aristotle's three modes of persuasion?,Logos only,Ethos Pathos Logos,Pathos only,Logos and Ethos only,Ethos Pathos Logos,general
+soft_skill,Communication,easy,What is a formal communication?,Personal chat,Official business communication,Casual talk,Text message,Official business communication,general
+soft_skill,Communication,medium,When giving critical feedback best approach is?,Criticize publicly,Focus on behavior not person,Avoid feedback,Blame entirely,Focus on behavior not person,general
+soft_skill,Communication,hard,What is the concept of active voice in professional communication?,Only grammar rule,Creates more direct and powerful writing,Old fashioned,Academic only,Creates more direct and powerful writing,general
+soft_skill,Time Management,easy,Pomodoro technique work interval?,15 mins,25 mins,45 mins,60 mins,25 mins,general
+soft_skill,Time Management,easy,Eisenhower Matrix divides tasks by?,Urgency and Importance,Difficulty and Time,Cost and Benefit,Size and Priority,Urgency and Importance,general
+soft_skill,Time Management,easy,Which quadrant in Eisenhower Matrix should be done first?,Not urgent not important,Urgent and important,Urgent not important,Important not urgent,Urgent and important,general
+soft_skill,Time Management,easy,What does SMART goal stand for?,Smart Manageable Achievable Realistic Timely,Specific Measurable Achievable Relevant Time-bound,Simple Motivating Achievable Reliable Tactical,None,Specific Measurable Achievable Relevant Time-bound,general
+soft_skill,Time Management,easy,What is procrastination?,Working fast,Delaying tasks unnecessarily,Multitasking,Planning ahead,Delaying tasks unnecessarily,general
+soft_skill,Time Management,easy,What is time blocking?,Blocking others,Assigning specific time slots to tasks,Avoiding calendar,Multitasking,Assigning specific time slots to tasks,general
+soft_skill,Time Management,easy,What is the GTD method?,Get Things Done productivity method,General Task Database,Group Task Division,None,Get Things Done productivity method,general
+soft_skill,Time Management,easy,What is batch processing in time management?,Doing tasks one by one,Grouping similar tasks together,Random task execution,No planning,Grouping similar tasks together,general
+soft_skill,Time Management,easy,What is deadline?,Target completion time,Start time,Break time,Review time,Target completion time,general
+soft_skill,Time Management,easy,What is delegation?,Avoiding tasks,Assigning tasks to others,Doing everything yourself,Postponing tasks,Assigning tasks to others,general
+soft_skill,Time Management,medium,Parkinson's Law states?,Work requires exact time,Work expands to fill available time,Work is always minimal,80-20 rule,Work expands to fill available time,general
+soft_skill,Time Management,medium,80/20 rule (Pareto Principle) in time management means?,80% time for 20% tasks,20% of activities give 80% of results,Equal distribution,Random prioritization,20% of activities give 80% of results,general
+soft_skill,Time Management,medium,What is energy management in time management?,Physical exercise,Aligning tasks with energy levels throughout day,Saving electricity,Power management,Aligning tasks with energy levels throughout day,general
+soft_skill,Time Management,medium,What is the difference between urgent and important tasks?,Same thing,Urgent demands immediate attention important has long-term value,Important is urgent,Urgent has long-term value,Urgent demands immediate attention important has long-term value,general
+soft_skill,Time Management,medium,What is Eat the Frog technique?,Eating breakfast,Doing hardest task first thing in morning,Skipping meals,Afternoon routine,Doing hardest task first thing in morning,general
+soft_skill,Time Management,medium,What is review in time management cycle?,Skipping tasks,Evaluating progress and adjusting plans,Only planning,Starting tasks,Evaluating progress and adjusting plans,general
+soft_skill,Time Management,medium,What is context switching cost?,No cost,Time and mental energy lost switching between tasks,Memory cost,Salary cost,Time and mental energy lost switching between tasks,general
+soft_skill,Time Management,medium,What is a weekly review in GTD?,Monthly meeting,Weekly reflection on tasks and goals,Daily standup,Annual review,Weekly reflection on tasks and goals,general
+soft_skill,Time Management,medium,What is the two-minute rule?,Work for 2 minutes,If task takes less than 2 min do it now,Wait 2 minutes,Break every 2 minutes,If task takes less than 2 min do it now,general
+soft_skill,Time Management,medium,What is deep work vs shallow work?,Same,Deep work is cognitively demanding shallow is routine,Shallow is harder,No difference,Deep work is cognitively demanding shallow is routine,general
+soft_skill,Time Management,hard,What is timeboxing vs time blocking?,Same thing,Timeboxing has fixed end time time blocking reserves slots,Time blocking has fixed end time,No difference,Timeboxing has fixed end time time blocking reserves slots,general
+soft_skill,Time Management,hard,What is the concept of flow state in productivity?,Day dreaming,Optimal state of complete absorption in work,Sleeping,Multitasking,Optimal state of complete absorption in work,general
+soft_skill,Time Management,hard,What is OKR methodology?,Old Key Results,Objectives and Key Results goal framework,Open Knowledge Repository,None,Objectives and Key Results goal framework,general
+soft_skill,Time Management,hard,What is the cost of multitasking according to research?,Increases productivity,Reduces productivity and increases errors,No effect,Only affects memory,Reduces productivity and increases errors,general
+soft_skill,Time Management,hard,What is Kanban board in time management?,Japanese food,Visual workflow management system,Financial tool,HR tool,Visual workflow management system,general
+soft_skill,Time Management,hard,What is the purpose of a morning routine in time management?,Waking up early,Setting positive tone and priorities for day,Exercise only,Eating breakfast,Setting positive tone and priorities for day,general
+soft_skill,Time Management,hard,What is temptation bundling technique?,Bundling work,Pairing enjoyable activity with necessary task,Group work,Task merging,Pairing enjoyable activity with necessary task,general
+soft_skill,Time Management,hard,What is the zero-inbox approach?,Deleting all emails,Processing email to empty inbox regularly,Never using email,Mass unsubscribe,Processing email to empty inbox regularly,general
+soft_skill,Time Management,hard,What is planning fallacy?,Accurate planning,Tendency to underestimate task completion time,Overestimating time,Perfect planning,Tendency to underestimate task completion time,general
+soft_skill,Time Management,hard,What is cognitive load in time management?,Physical tiredness,Mental effort required for tasks affecting productivity,Emotional stress,Physical workload,Mental effort required for tasks affecting productivity,general
+soft_skill,Time Management,easy,What is a to-do list?,Shopping list,List of tasks to complete,Random notes,Calendar,List of tasks to complete,general
+soft_skill,Time Management,easy,What is priority?,Importance of task,Task duration,Task difficulty,Cost of task,Importance of task,general
+soft_skill,Time Management,medium,What is the 1-3-5 rule in task management?,1 big 3 medium 5 small tasks per day,1+3+5 hours,Ratio method,None,1 big 3 medium 5 small tasks per day,general
+soft_skill,Time Management,medium,What is inbox zero philosophy?,Empty trash only,Keeping email inbox empty and organized,No emails,All emails in one folder,Keeping email inbox empty and organized,general
+soft_skill,Time Management,easy,What is a calendar in time management?,Phone app,Tool for scheduling and planning time,Decoration,Social media,Tool for scheduling and planning time,general
+soft_skill,Time Management,medium,What is the MIT method in productivity?,MIT University method,Most Important Tasks method,Multiple Input Tasks,None,Most Important Tasks method,general
+soft_skill,Time Management,hard,What is the concept of decision fatigue?,Making bad decisions always,Reduced quality of decisions after making many,Only physical fatigue,Morning issue,Reduced quality of decisions after making many,general
+soft_skill,Time Management,easy,What is a break in work?,Distraction,Rest period to maintain productivity,Vacation,Work pause,Rest period to maintain productivity,general
+soft_skill,Time Management,medium,What is time audit?,Tax audit,Tracking how you actually spend time,Salary audit,Performance review,Tracking how you actually spend time,general
+soft_skill,Time Management,hard,What is monotasking vs multitasking research finding?,Equal productivity,Monotasking more productive than multitasking,Multitasking better,Depends on person,Monotasking more productive than multitasking,general
+soft_skill,Leadership,easy,A good leader should primarily?,Command,Inspire,Demand,Control,Inspire,general
+soft_skill,Leadership,easy,What is leadership?,Managing people,Influencing others to achieve goals,Giving orders,Controlling resources,Influencing others to achieve goals,general
+soft_skill,Leadership,easy,What is vision in leadership?,Short-term goal,Clear picture of desired future,Budget plan,HR plan,Clear picture of desired future,general
+soft_skill,Leadership,easy,What is delegation in leadership?,Avoiding responsibility,Assigning tasks to right team members,Doing all yourself,Random assignment,Assigning tasks to right team members,general
+soft_skill,Leadership,easy,What is feedback in leadership context?,Criticism only,Constructive information about performance,Random opinion,Complaint,Constructive information about performance,general
+soft_skill,Leadership,easy,What is accountability in leadership?,Blaming others,Taking responsibility for outcomes,Avoiding problems,Ignoring results,Taking responsibility for outcomes,general
+soft_skill,Leadership,easy,What is a democratic leadership style?,Leader decides alone,Team participates in decisions,No decisions,Autocratic,Team participates in decisions,general
+soft_skill,Leadership,easy,What is trust in leadership?,Blind faith,Confidence in reliability and integrity,Agreement on everything,Friendship,Confidence in reliability and integrity,general
+soft_skill,Leadership,easy,What is an autocratic leadership style?,Team decides,Leader makes all decisions without consulting,No decisions,Lazy leadership,Leader makes all decisions without consulting,general
+soft_skill,Leadership,easy,What is servant leadership?,Leader serves own interests,Leader serves team's needs,Being submissive,No authority,Leader serves team's needs,general
+soft_skill,Leadership,medium,Transformational leadership focuses on?,Rewards and punishment,Inspiring change and vision,Following rules strictly,Micromanaging,Inspiring change and vision,general
+soft_skill,Leadership,medium,What is situational leadership?,One style always,Adapting style to follower maturity,Only democratic,Only autocratic,Adapting style to follower maturity,general
+soft_skill,Leadership,medium,What is the difference between leadership and management?,Leadership is about people management about processes,Same thing,Management leads people,No difference,Leadership is about people management about processes,general
+soft_skill,Leadership,medium,What is emotional intelligence in leadership?,IQ only,Understanding and managing own and others emotions,Technical skill,Financial skill,Understanding and managing own and others emotions,general
+soft_skill,Leadership,medium,What is laissez-faire leadership?,Very controlling,Hands-off leader gives team full autonomy,Moderate control,Military style,Hands-off leader gives team full autonomy,general
+soft_skill,Leadership,medium,What are Blake-Mouton Grid leadership styles?,3 styles,5 styles based on concern for people and production,2 styles,7 styles,5 styles based on concern for people and production,general
+soft_skill,Leadership,medium,What is crisis leadership?,Normal leadership,Leading under extreme pressure and uncertainty,Planning leadership,Formal leadership,Leading under extreme pressure and uncertainty,general
+soft_skill,Leadership,medium,What is the difference between power and authority?,Same,Power is ability authority is formal right,Authority is ability,No difference,Power is ability authority is formal right,general
+soft_skill,Leadership,medium,What is inclusive leadership?,Excluding differences,Valuing and leveraging diverse perspectives,Uniform team,Gender focus only,Valuing and leveraging diverse perspectives,general
+soft_skill,Leadership,medium,What is strategic leadership?,Day-to-day management,Setting long-term direction and aligning organization,Operational control,HR management,Setting long-term direction and aligning organization,general
+soft_skill,Leadership,hard,What is Tuckman's leadership phases in team development?,3 phases,Forming Storming Norming Performing,5 phases,2 phases,Forming Storming Norming Performing,general
+soft_skill,Leadership,hard,What is transactional vs transformational leadership difference?,Transactional uses rewards transformational inspires change,Same,Transformational uses rewards,No difference,Transactional uses rewards transformational inspires change,general
+soft_skill,Leadership,hard,What is distributed leadership?,Central leader only,Leadership shared across team members,No leadership,External leadership,Leadership shared across team members,general
+soft_skill,Leadership,hard,What is psychological safety in teams?,Physical safety,Team members feel safe to take risks and speak up,Mental health only,Privacy,Team members feel safe to take risks and speak up,general
+soft_skill,Leadership,hard,What is charismatic leadership?,Strict leadership,Leading through charm and vision,Financial focus,Process focus,Leading through charm and vision,general
+soft_skill,Leadership,hard,What is the concept of Level 5 Leadership by Collins?,5 levels of management,Humility + professional will = highest leadership level,5 leadership styles,5 qualities,Humility + professional will = highest leadership level,general
+soft_skill,Leadership,hard,What is adaptive leadership?,Rigid approach,Helping organizations adapt to complex challenges,Technical leadership,Crisis only,Helping organizations adapt to complex challenges,general
+soft_skill,Leadership,hard,What is the difference between coaching and mentoring in leadership?,Same,Coaching is task-specific mentoring is long-term development,Mentoring is task-specific,No difference,Coaching is task-specific mentoring is long-term development,general
+soft_skill,Leadership,hard,What is organizational culture and leadership relationship?,No relation,Leaders shape and are shaped by organizational culture,Culture only follows leaders,Leaders ignore culture,Leaders shape and are shaped by organizational culture,general
+soft_skill,Leadership,hard,What is followership theory?,Leaders matter most,Followers' role is equally important to leadership,Only leaders matter,No followers,Followers' role is equally important to leadership,general
+soft_skill,Leadership,easy,What is motivation in leadership?,Punishment,Inspiring others to take action,Salary only,Fear,Inspiring others to take action,general
+soft_skill,Leadership,easy,What is integrity in leadership?,Perfect performance,Consistency between values and actions,Being strict,Financial honesty only,Consistency between values and actions,general
+soft_skill,Leadership,medium,What is coaching leadership style?,Telling what to do,Developing people through guidance and questions,Autocratic,Laissez-faire,Developing people through guidance and questions,general
+soft_skill,Leadership,medium,What is resilience in leadership?,Never failing,Ability to recover from setbacks,Physical strength,Ignoring problems,Ability to recover from setbacks,general
+soft_skill,Leadership,easy,What is communication importance in leadership?,Not important,Foundation of effective leadership,Optional,Technical skill only,Foundation of effective leadership,general
+soft_skill,Leadership,medium,What is conflict resolution in leadership?,Avoiding conflict,Addressing disagreements constructively,Punishing,Ignoring,Addressing disagreements constructively,general
+soft_skill,Leadership,hard,What is the concept of Leadership Pipeline?,Hiring pipeline,Framework for developing leaders at all levels,Sales pipeline,No concept,Framework for developing leaders at all levels,general
+soft_skill,Leadership,easy,What is a role model in leadership?,Follower,Leader others look up to and emulate,Manager only,External consultant,Leader others look up to and emulate,general
+soft_skill,Leadership,medium,What is empowerment in leadership?,Taking power away,Giving team authority and confidence to act,Controlling,Micromanaging,Giving team authority and confidence to act,general
+soft_skill,Leadership,hard,What is authentic leadership?,Acting a role,Leading from genuine self aligned with core values,Strict leadership,Formal leadership,Leading from genuine self aligned with core values,general
+soft_skill,Teamwork,easy,Most important in teamwork?,Individual performance,Trust and collaboration,Competition,Speed,Trust and collaboration,general
+soft_skill,Teamwork,easy,What is a team?,Group of people,People working together toward common goal,Crowd,Random group,People working together toward common goal,general
+soft_skill,Teamwork,easy,When teammate makes mistake you should?,Blame them,Ignore it,Help them learn and improve,Report immediately,Help them learn and improve,general
+soft_skill,Teamwork,easy,What is collaboration?,Working alone,Working jointly toward shared goal,Competition,Delegation,Working jointly toward shared goal,general
+soft_skill,Teamwork,easy,What is a team norm?,Rule forced on team,Agreed behavior standards within team,Formal policy,Legal requirement,Agreed behavior standards within team,general
+soft_skill,Teamwork,easy,What is peer feedback?,Only manager feedback,Feedback from teammates,Customer feedback,Formal review,Feedback from teammates,general
+soft_skill,Teamwork,easy,What is cross-functional team?,Same department,Team with members from different departments,External team,Management team,Team with members from different departments,general
+soft_skill,Teamwork,easy,What is team goal?,Individual target,Shared objective for whole team,Manager's goal,Annual goal,Shared objective for whole team,general
+soft_skill,Teamwork,easy,What is a role in a team?,Job title,Specific function or responsibility,Salary grade,Level,Specific function or responsibility,general
+soft_skill,Teamwork,easy,What is communication in teamwork?,Optional,Essential for coordinating and aligning team,Only emails,Only meetings,Essential for coordinating and aligning team,general
+soft_skill,Teamwork,medium,What are Tuckman's stages of team development?,Plan Do Check Act,Forming Storming Norming Performing,Define Measure Improve,None,Forming Storming Norming Performing,general
+soft_skill,Teamwork,medium,What is groupthink?,Good group thinking,Tendency to conform to group opinion without critical thought,Team creativity,Group decision,Tendency to conform to group opinion without critical thought,general
+soft_skill,Teamwork,medium,What is accountability in teamwork?,Blaming others,Each member responsible for commitments,No responsibility,Only leader responsible,Each member responsible for commitments,general
+soft_skill,Teamwork,medium,What is diversity in teams?,Same backgrounds,Variety of perspectives skills and backgrounds,Problem in teams,Not important,Variety of perspectives skills and backgrounds,general
+soft_skill,Teamwork,medium,What is the difference between a group and a team?,Same,Team has shared goal and interdependence group may not,Group is formal,No difference,Team has shared goal and interdependence group may not,general
+soft_skill,Teamwork,medium,What is a team charter?,Legal document,Document defining team purpose goals and norms,Org chart,Financial plan,Document defining team purpose goals and norms,general
+soft_skill,Teamwork,medium,What is psychological safety in team?,Physical safety,Feeling safe to speak up without fear,Mental health,Privacy,Feeling safe to speak up without fear,general
+soft_skill,Teamwork,medium,What is conflict in teams always?,Bad,Natural and can be constructive if managed well,Sign of failure,Personal issue,Natural and can be constructive if managed well,general
+soft_skill,Teamwork,medium,What is agile teamwork principle?,Strict hierarchy,Iterative collaborative and adaptive work,Waterfall approach,Individual work,Iterative collaborative and adaptive work,general
+soft_skill,Teamwork,medium,What is the free rider problem in teams?,Freelance work,Team member benefiting without contributing,External contractor,Remote worker,Team member benefiting without contributing,general
+soft_skill,Teamwork,hard,What is the concept of team efficacy?,Individual confidence,Shared belief in team's capability to succeed,Team salary,Team size,Shared belief in team's capability to succeed,general
+soft_skill,Teamwork,hard,What is Belbin's team roles theory?,Leadership styles,9 behavioral roles needed for effective team,Management theory,Communication model,9 behavioral roles needed for effective team,general
+soft_skill,Teamwork,hard,What is social loafing?,Extra effort in group,Reduced individual effort when in group,Team motivation,Collaboration,Reduced individual effort when in group,general
+soft_skill,Teamwork,hard,What is the difference between task conflict and relationship conflict in teams?,Same,Task conflict about work can be productive relationship conflict is personal,Relationship conflict is productive,No difference,Task conflict about work can be productive relationship conflict is personal,general
+soft_skill,Teamwork,hard,What is team cohesion?,Individual commitment,Degree to which team members stick together,Team size,Physical closeness,Degree to which team members stick together,general
+soft_skill,Teamwork,hard,What is distributed team challenge?,Physical space,Managing coordination across time zones and locations,Technical issues,Budget,Managing coordination across time zones and locations,general
+soft_skill,Teamwork,hard,What is the concept of T-shaped skills in teams?,Only deep expertise,Breadth of knowledge with depth in one area,Only broad knowledge,No skills,Breadth of knowledge with depth in one area,general
+soft_skill,Teamwork,hard,What is retrospective in agile teamwork?,Planning meeting,Regular reflection on what went well and what to improve,Status update,Performance review,Regular reflection on what went well and what to improve,general
+soft_skill,Teamwork,hard,What is organizational citizenship behavior?,Job description only,Going beyond formal requirements to help colleagues,Formal duties,Management behavior,Going beyond formal requirements to help colleagues,general
+soft_skill,Teamwork,hard,What is the concept of high-performing teams?,Average teams,Teams with clear purpose strong communication and accountability,Management teams,New teams,Teams with clear purpose strong communication and accountability,general
+soft_skill,Teamwork,easy,What is meeting in teamwork?,Casual conversation,Structured discussion to align team,Social event,Email,Structured discussion to align team,general
+soft_skill,Teamwork,easy,What is compromise in teamwork?,Winning argument,Each party gives up something to reach agreement,Complete agreement,Total disagreement,Each party gives up something to reach agreement,general
+soft_skill,Teamwork,medium,What is asynchronous communication in remote teams?,Real-time communication,Communication where response is not immediate,Face-to-face,Phone call,Communication where response is not immediate,general
+soft_skill,Teamwork,medium,What is team recognition importance?,Not important,Boosts morale motivation and performance,Only financial,Annual only,Boosts morale motivation and performance,general
+soft_skill,Teamwork,easy,What is a project team?,Permanent team,Temporary team formed for specific project,Department,Management,Temporary team formed for specific project,general
+soft_skill,Teamwork,medium,What is mentoring in team context?,Formal training,Experienced member guiding less experienced,Performance review,Job rotation,Experienced member guiding less experienced,general
+soft_skill,Teamwork,hard,What is team resilience?,Individual resilience,Team's ability to recover collectively from setbacks,Physical strength,Avoiding problems,Team's ability to recover collectively from setbacks,general
+soft_skill,Teamwork,easy,What is respect in teamwork?,Agreement with all,Valuing team members' contributions and perspectives,Being polite only,Formal behavior,Valuing team members' contributions and perspectives,general
+soft_skill,Teamwork,medium,What is task interdependence in teams?,Tasks done independently,Degree to which team members rely on each other for tasks,No reliance,Management dependency,Degree to which team members rely on each other for tasks,general
+soft_skill,Teamwork,hard,What is emergent leadership?,Formal leadership,Leadership arising naturally within team without formal role,External leadership,Elected leadership,Leadership arising naturally within team without formal role,general
+soft_skill,Problem Solving,easy,First step in problem solving?,Find solution,Define the problem,Implement fix,Test solution,Define the problem,general
+soft_skill,Problem Solving,easy,What is brainstorming?,Thinking alone,Generating many ideas without judgment,Solving problem,Final decision,Generating many ideas without judgment,general
+soft_skill,Problem Solving,easy,What is a root cause?,Surface symptom,Underlying reason for problem,First symptom,Latest issue,Underlying reason for problem,general
+soft_skill,Problem Solving,easy,What is critical thinking?,Criticizing others,Objective analysis and evaluation of issues,Quick judgment,Following orders,Objective analysis and evaluation of issues,general
+soft_skill,Problem Solving,easy,What is a constraint in problem solving?,Available resource,Limitation or restriction,Goal,Solution,Limitation or restriction,general
+soft_skill,Problem Solving,easy,What is an assumption in problem solving?,Known fact,Belief accepted as true without proof,Proven data,Tested hypothesis,Belief accepted as true without proof,general
+soft_skill,Problem Solving,easy,What is evaluation in problem solving?,Generating ideas,Assessing quality and feasibility of solutions,Implementing,Planning,Assessing quality and feasibility of solutions,general
+soft_skill,Problem Solving,easy,What is creativity in problem solving?,Following rules,Generating novel and useful ideas,Copying solutions,Using only known methods,Generating novel and useful ideas,general
+soft_skill,Problem Solving,easy,What is a hypothesis in problem solving?,Final answer,Proposed explanation to be tested,Known fact,Problem statement,Proposed explanation to be tested,general
+soft_skill,Problem Solving,easy,What is decision making?,Avoiding choices,Selecting best option from alternatives,Random choice,Following orders,Selecting best option from alternatives,general
+soft_skill,Problem Solving,medium,Root cause analysis is used to?,Find symptoms,Find underlying cause of problem,Test solutions,Document problems,Find underlying cause of problem,general
+soft_skill,Problem Solving,medium,What is the 5 Whys technique?,Ask 5 questions,Ask Why 5 times to find root cause,5-step process,5 solutions,Ask Why 5 times to find root cause,general
+soft_skill,Problem Solving,medium,What is fishbone diagram (Ishikawa) used for?,Fish recipe,Identifying causes of problem,Fish data,Network diagram,Identifying causes of problem,general
+soft_skill,Problem Solving,medium,What is convergent thinking?,Generating multiple ideas,Narrowing down to best solution,Brainstorming,Divergent thinking,Narrowing down to best solution,general
+soft_skill,Problem Solving,medium,What is divergent thinking?,Finding one answer,Generating multiple creative solutions,Critical analysis,Logical thinking,Generating multiple creative solutions,general
+soft_skill,Problem Solving,medium,What is cost-benefit analysis?,Only costs,Comparing costs and benefits of decision,Only benefits,Financial only,Comparing costs and benefits of decision,general
+soft_skill,Problem Solving,medium,What is a SWOT analysis?,Strength Weakness Opportunity Threat analysis,Software analysis,4 problems,None,Strength Weakness Opportunity Threat analysis,general
+soft_skill,Problem Solving,medium,What is decision matrix?,Random decisions,Tool rating options against weighted criteria,Matrix math,Database,Tool rating options against weighted criteria,general
+soft_skill,Problem Solving,medium,What is lateral thinking?,Normal thinking,Solving problems indirectly and creatively,Linear thinking,Logical thinking,Solving problems indirectly and creatively,general
+soft_skill,Problem Solving,medium,What is prototype in problem solving?,Final product,Early model to test solution,Problem statement,Analysis,Early model to test solution,general
+soft_skill,Problem Solving,hard,What is design thinking process?,Define Test,Empathise Define Ideate Prototype Test,Plan Do Check,None,Empathise Define Ideate Prototype Test,general
+soft_skill,Problem Solving,hard,What is Systems thinking?,Linear thinking,Understanding how parts interact within whole system,Simple analysis,Individual focus,Understanding how parts interact within whole system,general
+soft_skill,Problem Solving,hard,What is cognitive bias in problem solving?,Clear thinking,Mental shortcut causing errors in thinking,Memory enhancement,Logical thinking,Mental shortcut causing errors in thinking,general
+soft_skill,Problem Solving,hard,What is the sunk cost fallacy?,Future investment,Continuing because of past investment despite poor future,Smart investment,Good strategy,Continuing because of past investment despite poor future,general
+soft_skill,Problem Solving,hard,What is analogical reasoning?,Mathematical reasoning,Solving new problem by comparing to similar known problem,Random thinking,Statistical reasoning,Solving new problem by comparing to similar known problem,general
+soft_skill,Problem Solving,hard,What is bounded rationality concept?,Perfect rational decisions,Decision making limited by information and cognitive capacity,Irrational decisions,Statistical decisions,Decision making limited by information and cognitive capacity,general
+soft_skill,Problem Solving,hard,What is wicked problem concept?,Easy problem,Complex problem with no clear solution multiple stakeholders,Technical problem,Financial problem,Complex problem with no clear solution multiple stakeholders,general
+soft_skill,Problem Solving,hard,What is satisficing in decision making?,Finding optimal solution,Choosing good enough solution rather than optimal,Random choice,Never deciding,Choosing good enough solution rather than optimal,general
+soft_skill,Problem Solving,hard,What is abductive reasoning?,Deduction,Reasoning to best explanation from incomplete evidence,Induction,Statistical reasoning,Reasoning to best explanation from incomplete evidence,general
+soft_skill,Problem Solving,hard,What is TRIZ methodology in problem solving?,Russian marketing method,Systematic innovation method based on patterns,Management framework,HR tool,Systematic innovation method based on patterns,general
+soft_skill,Problem Solving,easy,What is trial and error?,Perfect approach,Testing solutions until one works,Giving up,Random action,Testing solutions until one works,general
+soft_skill,Problem Solving,easy,What is problem statement?,Solution,Clear description of issue to be solved,Goal,Plan,Clear description of issue to be solved,general
+soft_skill,Problem Solving,medium,What is feasibility study?,Random study,Assessment of practicality of proposed solution,Customer survey,Market analysis,Assessment of practicality of proposed solution,general
+soft_skill,Problem Solving,medium,What is benchmarking in problem solving?,Random comparison,Comparing performance against best practices,Setting targets,Financial review,Comparing performance against best practices,general
+soft_skill,Problem Solving,easy,What is prioritization in problem solving?,Random order,Ranking problems or solutions by importance,Solving all at once,Ignoring some,Ranking problems or solutions by importance,general
+soft_skill,Problem Solving,medium,What is pilot testing?,Full implementation,Small-scale test of solution before full rollout,Random testing,No testing,Small-scale test of solution before full rollout,general
+soft_skill,Problem Solving,hard,What is failure mode effects analysis FMEA?,Success analysis,Proactive method to identify potential failure modes,Customer analysis,Budget planning,Proactive method to identify potential failure modes,general
+soft_skill,Problem Solving,easy,What is iteration in problem solving?,One-time solving,Repeatedly refining solution through cycles,Avoiding problems,Random testing,Repeatedly refining solution through cycles,general
+soft_skill,Problem Solving,medium,What is gap analysis?,Random analysis,Identifying difference between current and desired state,Financial analysis,Time analysis,Identifying difference between current and desired state,general
+soft_skill,Problem Solving,hard,What is the Cynefin framework?,3 domains,5 domains for decision making in different complexity,Leadership model,Communication model,5 domains for decision making in different complexity,general
+soft_skill,Interview Skills,easy,STAR method in interviews stands for?,Situation Task Action Result,Skill Task Attitude Result,Situation Time Action Role,None,Situation Task Action Result,general
+soft_skill,Interview Skills,easy,When asked tell me about yourself you should?,Personal life story,Professional summary aligned with job,Only hobbies,Salary expectation,Professional summary aligned with job,general
+soft_skill,Interview Skills,easy,What should you research before interview?,Nothing,Company culture products and role,Only job title,Only salary,Company culture products and role,general
+soft_skill,Interview Skills,easy,What is appropriate dress code for interview?,Casual,Professional and neat unless company culture says otherwise,Party wear,Sports wear,Professional and neat unless company culture says otherwise,general
+soft_skill,Interview Skills,easy,When should you arrive for interview?,30 min late,5-10 min early,Exactly on time,1 hour early,5-10 min early,general
+soft_skill,Interview Skills,easy,What is a good answer to why do you want this job?,Good salary,Genuine interest in role and company,Closer to home,No other offers,Genuine interest in role and company,general
+soft_skill,Interview Skills,easy,What should you bring to an interview?,Nothing,Copies of resume and portfolio if relevant,Only phone,Only water,Copies of resume and portfolio if relevant,general
+soft_skill,Interview Skills,easy,What is appropriate eye contact in interview?,Stare constantly,Natural eye contact showing engagement,Avoid eye contact,Look at ceiling,Natural eye contact showing engagement,general
+soft_skill,Interview Skills,easy,What is a follow-up email after interview?,Unnecessary,Thank you note within 24 hours showing continued interest,Weekly emails,Requesting result immediately,Thank you note within 24 hours showing continued interest,general
+soft_skill,Interview Skills,easy,What to do if you don't know answer in interview?,Make up answer,Say you don't know but explain how you'd find out,Remain silent,Change subject,Say you don't know but explain how you'd find out,general
+soft_skill,Interview Skills,medium,Best response to what is your weakness?,Say you have none,Give real weakness with improvement plan,Mention strength as weakness,Refuse to answer,Give real weakness with improvement plan,general
+soft_skill,Interview Skills,medium,What is behavioral interviewing technique used by companies?,Testing skills,Asking about past behavior to predict future,Testing knowledge only,Stress testing,Asking about past behavior to predict future,general
+soft_skill,Interview Skills,medium,How to answer why should we hire you?,I need the job,Align your skills with company needs and explain value,I am available,I applied everywhere,Align your skills with company needs and explain value,general
+soft_skill,Interview Skills,medium,What is panel interview?,One-on-one,Multiple interviewers at once,Phone call,Group interview,Multiple interviewers at once,general
+soft_skill,Interview Skills,medium,How to handle salary negotiation in interview?,Never negotiate,Research market rate and negotiate confidently,Accept any offer,Negotiate aggressively,Research market rate and negotiate confidently,general
+soft_skill,Interview Skills,medium,What is case interview used by consulting firms?,Normal HR interview,Problem-solving exercise presented as business case,Technical test,Group discussion,Problem-solving exercise presented as business case,general
+soft_skill,Interview Skills,medium,What is elevator pitch for interview?,Long presentation,30-60 second professional introduction,Only name,Only skills,30-60 second professional introduction,general
+soft_skill,Interview Skills,medium,What are good questions to ask interviewer?,No questions,About role growth company culture and team,Salary only,Personal questions,About role growth company culture and team,general
+soft_skill,Interview Skills,medium,What is a structured vs unstructured interview?,Same,Structured has predefined questions unstructured is open-ended,Unstructured is predefined,No difference,Structured has predefined questions unstructured is open-ended,general
+soft_skill,Interview Skills,medium,How to handle gap in employment in interview?,Lie about it,Be honest and explain what you did during gap,Avoid mentioning,Blame economy,Be honest and explain what you did during gap,general
+soft_skill,Interview Skills,hard,What is competency-based interview?,Skill test,Evaluating specific competencies through structured questions,Personality test,Technical test,Evaluating specific competencies through structured questions,general
+soft_skill,Interview Skills,hard,What is the halo effect in interviews?,Positive bias from one good trait affecting overall,Negative bias,No effect,Equal evaluation,Positive bias from one good trait affecting overall,general
+soft_skill,Interview Skills,hard,What is a stress interview technique?,Relaxed interview,Deliberately creating pressure to see response,Normal interview,Technical interview,Deliberately creating pressure to see response,general
+soft_skill,Interview Skills,hard,What is cultural fit in hiring?,Same background,Alignment with company values and work style,Same nationality,Same education,Alignment with company values and work style,general
+soft_skill,Interview Skills,hard,What is unconscious bias in interviewing?,Deliberate prejudice,Unintentional biases affecting evaluation,No bias,Legal bias,Unintentional biases affecting evaluation,general
+soft_skill,Interview Skills,hard,How to answer where do you see yourself in 5 years?,Anywhere,Show ambition aligned with company growth,CEO only,Unknown,Show ambition aligned with company growth,general
+soft_skill,Interview Skills,hard,What is ATS (Applicant Tracking System) and how to optimize resume?,Paper tracking,Software screening resumes use keywords from job description,Manual review,Interview tool,Software screening resumes use keywords from job description,general
+soft_skill,Interview Skills,hard,What is values-based interview?,Skill assessment,Evaluating if candidate values align with organization,Technical test,Group task,Evaluating if candidate values align with organization,general
+soft_skill,Interview Skills,hard,What is the purpose of technical screen before main interview?,Final decision,Initial filter to assess basic technical competence,HR check,Salary negotiation,Initial filter to assess basic technical competence,general
+soft_skill,Interview Skills,hard,What is situation judgement test in recruitment?,IQ test,Hypothetical work scenarios assessing judgment,Memory test,Speed test,Hypothetical work scenarios assessing judgment,general
+soft_skill,Interview Skills,easy,What is resume purpose?,Social media,Marketing document to get interview,Application form,Cover letter,Marketing document to get interview,general
+soft_skill,Interview Skills,easy,Should you speak negatively about previous employer?,Yes freely,No maintain professionalism,Only if asked,Always,No maintain professionalism,general
+soft_skill,Interview Skills,medium,What is a portfolio in job application?,Photo collection,Samples of work demonstrating skills,Resume,Cover letter,Samples of work demonstrating skills,general
+soft_skill,Interview Skills,medium,What is informational interview?,Job interview,Casual conversation to learn about company or role,Technical test,Group discussion,Casual conversation to learn about company or role,general
+soft_skill,Interview Skills,easy,What is cover letter purpose?,Repeat resume,Introduce yourself and explain fit for role,Job application form,Reference letter,Introduce yourself and explain fit for role,general
+soft_skill,Interview Skills,medium,How should you handle illegal interview question?,Answer completely,Politely decline or redirect to relevant qualifications,Walk out,Report immediately,Politely decline or redirect to relevant qualifications,general
+soft_skill,Interview Skills,hard,What is the difference between direct and indirect interview questions?,Same,Direct asks specific questions indirect uses scenarios,Indirect is specific,No difference,Direct asks specific questions indirect uses scenarios,general
+soft_skill,Interview Skills,easy,What is handshake etiquette in interview?,Skip it,Firm and confident while maintaining eye contact,Very strong grip,Very light grip,Firm and confident while maintaining eye contact,general
+soft_skill,Interview Skills,medium,What is the importance of active listening in interview?,Not important,Shows engagement and helps give relevant answers,Only for HR,Formality,Shows engagement and helps give relevant answers,general
+soft_skill,Interview Skills,hard,In group discussion best strategy is?,Speak first always,Dominate discussion,Make quality points and listen actively,Stay quiet,Make quality points and listen actively,general
+soft_skill,Emotional Intelligence,easy,EQ stands for?,Education Quotient,Emotional Quotient,Energy Quotient,Efficiency Quotient,Emotional Quotient,general
+soft_skill,Emotional Intelligence,easy,What is self-awareness in EQ?,Knowing others' emotions,Knowing your own emotions and how they affect you,Physical awareness,Social awareness,Knowing your own emotions and how they affect you,general
+soft_skill,Emotional Intelligence,easy,What is empathy?,Feeling sorry for others,Understanding others' perspective and emotions,Agreeing with everyone,Being emotional,Understanding others' perspective and emotions,general
+soft_skill,Emotional Intelligence,easy,What is self-regulation in EQ?,Doing everything alone,Managing own emotions and impulses,Physical health,Social skill,Managing own emotions and impulses,general
+soft_skill,Emotional Intelligence,easy,Who developed EQ concept?,Freud,Daniel Goleman,Maslow,Piaget,Daniel Goleman,general
+soft_skill,Emotional Intelligence,easy,What is motivation in EQ context?,Money only,Inner drive to achieve goals for reasons beyond money,External rewards,Fear,Inner drive to achieve goals for reasons beyond money,general
+soft_skill,Emotional Intelligence,easy,What are the 5 components of EQ?,Think feel act plan do,Self-awareness Self-regulation Motivation Empathy Social skills,Love care trust hope faith,None,Self-awareness Self-regulation Motivation Empathy Social skills,general
+soft_skill,Emotional Intelligence,easy,What is social skill in EQ?,Technical skill,Ability to manage relationships and build networks,Coding skill,Language skill,Ability to manage relationships and build networks,general
+soft_skill,Emotional Intelligence,easy,Is EQ or IQ more important for workplace success?,IQ always,Depends but EQ often predicts success better in leadership,Equal always,Neither,Depends but EQ often predicts success better in leadership,general
+soft_skill,Emotional Intelligence,easy,What is emotional trigger?,Random emotion,Event or situation that causes strong emotional reaction,Logical thought,Physical pain,Event or situation that causes strong emotional reaction,general
+soft_skill,Emotional Intelligence,medium,What is cognitive empathy vs affective empathy?,Same,Cognitive is understanding perspective affective is sharing feelings,Affective is understanding,No difference,Cognitive is understanding perspective affective is sharing feelings,general
+soft_skill,Emotional Intelligence,medium,What is emotional regulation strategy?,Suppress emotions,Recognizing and managing emotions adaptively,Ignoring emotions,Only positive emotions,Recognizing and managing emotions adaptively,general
+soft_skill,Emotional Intelligence,medium,What is the relationship between EQ and leadership effectiveness?,No relation,Higher EQ is associated with more effective leadership,IQ is more important,Technical skills matter most,Higher EQ is associated with more effective leadership,general
+soft_skill,Emotional Intelligence,medium,What is mindfulness in EQ context?,Meditation only,Present-moment awareness of thoughts and feelings,Religious practice,Exercise,Present-moment awareness of thoughts and feelings,general
+soft_skill,Emotional Intelligence,medium,What is emotional contagion?,Physical disease,Emotions spreading from person to person,Emotional problem,Stress only,Emotions spreading from person to person,general
+soft_skill,Emotional Intelligence,medium,What is the difference between emotion and mood?,Same,Emotion is short-lived and specific mood lasts longer,Mood is short,No difference,Emotion is short-lived and specific mood lasts longer,general
+soft_skill,Emotional Intelligence,medium,What is impulse control in EQ?,Never controlling,Ability to pause before reacting emotionally,Always reacting,Physical control,Ability to pause before reacting emotionally,general
+soft_skill,Emotional Intelligence,medium,What is growth mindset in relation to EQ?,Fixed abilities,Belief that abilities can be developed through effort,Only talent matters,No relation,Belief that abilities can be developed through effort,general
+soft_skill,Emotional Intelligence,medium,What is social awareness in EQ?,Self-awareness,Understanding others and organizational dynamics,Technical awareness,Market awareness,Understanding others and organizational dynamics,general
+soft_skill,Emotional Intelligence,medium,What is the impact of high EQ on conflict resolution?,Worsens conflict,Better ability to understand all sides and find solutions,No impact,Only helps in personal life,Better ability to understand all sides and find solutions,general
+soft_skill,Emotional Intelligence,hard,What is Mayer-Salovey model of EQ?,Same as Goleman,Ability-based model perceiving using understanding managing emotions,Simple 3-factor model,Leadership model,Ability-based model perceiving using understanding managing emotions,general
+soft_skill,Emotional Intelligence,hard,What is emotional granularity?,Basic emotions only,Ability to identify and distinguish many specific emotions,Physical sensation,Social skill,Ability to identify and distinguish many specific emotions,general
+soft_skill,Emotional Intelligence,hard,What is the broaden-and-build theory of positive emotions?,Positive emotions narrow thinking,Positive emotions broaden thinking and build resources,No effect,Only clinical use,Positive emotions broaden thinking and build resources,general
+soft_skill,Emotional Intelligence,hard,What is affect labeling in emotional regulation?,Ignoring emotions,Putting feelings into words reduces emotional intensity,Amplifying emotions,Physical exercise,Putting feelings into words reduces emotional intensity,general
+soft_skill,Emotional Intelligence,hard,What is rumination vs reflection?,Same,Rumination is repetitive negative thinking reflection is constructive,Reflection is negative,No difference,Rumination is repetitive negative thinking reflection is constructive,general
+soft_skill,Emotional Intelligence,hard,What is the concept of emotional labor in workplace?,Physical work,Managing emotions as part of job requirements,Emotional breakdown,Lazy work,Managing emotions as part of job requirements,general
+soft_skill,Emotional Intelligence,hard,What is neuroplasticity significance for EQ?,Cannot change EQ,Brain can change suggesting EQ can be developed,Only children benefit,Only cognitive skills,Brain can change suggesting EQ can be developed,general
+soft_skill,Emotional Intelligence,hard,What is compassion fatigue in helping professions?,Lack of empathy,Exhaustion from caring for others' distress over time,Physical fatigue,Time management issue,Exhaustion from caring for others' distress over time,general
+soft_skill,Emotional Intelligence,hard,What is difference between sympathy and empathy?,Same,Sympathy feels for someone empathy feels with someone,Empathy is sympathy,No difference,Sympathy feels for someone empathy feels with someone,general
+soft_skill,Emotional Intelligence,hard,What is the amygdala hijack concept?,Brain boost,Amygdala overriding rational thinking in emotional situations,Memory loss,Focus enhancement,Amygdala overriding rational thinking in emotional situations,general
+soft_skill,Emotional Intelligence,easy,What is emotional intelligence different from IQ?,Same,EQ deals with emotions IQ deals with cognitive ability,IQ is emotion,No difference,EQ deals with emotions IQ deals with cognitive ability,general
+soft_skill,Emotional Intelligence,easy,What is a good sign of high EQ in person?,Never emotional,Can recognize and manage own emotions effectively,Always happy,Never angry,Can recognize and manage own emotions effectively,general
+soft_skill,Emotional Intelligence,medium,What is psychological resilience in EQ?,Never failing,Ability to recover from adversity and stress,Physical strength,Avoiding stress,Ability to recover from adversity and stress,general
+soft_skill,Emotional Intelligence,medium,What is the impact of EQ on team performance?,No impact,Teams with higher collective EQ perform better,Only individual performance,Technical skills dominate,Teams with higher collective EQ perform better,general
+soft_skill,Emotional Intelligence,easy,What is active listening role in EQ?,Not related,Foundation of empathy and social awareness,Only communication skill,Formal training,Foundation of empathy and social awareness,general
+soft_skill,Emotional Intelligence,medium,What is gratitude practice in EQ?,Religious practice,Regularly acknowledging positives improves emotional wellbeing,Politeness only,Formal requirement,Regularly acknowledging positives improves emotional wellbeing,general
+soft_skill,Emotional Intelligence,hard,What is metacognition in EQ context?,Basic thinking,Thinking about your own thinking and emotional processes,Memory technique,Speed reading,Thinking about your own thinking and emotional processes,general
+soft_skill,Emotional Intelligence,easy,What is nonverbal cue reading in EQ?,Not important,Understanding body language and facial expressions,Reading books,Technical skill,Understanding body language and facial expressions,general
+soft_skill,Emotional Intelligence,medium,What is emotional vocabulary importance in EQ?,Not important,More precise emotion words help better understand and communicate feelings,Only writing skill,Academic skill,More precise emotion words help better understand and communicate feelings,general
+soft_skill,Emotional Intelligence,hard,What is the concept of EQ and decision making?,EQ has no role,Emotional awareness helps make more balanced and rational decisions,Only IQ matters,Random process,Emotional awareness helps make more balanced and rational decisions,general
