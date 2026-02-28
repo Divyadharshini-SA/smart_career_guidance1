@@ -7,289 +7,361 @@ import API from '../api';
 
 const DSA_PROBLEMS = [
   // Arrays — direct video links (Striver/NeetCode)
-  { topic:'Arrays', name:'Two Sum',
-    lc:'https://leetcode.com/problems/two-sum/',
-    gfg:'https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/',
-    hr:'https://www.hackerrank.com/challenges/pairs/problem',
-    yt:'https://www.youtube.com/watch?v=KLlXCFG5TnA' },
-  { topic:'Arrays', name:'Best Time to Buy & Sell Stock',
-    lc:'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
-    gfg:'https://www.geeksforgeeks.org/best-time-to-buy-and-sell-stock/',
-    hr:'https://www.hackerrank.com/challenges/stockmax/problem',
-    yt:'https://www.youtube.com/watch?v=1pkOgXD63yU' },
-  { topic:'Arrays', name:'Maximum Subarray (Kadane)',
-    lc:'https://leetcode.com/problems/maximum-subarray/',
-    gfg:'https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/',
-    hr:'https://www.hackerrank.com/challenges/maxsubarray/problem',
-    yt:'https://www.youtube.com/watch?v=AHZpyENo7k4' },
-  { topic:'Arrays', name:'Rotate Array',
-    lc:'https://leetcode.com/problems/rotate-array/',
-    gfg:'https://www.geeksforgeeks.org/array-rotation/',
-    hr:'https://www.hackerrank.com/challenges/array-left-rotation/problem',
-    yt:'https://www.youtube.com/watch?v=BHr381Guz3Y' },
-  { topic:'Arrays', name:'Find Duplicate Number',
-    lc:'https://leetcode.com/problems/find-the-duplicate-number/',
-    gfg:'https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/',
-    hr:'https://www.hackerrank.com/challenges/duplicates/problem',
-    yt:'https://www.youtube.com/watch?v=32Ll35mhWg0' },
+  {
+    topic: 'Arrays', name: 'Two Sum',
+    lc: 'https://leetcode.com/problems/two-sum/',
+    gfg: 'https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/',
+    hr: 'https://www.hackerrank.com/challenges/pairs/problem',
+    yt: 'https://www.youtube.com/watch?v=KLlXCFG5TnA'
+  },
+  {
+    topic: 'Arrays', name: 'Best Time to Buy & Sell Stock',
+    lc: 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
+    gfg: 'https://www.geeksforgeeks.org/best-time-to-buy-and-sell-stock/',
+    hr: 'https://www.hackerrank.com/challenges/stockmax/problem',
+    yt: 'https://www.youtube.com/watch?v=1pkOgXD63yU'
+  },
+  {
+    topic: 'Arrays', name: 'Maximum Subarray (Kadane)',
+    lc: 'https://leetcode.com/problems/maximum-subarray/',
+    gfg: 'https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/',
+    hr: 'https://www.hackerrank.com/challenges/maxsubarray/problem',
+    yt: 'https://www.youtube.com/watch?v=AHZpyENo7k4'
+  },
+  {
+    topic: 'Arrays', name: 'Rotate Array',
+    lc: 'https://leetcode.com/problems/rotate-array/',
+    gfg: 'https://www.geeksforgeeks.org/array-rotation/',
+    hr: 'https://www.hackerrank.com/challenges/array-left-rotation/problem',
+    yt: 'https://www.youtube.com/watch?v=BHr381Guz3Y'
+  },
+  {
+    topic: 'Arrays', name: 'Find Duplicate Number',
+    lc: 'https://leetcode.com/problems/find-the-duplicate-number/',
+    gfg: 'https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/',
+    hr: 'https://www.hackerrank.com/challenges/duplicates/problem',
+    yt: 'https://www.youtube.com/watch?v=32Ll35mhWg0'
+  },
 
   // Linked List
-  { topic:'Linked List', name:'Reverse Linked List',
-    lc:'https://leetcode.com/problems/reverse-linked-list/',
-    gfg:'https://www.geeksforgeeks.org/reverse-a-linked-list/',
-    hr:'https://www.hackerrank.com/challenges/reverse-a-linked-list/problem',
-    yt:'https://www.youtube.com/watch?v=D7y_hoT_YZI' },
-  { topic:'Linked List', name:'Detect Cycle',
-    lc:'https://leetcode.com/problems/linked-list-cycle/',
-    gfg:'https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/',
-    hr:'https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem',
-    yt:'https://www.youtube.com/watch?v=wiOo4DC5GGA' },
-  { topic:'Linked List', name:'Merge Two Sorted Lists',
-    lc:'https://leetcode.com/problems/merge-two-sorted-lists/',
-    gfg:'https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/',
-    hr:'https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem',
-    yt:'https://www.youtube.com/watch?v=XIdigk956u0' },
-  { topic:'Linked List', name:'Middle of Linked List',
-    lc:'https://leetcode.com/problems/middle-of-the-linked-list/',
-    gfg:'https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/',
-    hr:'https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem',
-    yt:'https://www.youtube.com/watch?v=A2_ldqM4QcY' },
-  { topic:'Linked List', name:'Remove Nth Node From End',
-    lc:'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
-    gfg:'https://www.geeksforgeeks.org/remove-nth-node-from-end-of-the-linked-list/',
-    hr:'https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem',
-    yt:'https://www.youtube.com/watch?v=XVuQxVej6y8' },
+  {
+    topic: 'Linked List', name: 'Reverse Linked List',
+    lc: 'https://leetcode.com/problems/reverse-linked-list/',
+    gfg: 'https://www.geeksforgeeks.org/reverse-a-linked-list/',
+    hr: 'https://www.hackerrank.com/challenges/reverse-a-linked-list/problem',
+    yt: 'https://www.youtube.com/watch?v=D7y_hoT_YZI'
+  },
+  {
+    topic: 'Linked List', name: 'Detect Cycle',
+    lc: 'https://leetcode.com/problems/linked-list-cycle/',
+    gfg: 'https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/',
+    hr: 'https://www.hackerrank.com/challenges/detect-whether-a-linked-list-contains-a-cycle/problem',
+    yt: 'https://www.youtube.com/watch?v=wiOo4DC5GGA'
+  },
+  {
+    topic: 'Linked List', name: 'Merge Two Sorted Lists',
+    lc: 'https://leetcode.com/problems/merge-two-sorted-lists/',
+    gfg: 'https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/',
+    hr: 'https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem',
+    yt: 'https://www.youtube.com/watch?v=XIdigk956u0'
+  },
+  {
+    topic: 'Linked List', name: 'Middle of Linked List',
+    lc: 'https://leetcode.com/problems/middle-of-the-linked-list/',
+    gfg: 'https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/',
+    hr: 'https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem',
+    yt: 'https://www.youtube.com/watch?v=A2_ldqM4QcY'
+  },
+  {
+    topic: 'Linked List', name: 'Remove Nth Node From End',
+    lc: 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
+    gfg: 'https://www.geeksforgeeks.org/remove-nth-node-from-end-of-the-linked-list/',
+    hr: 'https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem',
+    yt: 'https://www.youtube.com/watch?v=XVuQxVej6y8'
+  },
 
   // Stacks & Queues
-  { topic:'Stacks & Queues', name:'Valid Parentheses',
-    lc:'https://leetcode.com/problems/valid-parentheses/',
-    gfg:'https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/',
-    hr:'https://www.hackerrank.com/challenges/balanced-brackets/problem',
-    yt:'https://www.youtube.com/watch?v=WTzjTskDFMg' },
-  { topic:'Stacks & Queues', name:'Next Greater Element',
-    lc:'https://leetcode.com/problems/next-greater-element-i/',
-    gfg:'https://www.geeksforgeeks.org/next-greater-element/',
-    hr:'https://www.hackerrank.com/challenges/largest-rectangle/problem',
-    yt:'https://www.youtube.com/watch?v=Du881K7Jtk8' },
-  { topic:'Stacks & Queues', name:'Min Stack',
-    lc:'https://leetcode.com/problems/min-stack/',
-    gfg:'https://www.geeksforgeeks.org/design-a-stack-that-supports-getmin-in-o1-time-and-o1-extra-space/',
-    hr:'https://www.hackerrank.com/challenges/maximum-element/problem',
-    yt:'https://www.youtube.com/watch?v=qkLl7nAwDPo' },
-  { topic:'Stacks & Queues', name:'Implement Queue using Stacks',
-    lc:'https://leetcode.com/problems/implement-queue-using-stacks/',
-    gfg:'https://www.geeksforgeeks.org/queue-using-stacks/',
-    hr:'https://www.hackerrank.com/challenges/queue-using-two-stacks/problem',
-    yt:'https://www.youtube.com/watch?v=3Et9MrMc02A' },
+  {
+    topic: 'Stacks & Queues', name: 'Valid Parentheses',
+    lc: 'https://leetcode.com/problems/valid-parentheses/',
+    gfg: 'https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/',
+    hr: 'https://www.hackerrank.com/challenges/balanced-brackets/problem',
+    yt: 'https://www.youtube.com/watch?v=WTzjTskDFMg'
+  },
+  {
+    topic: 'Stacks & Queues', name: 'Next Greater Element',
+    lc: 'https://leetcode.com/problems/next-greater-element-i/',
+    gfg: 'https://www.geeksforgeeks.org/next-greater-element/',
+    hr: 'https://www.hackerrank.com/challenges/largest-rectangle/problem',
+    yt: 'https://www.youtube.com/watch?v=Du881K7Jtk8'
+  },
+  {
+    topic: 'Stacks & Queues', name: 'Min Stack',
+    lc: 'https://leetcode.com/problems/min-stack/',
+    gfg: 'https://www.geeksforgeeks.org/design-a-stack-that-supports-getmin-in-o1-time-and-o1-extra-space/',
+    hr: 'https://www.hackerrank.com/challenges/maximum-element/problem',
+    yt: 'https://www.youtube.com/watch?v=qkLl7nAwDPo'
+  },
+  {
+    topic: 'Stacks & Queues', name: 'Implement Queue using Stacks',
+    lc: 'https://leetcode.com/problems/implement-queue-using-stacks/',
+    gfg: 'https://www.geeksforgeeks.org/queue-using-stacks/',
+    hr: 'https://www.hackerrank.com/challenges/queue-using-two-stacks/problem',
+    yt: 'https://www.youtube.com/watch?v=3Et9MrMc02A'
+  },
 
   // Trees
-  { topic:'Trees', name:'Maximum Depth of Binary Tree',
-    lc:'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
-    gfg:'https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/',
-    hr:'https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem',
-    yt:'https://www.youtube.com/watch?v=hTM3phVI6YQ' },
-  { topic:'Trees', name:'Inorder Traversal',
-    lc:'https://leetcode.com/problems/binary-tree-inorder-traversal/',
-    gfg:'https://www.geeksforgeeks.org/inorder-traversal-of-binary-tree/',
-    hr:'https://www.hackerrank.com/challenges/tree-inorder-traversal/problem',
-    yt:'https://www.youtube.com/watch?v=5dySuyZf9Qg' },
-  { topic:'Trees', name:'Symmetric Tree',
-    lc:'https://leetcode.com/problems/symmetric-tree/',
-    gfg:'https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/',
-    hr:'https://www.hackerrank.com/challenges/symmetric-tree/problem',
-    yt:'https://www.youtube.com/watch?v=Mao9uzxwv0E' },
-  { topic:'Trees', name:'Level Order Traversal (BFS)',
-    lc:'https://leetcode.com/problems/binary-tree-level-order-traversal/',
-    gfg:'https://www.geeksforgeeks.org/level-order-tree-traversal/',
-    hr:'https://www.hackerrank.com/challenges/tree-level-order-traversal/problem',
-    yt:'https://www.youtube.com/watch?v=6ZnyEApgFYg' },
-  { topic:'Trees', name:'Lowest Common Ancestor',
-    lc:'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/',
-    gfg:'https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/',
-    hr:'https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem',
-    yt:'https://www.youtube.com/watch?v=13m9ZCB8gjw' },
+  {
+    topic: 'Trees', name: 'Maximum Depth of Binary Tree',
+    lc: 'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
+    gfg: 'https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/',
+    hr: 'https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem',
+    yt: 'https://www.youtube.com/watch?v=hTM3phVI6YQ'
+  },
+  {
+    topic: 'Trees', name: 'Inorder Traversal',
+    lc: 'https://leetcode.com/problems/binary-tree-inorder-traversal/',
+    gfg: 'https://www.geeksforgeeks.org/inorder-traversal-of-binary-tree/',
+    hr: 'https://www.hackerrank.com/challenges/tree-inorder-traversal/problem',
+    yt: 'https://www.youtube.com/watch?v=5dySuyZf9Qg'
+  },
+  {
+    topic: 'Trees', name: 'Symmetric Tree',
+    lc: 'https://leetcode.com/problems/symmetric-tree/',
+    gfg: 'https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/',
+    hr: 'https://www.hackerrank.com/challenges/symmetric-tree/problem',
+    yt: 'https://www.youtube.com/watch?v=Mao9uzxwv0E'
+  },
+  {
+    topic: 'Trees', name: 'Level Order Traversal (BFS)',
+    lc: 'https://leetcode.com/problems/binary-tree-level-order-traversal/',
+    gfg: 'https://www.geeksforgeeks.org/level-order-tree-traversal/',
+    hr: 'https://www.hackerrank.com/challenges/tree-level-order-traversal/problem',
+    yt: 'https://www.youtube.com/watch?v=6ZnyEApgFYg'
+  },
+  {
+    topic: 'Trees', name: 'Lowest Common Ancestor',
+    lc: 'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/',
+    gfg: 'https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/',
+    hr: 'https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem',
+    yt: 'https://www.youtube.com/watch?v=13m9ZCB8gjw'
+  },
 
   // Graphs
-  { topic:'Graphs', name:'Number of Islands',
-    lc:'https://leetcode.com/problems/number-of-islands/',
-    gfg:'https://www.geeksforgeeks.org/find-number-of-islands/',
-    hr:'https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem',
-    yt:'https://www.youtube.com/watch?v=pV2kpPD66nE' },
-  { topic:'Graphs', name:'BFS of Graph',
-    lc:'https://leetcode.com/problems/keys-and-rooms/',
-    gfg:'https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/',
-    hr:'https://www.hackerrank.com/challenges/bfsshortreach/problem',
-    yt:'https://www.youtube.com/watch?v=-tgVpUgsQ5k' },
-  { topic:'Graphs', name:'DFS of Graph',
-    lc:'https://leetcode.com/problems/number-of-provinces/',
-    gfg:'https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/',
-    hr:'https://www.hackerrank.com/challenges/dfs-edges/problem',
-    yt:'https://www.youtube.com/watch?v=PMMc4VsIacU' },
-  { topic:'Graphs', name:'Topological Sort',
-    lc:'https://leetcode.com/problems/course-schedule/',
-    gfg:'https://www.geeksforgeeks.org/topological-sorting/',
-    hr:'https://www.hackerrank.com/challenges/torque-and-development/problem',
-    yt:'https://www.youtube.com/watch?v=dis_c84ejhQ' },
+  {
+    topic: 'Graphs', name: 'Number of Islands',
+    lc: 'https://leetcode.com/problems/number-of-islands/',
+    gfg: 'https://www.geeksforgeeks.org/find-number-of-islands/',
+    hr: 'https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem',
+    yt: 'https://www.youtube.com/watch?v=pV2kpPD66nE'
+  },
+  {
+    topic: 'Graphs', name: 'BFS of Graph',
+    lc: 'https://leetcode.com/problems/keys-and-rooms/',
+    gfg: 'https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/',
+    hr: 'https://www.hackerrank.com/challenges/bfsshortreach/problem',
+    yt: 'https://www.youtube.com/watch?v=-tgVpUgsQ5k'
+  },
+  {
+    topic: 'Graphs', name: 'DFS of Graph',
+    lc: 'https://leetcode.com/problems/number-of-provinces/',
+    gfg: 'https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/',
+    hr: 'https://www.hackerrank.com/challenges/dfs-edges/problem',
+    yt: 'https://www.youtube.com/watch?v=PMMc4VsIacU'
+  },
+  {
+    topic: 'Graphs', name: 'Topological Sort',
+    lc: 'https://leetcode.com/problems/course-schedule/',
+    gfg: 'https://www.geeksforgeeks.org/topological-sorting/',
+    hr: 'https://www.hackerrank.com/challenges/torque-and-development/problem',
+    yt: 'https://www.youtube.com/watch?v=dis_c84ejhQ'
+  },
 
   // Dynamic Programming
-  { topic:'Dynamic Programming', name:'Climbing Stairs',
-    lc:'https://leetcode.com/problems/climbing-stairs/',
-    gfg:'https://www.geeksforgeeks.org/count-ways-reach-nth-stair/',
-    hr:'https://www.hackerrank.com/challenges/dynamic-programming-classics-the-longest-common-subsequence/problem',
-    yt:'https://www.youtube.com/watch?v=Y0lT9Fck7qI' },
-  { topic:'Dynamic Programming', name:'Coin Change',
-    lc:'https://leetcode.com/problems/coin-change/',
-    gfg:'https://www.geeksforgeeks.org/coin-change-dp-7/',
-    hr:'https://www.hackerrank.com/challenges/coin-change-problem/problem',
-    yt:'https://www.youtube.com/watch?v=H9bfqozjoqs' },
-  { topic:'Dynamic Programming', name:'Longest Common Subsequence',
-    lc:'https://leetcode.com/problems/longest-common-subsequence/',
-    gfg:'https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/',
-    hr:'https://www.hackerrank.com/challenges/dynamic-programming-classics-the-longest-common-subsequence/problem',
-    yt:'https://www.youtube.com/watch?v=Ua0GhAsyan4' },
-  { topic:'Dynamic Programming', name:'0/1 Knapsack',
-    lc:'https://leetcode.com/problems/partition-equal-subset-sum/',
-    gfg:'https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/',
-    hr:'https://www.hackerrank.com/challenges/unbounded-knapsack/problem',
-    yt:'https://www.youtube.com/watch?v=GqOmJHQZivw' },
-  { topic:'Dynamic Programming', name:'Longest Increasing Subsequence',
-    lc:'https://leetcode.com/problems/longest-increasing-subsequence/',
-    gfg:'https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/',
-    hr:'https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem',
-    yt:'https://www.youtube.com/watch?v=ekcwMsSIzVc' },
+  {
+    topic: 'Dynamic Programming', name: 'Climbing Stairs',
+    lc: 'https://leetcode.com/problems/climbing-stairs/',
+    gfg: 'https://www.geeksforgeeks.org/count-ways-reach-nth-stair/',
+    hr: 'https://www.hackerrank.com/challenges/dynamic-programming-classics-the-longest-common-subsequence/problem',
+    yt: 'https://www.youtube.com/watch?v=Y0lT9Fck7qI'
+  },
+  {
+    topic: 'Dynamic Programming', name: 'Coin Change',
+    lc: 'https://leetcode.com/problems/coin-change/',
+    gfg: 'https://www.geeksforgeeks.org/coin-change-dp-7/',
+    hr: 'https://www.hackerrank.com/challenges/coin-change-problem/problem',
+    yt: 'https://www.youtube.com/watch?v=H9bfqozjoqs'
+  },
+  {
+    topic: 'Dynamic Programming', name: 'Longest Common Subsequence',
+    lc: 'https://leetcode.com/problems/longest-common-subsequence/',
+    gfg: 'https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/',
+    hr: 'https://www.hackerrank.com/challenges/dynamic-programming-classics-the-longest-common-subsequence/problem',
+    yt: 'https://www.youtube.com/watch?v=Ua0GhAsyan4'
+  },
+  {
+    topic: 'Dynamic Programming', name: '0/1 Knapsack',
+    lc: 'https://leetcode.com/problems/partition-equal-subset-sum/',
+    gfg: 'https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/',
+    hr: 'https://www.hackerrank.com/challenges/unbounded-knapsack/problem',
+    yt: 'https://www.youtube.com/watch?v=GqOmJHQZivw'
+  },
+  {
+    topic: 'Dynamic Programming', name: 'Longest Increasing Subsequence',
+    lc: 'https://leetcode.com/problems/longest-increasing-subsequence/',
+    gfg: 'https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/',
+    hr: 'https://www.hackerrank.com/challenges/longest-increasing-subsequent/problem',
+    yt: 'https://www.youtube.com/watch?v=ekcwMsSIzVc'
+  },
 
   // Sorting & Searching
-  { topic:'Sorting & Searching', name:'Binary Search',
-    lc:'https://leetcode.com/problems/binary-search/',
-    gfg:'https://www.geeksforgeeks.org/binary-search/',
-    hr:'https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem',
-    yt:'https://www.youtube.com/watch?v=s4DPM8ct1pI' },
-  { topic:'Sorting & Searching', name:'Merge Sort',
-    lc:'https://leetcode.com/problems/sort-an-array/',
-    gfg:'https://www.geeksforgeeks.org/merge-sort/',
-    hr:'https://www.hackerrank.com/challenges/merge-sort/problem',
-    yt:'https://www.youtube.com/watch?v=4VqmGXwpLqc' },
-  { topic:'Sorting & Searching', name:'Quick Sort',
-    lc:'https://leetcode.com/problems/sort-an-array/',
-    gfg:'https://www.geeksforgeeks.org/quick-sort/',
-    hr:'https://www.hackerrank.com/challenges/quicksort1/problem',
-    yt:'https://www.youtube.com/watch?v=Hoixgm4-P4M' },
-  { topic:'Sorting & Searching', name:'Search in Rotated Sorted Array',
-    lc:'https://leetcode.com/problems/search-in-rotated-sorted-array/',
-    gfg:'https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/',
-    hr:'https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem',
-    yt:'https://www.youtube.com/watch?v=oTfPJKGEHcc' },
+  {
+    topic: 'Sorting & Searching', name: 'Binary Search',
+    lc: 'https://leetcode.com/problems/binary-search/',
+    gfg: 'https://www.geeksforgeeks.org/binary-search/',
+    hr: 'https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem',
+    yt: 'https://www.youtube.com/watch?v=s4DPM8ct1pI'
+  },
+  {
+    topic: 'Sorting & Searching', name: 'Merge Sort',
+    lc: 'https://leetcode.com/problems/sort-an-array/',
+    gfg: 'https://www.geeksforgeeks.org/merge-sort/',
+    hr: 'https://www.hackerrank.com/challenges/merge-sort/problem',
+    yt: 'https://www.youtube.com/watch?v=4VqmGXwpLqc'
+  },
+  {
+    topic: 'Sorting & Searching', name: 'Quick Sort',
+    lc: 'https://leetcode.com/problems/sort-an-array/',
+    gfg: 'https://www.geeksforgeeks.org/quick-sort/',
+    hr: 'https://www.hackerrank.com/challenges/quicksort1/problem',
+    yt: 'https://www.youtube.com/watch?v=Hoixgm4-P4M'
+  },
+  {
+    topic: 'Sorting & Searching', name: 'Search in Rotated Sorted Array',
+    lc: 'https://leetcode.com/problems/search-in-rotated-sorted-array/',
+    gfg: 'https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/',
+    hr: 'https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem',
+    yt: 'https://www.youtube.com/watch?v=oTfPJKGEHcc'
+  },
 
   // Strings
-  { topic:'Strings', name:'Reverse String',
-    lc:'https://leetcode.com/problems/reverse-string/',
-    gfg:'https://www.geeksforgeeks.org/reverse-a-string/',
-    hr:'https://www.hackerrank.com/challenges/reverse-a-string/problem',
-    yt:'https://www.youtube.com/watch?v=aUHEgIIu5_E' },
-  { topic:'Strings', name:'Valid Anagram',
-    lc:'https://leetcode.com/problems/valid-anagram/',
-    gfg:'https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/',
-    hr:'https://www.hackerrank.com/challenges/anagram/problem',
-    yt:'https://www.youtube.com/watch?v=9UtInBqnCgA' },
-  { topic:'Strings', name:'Longest Substring Without Repeating',
-    lc:'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
-    gfg:'https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/',
-    hr:'https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem',
-    yt:'https://www.youtube.com/watch?v=wiGpQwVHdE0' },
-  { topic:'Strings', name:'Palindrome Check',
-    lc:'https://leetcode.com/problems/valid-palindrome/',
-    gfg:'https://www.geeksforgeeks.org/check-if-a-string-is-palindrome/',
-    hr:'https://www.hackerrank.com/challenges/palindrome-index/problem',
-    yt:'https://www.youtube.com/watch?v=xX_HBZLejRc' },
+  {
+    topic: 'Strings', name: 'Reverse String',
+    lc: 'https://leetcode.com/problems/reverse-string/',
+    gfg: 'https://www.geeksforgeeks.org/reverse-a-string/',
+    hr: 'https://www.hackerrank.com/challenges/reverse-a-string/problem',
+    yt: 'https://www.youtube.com/watch?v=aUHEgIIu5_E'
+  },
+  {
+    topic: 'Strings', name: 'Valid Anagram',
+    lc: 'https://leetcode.com/problems/valid-anagram/',
+    gfg: 'https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/',
+    hr: 'https://www.hackerrank.com/challenges/anagram/problem',
+    yt: 'https://www.youtube.com/watch?v=9UtInBqnCgA'
+  },
+  {
+    topic: 'Strings', name: 'Longest Substring Without Repeating',
+    lc: 'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
+    gfg: 'https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/',
+    hr: 'https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem',
+    yt: 'https://www.youtube.com/watch?v=wiGpQwVHdE0'
+  },
+  {
+    topic: 'Strings', name: 'Palindrome Check',
+    lc: 'https://leetcode.com/problems/valid-palindrome/',
+    gfg: 'https://www.geeksforgeeks.org/check-if-a-string-is-palindrome/',
+    hr: 'https://www.hackerrank.com/challenges/palindrome-index/problem',
+    yt: 'https://www.youtube.com/watch?v=xX_HBZLejRc'
+  },
 ];
 
 const APTITUDE_TOPICS = [
-  { name:'Percentages',          indiabix:'https://www.indiabix.com/aptitude/percentage/',            yt:'https://www.youtube.com/results?search_query=percentage+aptitude+problems' },
-  { name:'Profit & Loss',        indiabix:'https://www.indiabix.com/aptitude/profit-and-loss/',       yt:'https://www.youtube.com/results?search_query=profit+and+loss+aptitude' },
-  { name:'Time & Work',          indiabix:'https://www.indiabix.com/aptitude/time-and-work/',         yt:'https://www.youtube.com/results?search_query=time+and+work+aptitude+tricks' },
-  { name:'Speed & Distance',     indiabix:'https://www.indiabix.com/aptitude/time-and-distance/',     yt:'https://www.youtube.com/results?search_query=speed+distance+time+aptitude' },
-  { name:'Number System',        indiabix:'https://www.indiabix.com/aptitude/numbers/',               yt:'https://www.youtube.com/results?search_query=number+system+aptitude' },
-  { name:'HCF & LCM',           indiabix:'https://www.indiabix.com/aptitude/hcf-and-lcm/',           yt:'https://www.youtube.com/results?search_query=hcf+lcm+aptitude+tricks' },
-  { name:'Permutation & Combination', indiabix:'https://www.indiabix.com/aptitude/permutation-and-combination/', yt:'https://www.youtube.com/results?search_query=permutation+combination+aptitude' },
-  { name:'Probability',          indiabix:'https://www.indiabix.com/aptitude/probability/',           yt:'https://www.youtube.com/results?search_query=probability+aptitude+problems' },
-  { name:'Averages',             indiabix:'https://www.indiabix.com/aptitude/average/',               yt:'https://www.youtube.com/results?search_query=average+aptitude+problems' },
-  { name:'Ratio & Proportion',   indiabix:'https://www.indiabix.com/aptitude/ratio-and-proportion/',  yt:'https://www.youtube.com/results?search_query=ratio+proportion+aptitude' },
-  { name:'Simple Interest',      indiabix:'https://www.indiabix.com/aptitude/simple-interest/',       yt:'https://www.youtube.com/results?search_query=simple+interest+aptitude' },
-  { name:'Compound Interest',    indiabix:'https://www.indiabix.com/aptitude/compound-interest/',     yt:'https://www.youtube.com/results?search_query=compound+interest+aptitude' },
-  { name:'Ages Problems',        indiabix:'https://www.indiabix.com/aptitude/problems-on-ages/',      yt:'https://www.youtube.com/results?search_query=problems+on+ages+aptitude' },
-  { name:'Trains',               indiabix:'https://www.indiabix.com/aptitude/problems-on-trains/',    yt:'https://www.youtube.com/results?search_query=trains+aptitude+problems' },
-  { name:'Boats & Streams',      indiabix:'https://www.indiabix.com/aptitude/boats-and-streams/',     yt:'https://www.youtube.com/results?search_query=boats+streams+aptitude' },
-  { name:'Pipes & Cisterns',     indiabix:'https://www.indiabix.com/aptitude/pipes-and-cisterns/',    yt:'https://www.youtube.com/results?search_query=pipes+cisterns+aptitude' },
-  { name:'Partnership',          indiabix:'https://www.indiabix.com/aptitude/partnership/',           yt:'https://www.youtube.com/results?search_query=partnership+aptitude+problems' },
-  { name:'Mixtures & Alligations',indiabix:'https://www.indiabix.com/aptitude/alligation-or-mixture/',yt:'https://www.youtube.com/results?search_query=mixtures+alligations+aptitude' },
-  { name:'Geometry & Mensuration',indiabix:'https://www.indiabix.com/aptitude/area/',                 yt:'https://www.youtube.com/results?search_query=mensuration+aptitude+problems' },
-  { name:'Algebra',              indiabix:'https://www.indiabix.com/aptitude/simplification/',        yt:'https://www.youtube.com/results?search_query=algebra+aptitude+problems' },
+  { name: 'Percentages', indiabix: 'https://www.indiabix.com/aptitude/percentage/', yt: 'https://www.youtube.com/results?search_query=percentage+aptitude+problems' },
+  { name: 'Profit & Loss', indiabix: 'https://www.indiabix.com/aptitude/profit-and-loss/', yt: 'https://www.youtube.com/results?search_query=profit+and+loss+aptitude' },
+  { name: 'Time & Work', indiabix: 'https://www.indiabix.com/aptitude/time-and-work/', yt: 'https://www.youtube.com/results?search_query=time+and+work+aptitude+tricks' },
+  { name: 'Speed & Distance', indiabix: 'https://www.indiabix.com/aptitude/time-and-distance/', yt: 'https://www.youtube.com/results?search_query=speed+distance+time+aptitude' },
+  { name: 'Number System', indiabix: 'https://www.indiabix.com/aptitude/numbers/', yt: 'https://www.youtube.com/results?search_query=number+system+aptitude' },
+  { name: 'HCF & LCM', indiabix: 'https://www.indiabix.com/aptitude/hcf-and-lcm/', yt: 'https://www.youtube.com/results?search_query=hcf+lcm+aptitude+tricks' },
+  { name: 'Permutation & Combination', indiabix: 'https://www.indiabix.com/aptitude/permutation-and-combination/', yt: 'https://www.youtube.com/results?search_query=permutation+combination+aptitude' },
+  { name: 'Probability', indiabix: 'https://www.indiabix.com/aptitude/probability/', yt: 'https://www.youtube.com/results?search_query=probability+aptitude+problems' },
+  { name: 'Averages', indiabix: 'https://www.indiabix.com/aptitude/average/', yt: 'https://www.youtube.com/results?search_query=average+aptitude+problems' },
+  { name: 'Ratio & Proportion', indiabix: 'https://www.indiabix.com/aptitude/ratio-and-proportion/', yt: 'https://www.youtube.com/results?search_query=ratio+proportion+aptitude' },
+  { name: 'Simple Interest', indiabix: 'https://www.indiabix.com/aptitude/simple-interest/', yt: 'https://www.youtube.com/results?search_query=simple+interest+aptitude' },
+  { name: 'Compound Interest', indiabix: 'https://www.indiabix.com/aptitude/compound-interest/', yt: 'https://www.youtube.com/results?search_query=compound+interest+aptitude' },
+  { name: 'Ages Problems', indiabix: 'https://www.indiabix.com/aptitude/problems-on-ages/', yt: 'https://www.youtube.com/results?search_query=problems+on+ages+aptitude' },
+  { name: 'Trains', indiabix: 'https://www.indiabix.com/aptitude/problems-on-trains/', yt: 'https://www.youtube.com/results?search_query=trains+aptitude+problems' },
+  { name: 'Boats & Streams', indiabix: 'https://www.indiabix.com/aptitude/boats-and-streams/', yt: 'https://www.youtube.com/results?search_query=boats+streams+aptitude' },
+  { name: 'Pipes & Cisterns', indiabix: 'https://www.indiabix.com/aptitude/pipes-and-cisterns/', yt: 'https://www.youtube.com/results?search_query=pipes+cisterns+aptitude' },
+  { name: 'Partnership', indiabix: 'https://www.indiabix.com/aptitude/partnership/', yt: 'https://www.youtube.com/results?search_query=partnership+aptitude+problems' },
+  { name: 'Mixtures & Alligations', indiabix: 'https://www.indiabix.com/aptitude/alligation-or-mixture/', yt: 'https://www.youtube.com/results?search_query=mixtures+alligations+aptitude' },
+  { name: 'Geometry & Mensuration', indiabix: 'https://www.indiabix.com/aptitude/area/', yt: 'https://www.youtube.com/results?search_query=mensuration+aptitude+problems' },
+  { name: 'Algebra', indiabix: 'https://www.indiabix.com/aptitude/simplification/', yt: 'https://www.youtube.com/results?search_query=algebra+aptitude+problems' },
 ];
 
 const LOGICAL_TOPICS = [
-  { name:'Number Series',         indiabix:'https://www.indiabix.com/verbal-reasoning/number-series/',          yt:'https://www.youtube.com/results?search_query=number+series+reasoning' },
-  { name:'Letter Series',         indiabix:'https://www.indiabix.com/verbal-reasoning/letter-series/',          yt:'https://www.youtube.com/results?search_query=letter+series+reasoning' },
-  { name:'Blood Relations',       indiabix:'https://www.indiabix.com/verbal-reasoning/blood-relation/',         yt:'https://www.youtube.com/results?search_query=blood+relations+reasoning' },
-  { name:'Coding & Decoding',     indiabix:'https://www.indiabix.com/verbal-reasoning/coding-decoding/',        yt:'https://www.youtube.com/results?search_query=coding+decoding+reasoning' },
-  { name:'Direction Sense',       indiabix:'https://www.indiabix.com/verbal-reasoning/direction-sense-test/',   yt:'https://www.youtube.com/results?search_query=direction+sense+reasoning' },
-  { name:'Syllogisms',            indiabix:'https://www.indiabix.com/logical-reasoning/statement-and-argument/', yt:'https://www.youtube.com/results?search_query=syllogism+reasoning+tricks' },
-  { name:'Seating Arrangements',  indiabix:'https://www.indiabix.com/logical-reasoning/seating-arrangement/',  yt:'https://www.youtube.com/results?search_query=seating+arrangement+reasoning' },
-  { name:'Puzzles',               indiabix:'https://www.indiabix.com/logical-reasoning/puzzle/',                yt:'https://www.youtube.com/results?search_query=puzzles+reasoning+problems' },
-  { name:'Venn Diagrams',         indiabix:'https://www.indiabix.com/logical-reasoning/venn-diagrams/',         yt:'https://www.youtube.com/results?search_query=venn+diagram+reasoning' },
-  { name:'Analogies',             indiabix:'https://www.indiabix.com/verbal-reasoning/analogy/',                yt:'https://www.youtube.com/results?search_query=analogy+reasoning+problems' },
-  { name:'Classification',        indiabix:'https://www.indiabix.com/verbal-reasoning/classification/',         yt:'https://www.youtube.com/results?search_query=classification+reasoning' },
-  { name:'Order & Ranking',       indiabix:'https://www.indiabix.com/verbal-reasoning/ranking-test/',           yt:'https://www.youtube.com/results?search_query=order+ranking+reasoning' },
-  { name:'Input & Output',        indiabix:'https://www.indiabix.com/logical-reasoning/machine-input-output/',  yt:'https://www.youtube.com/results?search_query=input+output+reasoning' },
-  { name:'Statements & Conclusions',indiabix:'https://www.indiabix.com/logical-reasoning/statement-and-conclusion/', yt:'https://www.youtube.com/results?search_query=statements+conclusions+reasoning' },
+  { name: 'Number Series', indiabix: 'https://www.indiabix.com/verbal-reasoning/number-series/', yt: 'https://www.youtube.com/results?search_query=number+series+reasoning' },
+  { name: 'Letter Series', indiabix: 'https://www.indiabix.com/verbal-reasoning/letter-series/', yt: 'https://www.youtube.com/results?search_query=letter+series+reasoning' },
+  { name: 'Blood Relations', indiabix: 'https://www.indiabix.com/verbal-reasoning/blood-relation/', yt: 'https://www.youtube.com/results?search_query=blood+relations+reasoning' },
+  { name: 'Coding & Decoding', indiabix: 'https://www.indiabix.com/verbal-reasoning/coding-decoding/', yt: 'https://www.youtube.com/results?search_query=coding+decoding+reasoning' },
+  { name: 'Direction Sense', indiabix: 'https://www.indiabix.com/verbal-reasoning/direction-sense-test/', yt: 'https://www.youtube.com/results?search_query=direction+sense+reasoning' },
+  { name: 'Syllogisms', indiabix: 'https://www.indiabix.com/logical-reasoning/statement-and-argument/', yt: 'https://www.youtube.com/results?search_query=syllogism+reasoning+tricks' },
+  { name: 'Seating Arrangements', indiabix: 'https://www.indiabix.com/logical-reasoning/seating-arrangement/', yt: 'https://www.youtube.com/results?search_query=seating+arrangement+reasoning' },
+  { name: 'Puzzles', indiabix: 'https://www.indiabix.com/logical-reasoning/puzzle/', yt: 'https://www.youtube.com/results?search_query=puzzles+reasoning+problems' },
+  { name: 'Venn Diagrams', indiabix: 'https://www.indiabix.com/logical-reasoning/venn-diagrams/', yt: 'https://www.youtube.com/results?search_query=venn+diagram+reasoning' },
+  { name: 'Analogies', indiabix: 'https://www.indiabix.com/verbal-reasoning/analogy/', yt: 'https://www.youtube.com/results?search_query=analogy+reasoning+problems' },
+  { name: 'Classification', indiabix: 'https://www.indiabix.com/verbal-reasoning/classification/', yt: 'https://www.youtube.com/results?search_query=classification+reasoning' },
+  { name: 'Order & Ranking', indiabix: 'https://www.indiabix.com/verbal-reasoning/ranking-test/', yt: 'https://www.youtube.com/results?search_query=order+ranking+reasoning' },
+  { name: 'Input & Output', indiabix: 'https://www.indiabix.com/logical-reasoning/machine-input-output/', yt: 'https://www.youtube.com/results?search_query=input+output+reasoning' },
+  { name: 'Statements & Conclusions', indiabix: 'https://www.indiabix.com/logical-reasoning/statement-and-conclusion/', yt: 'https://www.youtube.com/results?search_query=statements+conclusions+reasoning' },
 ];
 
 const VERBAL_TOPICS = [
-  { name:'Synonyms & Antonyms',   indiabix:'https://www.indiabix.com/verbal-ability/synonyms/',                 yt:'https://www.youtube.com/results?search_query=synonyms+antonyms+english' },
-  { name:'Sentence Correction',   indiabix:'https://www.indiabix.com/verbal-ability/sentence-correction/',      yt:'https://www.youtube.com/results?search_query=sentence+correction+english' },
-  { name:'Fill in the Blanks',    indiabix:'https://www.indiabix.com/verbal-ability/fill-in-the-blanks/',       yt:'https://www.youtube.com/results?search_query=fill+in+the+blanks+english' },
-  { name:'Reading Comprehension', indiabix:'https://www.indiabix.com/verbal-ability/reading-comprehension/',    yt:'https://www.youtube.com/results?search_query=reading+comprehension+tips' },
-  { name:'Idioms & Phrases',      indiabix:'https://www.indiabix.com/verbal-ability/idioms-and-phrases/',       yt:'https://www.youtube.com/results?search_query=idioms+phrases+english' },
-  { name:'Para Jumbles',          indiabix:'https://www.indiabix.com/verbal-ability/ordering-of-sentences/',    yt:'https://www.youtube.com/results?search_query=para+jumbles+english' },
-  { name:'Error Detection',       indiabix:'https://www.indiabix.com/verbal-ability/spotting-errors/',          yt:'https://www.youtube.com/results?search_query=error+detection+english' },
-  { name:'One Word Substitution', indiabix:'https://www.indiabix.com/verbal-ability/one-word-substitutes/',     yt:'https://www.youtube.com/results?search_query=one+word+substitution+english' },
-  { name:'Active & Passive Voice',indiabix:'https://www.indiabix.com/verbal-ability/change-of-voice/',          yt:'https://www.youtube.com/results?search_query=active+passive+voice+english' },
-  { name:'Vocabulary',            indiabix:'https://www.indiabix.com/verbal-ability/synonyms/',                 yt:'https://www.youtube.com/results?search_query=english+vocabulary+for+placement' },
+  { name: 'Synonyms & Antonyms', indiabix: 'https://www.indiabix.com/verbal-ability/synonyms/', yt: 'https://www.youtube.com/results?search_query=synonyms+antonyms+english' },
+  { name: 'Sentence Correction', indiabix: 'https://www.indiabix.com/verbal-ability/sentence-correction/', yt: 'https://www.youtube.com/results?search_query=sentence+correction+english' },
+  { name: 'Fill in the Blanks', indiabix: 'https://www.indiabix.com/verbal-ability/fill-in-the-blanks/', yt: 'https://www.youtube.com/results?search_query=fill+in+the+blanks+english' },
+  { name: 'Reading Comprehension', indiabix: 'https://www.indiabix.com/verbal-ability/reading-comprehension/', yt: 'https://www.youtube.com/results?search_query=reading+comprehension+tips' },
+  { name: 'Idioms & Phrases', indiabix: 'https://www.indiabix.com/verbal-ability/idioms-and-phrases/', yt: 'https://www.youtube.com/results?search_query=idioms+phrases+english' },
+  { name: 'Para Jumbles', indiabix: 'https://www.indiabix.com/verbal-ability/ordering-of-sentences/', yt: 'https://www.youtube.com/results?search_query=para+jumbles+english' },
+  { name: 'Error Detection', indiabix: 'https://www.indiabix.com/verbal-ability/spotting-errors/', yt: 'https://www.youtube.com/results?search_query=error+detection+english' },
+  { name: 'One Word Substitution', indiabix: 'https://www.indiabix.com/verbal-ability/one-word-substitutes/', yt: 'https://www.youtube.com/results?search_query=one+word+substitution+english' },
+  { name: 'Active & Passive Voice', indiabix: 'https://www.indiabix.com/verbal-ability/change-of-voice/', yt: 'https://www.youtube.com/results?search_query=active+passive+voice+english' },
+  { name: 'Vocabulary', indiabix: 'https://www.indiabix.com/verbal-ability/synonyms/', yt: 'https://www.youtube.com/results?search_query=english+vocabulary+for+placement' },
 ];
 
 const INTERVIEW_RESOURCES = [
-  { name:'Tell Me About Yourself',  yt:'https://www.youtube.com/results?search_query=tell+me+about+yourself+answer',       ib:'https://www.interviewbit.com/hr-interview-questions/' },
-  { name:'Strengths & Weaknesses',  yt:'https://www.youtube.com/results?search_query=strengths+weaknesses+interview',      ib:'https://www.interviewbit.com/hr-interview-questions/#strengths-weaknesses' },
-  { name:'Why This Company?',       yt:'https://www.youtube.com/results?search_query=why+do+you+want+to+join+this+company', ib:'https://www.interviewbit.com/hr-interview-questions/' },
-  { name:'Where Do You See Yourself in 5 Years?', yt:'https://www.youtube.com/results?search_query=where+do+you+see+yourself+5+years+answer', ib:'https://www.interviewbit.com/hr-interview-questions/' },
-  { name:'STAR Method for HR',      yt:'https://www.youtube.com/results?search_query=STAR+method+interview+answer',        ib:'https://www.interviewbit.com/blog/star-method-interview-questions/' },
-  { name:'Group Discussion Tips',   yt:'https://www.youtube.com/results?search_query=group+discussion+tips+placement',     ib:'https://www.interviewbit.com/group-discussion-topics/' },
-  { name:'Body Language Tips',      yt:'https://www.youtube.com/results?search_query=body+language+interview+tips',        ib:'https://www.interviewbit.com/blog/interview-tips/' },
-  { name:'Salary Negotiation',      yt:'https://www.youtube.com/results?search_query=salary+negotiation+tips+fresher',     ib:'https://www.interviewbit.com/blog/salary-negotiation-tips/' },
+  { name: 'Tell Me About Yourself', yt: 'https://www.youtube.com/results?search_query=tell+me+about+yourself+answer', ib: 'https://www.interviewbit.com/hr-interview-questions/' },
+  { name: 'Strengths & Weaknesses', yt: 'https://www.youtube.com/results?search_query=strengths+weaknesses+interview', ib: 'https://www.interviewbit.com/hr-interview-questions/#strengths-weaknesses' },
+  { name: 'Why This Company?', yt: 'https://www.youtube.com/results?search_query=why+do+you+want+to+join+this+company', ib: 'https://www.interviewbit.com/hr-interview-questions/' },
+  { name: 'Where Do You See Yourself in 5 Years?', yt: 'https://www.youtube.com/results?search_query=where+do+you+see+yourself+5+years+answer', ib: 'https://www.interviewbit.com/hr-interview-questions/' },
+  { name: 'STAR Method for HR', yt: 'https://www.youtube.com/results?search_query=STAR+method+interview+answer', ib: 'https://www.interviewbit.com/blog/star-method-interview-questions/' },
+  { name: 'Group Discussion Tips', yt: 'https://www.youtube.com/results?search_query=group+discussion+tips+placement', ib: 'https://www.interviewbit.com/group-discussion-topics/' },
+  { name: 'Body Language Tips', yt: 'https://www.youtube.com/results?search_query=body+language+interview+tips', ib: 'https://www.interviewbit.com/blog/interview-tips/' },
+  { name: 'Salary Negotiation', yt: 'https://www.youtube.com/results?search_query=salary+negotiation+tips+fresher', ib: 'https://www.interviewbit.com/blog/salary-negotiation-tips/' },
 ];
 
 const COMPANIES = [
-  { name:'TCS', logo:'🔵', rounds:['Aptitude Test','Technical MCQ','Technical Interview','HR Interview'], prep:'https://www.geeksforgeeks.org/tcs-interview-experience/', yt:'https://www.youtube.com/results?search_query=TCS+placement+preparation+2024' },
-  { name:'Infosys', logo:'🟢', rounds:['Hackathon/InfyTQ','Reasoning & Verbal','Technical Interview','HR Interview'], prep:'https://www.geeksforgeeks.org/infosys-interview-experience/', yt:'https://www.youtube.com/results?search_query=Infosys+placement+preparation+2024' },
-  { name:'Wipro', logo:'🟡', rounds:['Aptitude','Written Communication','Technical Interview','HR Interview'], prep:'https://www.geeksforgeeks.org/wipro-interview-experience/', yt:'https://www.youtube.com/results?search_query=Wipro+WILP+placement+preparation' },
-  { name:'Cognizant', logo:'🔷', rounds:['GAME (Aptitude)','Coding Test','Technical Interview','HR Interview'], prep:'https://www.geeksforgeeks.org/cognizant-interview-experience/', yt:'https://www.youtube.com/results?search_query=Cognizant+CTS+placement+preparation' },
-  { name:'Accenture', logo:'🟣', rounds:['Cognitive Test','Coding Test','Communication Test','HR Interview'], prep:'https://www.geeksforgeeks.org/accenture-interview-experience/', yt:'https://www.youtube.com/results?search_query=Accenture+placement+preparation+2024' },
-  { name:'Google', logo:'🔴', rounds:['Online Coding','Phone Screen','4-5 Onsite Rounds','System Design'], prep:'https://www.geeksforgeeks.org/google-interview-preparation/', yt:'https://www.youtube.com/results?search_query=google+interview+preparation+DSA' },
-  { name:'Amazon', logo:'🟠', rounds:['Online Assessment','Technical Phone','Bar Raiser','Leadership Principles'], prep:'https://www.geeksforgeeks.org/amazon-interview-preparation/', yt:'https://www.youtube.com/results?search_query=amazon+SDE+interview+preparation' },
-  { name:'Microsoft', logo:'⬜', rounds:['Online Coding','4 Technical Rounds','Hiring Manager Round'], prep:'https://www.geeksforgeeks.org/microsoft-interview-preparation/', yt:'https://www.youtube.com/results?search_query=microsoft+interview+preparation+SDE' },
+  { name: 'TCS', logo: '🔵', rounds: ['Aptitude Test', 'Technical MCQ', 'Technical Interview', 'HR Interview'], prep: 'https://www.geeksforgeeks.org/tcs-interview-experience/', yt: 'https://www.youtube.com/results?search_query=TCS+placement+preparation+2024' },
+  { name: 'Infosys', logo: '🟢', rounds: ['Hackathon/InfyTQ', 'Reasoning & Verbal', 'Technical Interview', 'HR Interview'], prep: 'https://www.geeksforgeeks.org/infosys-interview-experience/', yt: 'https://www.youtube.com/results?search_query=Infosys+placement+preparation+2024' },
+  { name: 'Wipro', logo: '🟡', rounds: ['Aptitude', 'Written Communication', 'Technical Interview', 'HR Interview'], prep: 'https://www.geeksforgeeks.org/wipro-interview-experience/', yt: 'https://www.youtube.com/results?search_query=Wipro+WILP+placement+preparation' },
+  { name: 'Cognizant', logo: '🔷', rounds: ['GAME (Aptitude)', 'Coding Test', 'Technical Interview', 'HR Interview'], prep: 'https://www.geeksforgeeks.org/cognizant-interview-experience/', yt: 'https://www.youtube.com/results?search_query=Cognizant+CTS+placement+preparation' },
+  { name: 'Accenture', logo: '🟣', rounds: ['Cognitive Test', 'Coding Test', 'Communication Test', 'HR Interview'], prep: 'https://www.geeksforgeeks.org/accenture-interview-experience/', yt: 'https://www.youtube.com/results?search_query=Accenture+placement+preparation+2024' },
+  { name: 'Google', logo: '🔴', rounds: ['Online Coding', 'Phone Screen', '4-5 Onsite Rounds', 'System Design'], prep: 'https://www.geeksforgeeks.org/google-interview-preparation/', yt: 'https://www.youtube.com/results?search_query=google+interview+preparation+DSA' },
+  { name: 'Amazon', logo: '🟠', rounds: ['Online Assessment', 'Technical Phone', 'Bar Raiser', 'Leadership Principles'], prep: 'https://www.geeksforgeeks.org/amazon-interview-preparation/', yt: 'https://www.youtube.com/results?search_query=amazon+SDE+interview+preparation' },
+  { name: 'Microsoft', logo: '⬜', rounds: ['Online Coding', '4 Technical Rounds', 'Hiring Manager Round'], prep: 'https://www.geeksforgeeks.org/microsoft-interview-preparation/', yt: 'https://www.youtube.com/results?search_query=microsoft+interview+preparation+SDE' },
 ];
 
 // ── Source button component ──────────────────────────────────
 function SourceBtn({ href, icon, label, color }) {
   return (
     <a href={href} target="_blank" rel="noreferrer" style={{
-      display:'inline-flex', alignItems:'center', gap:5,
-      padding:'5px 12px', borderRadius:8, textDecoration:'none',
-      background: color+'15', border:`1.5px solid ${color}44`,
-      color: color, fontSize:12, fontWeight:800,
-      transition:'all 0.15s', whiteSpace:'nowrap'
+      display: 'inline-flex', alignItems: 'center', gap: 5,
+      padding: '5px 12px', borderRadius: 8, textDecoration: 'none',
+      background: color + '15', border: `1.5px solid ${color}44`,
+      color: color, fontSize: 12, fontWeight: 800,
+      transition: 'all 0.15s', whiteSpace: 'nowrap'
     }}
-    onMouseEnter={e=>{ e.currentTarget.style.background=color; e.currentTarget.style.color='#fff'; }}
-    onMouseLeave={e=>{ e.currentTarget.style.background=color+'15'; e.currentTarget.style.color=color; }}
+      onMouseEnter={e => { e.currentTarget.style.background = color; e.currentTarget.style.color = '#fff'; }}
+      onMouseLeave={e => { e.currentTarget.style.background = color + '15'; e.currentTarget.style.color = color; }}
     >
       {icon} {label}
     </a>
@@ -298,22 +370,22 @@ function SourceBtn({ href, icon, label, color }) {
 
 export default function Placement() {
   const [jobs, setJobs] = useState(null);
-  const [tab,  setTab]  = useState('dsa');
-  const [dsaFilter, setDsaFilter]   = useState('All');
-  const [search, setSearch]         = useState('');
+  const [tab, setTab] = useState('dsa');
+  const [dsaFilter, setDsaFilter] = useState('All');
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
-    API.get('/placement/jobs').then(r => setJobs(r.data)).catch(() => {});
+    API.get('/placement/jobs').then(r => setJobs(r.data)).catch(() => { });
   }, []);
 
   const TABS = [
-    { key:'dsa',       label:'💻 DSA Problems',  color:'#FF6584' },
-    { key:'aptitude',  label:'📐 Aptitude',       color:'#6C63FF' },
-    { key:'logical',   label:'🧩 Logical',        color:'#F9A825' },
-    { key:'verbal',    label:'📝 Verbal',          color:'#43E97B' },
-    { key:'interview', label:'🎤 Interview',       color:'#AB47BC' },
-    { key:'companies', label:'🏢 Companies',       color:'#29B6F6' },
-    { key:'jobs',      label:'💼 Jobs',            color:'#FF6584' },
+    { key: 'dsa', label: '💻 DSA Problems', color: '#FF6584' },
+    { key: 'aptitude', label: '📐 Aptitude', color: '#6C63FF' },
+    { key: 'logical', label: '🧩 Logical', color: '#F9A825' },
+    { key: 'verbal', label: '📝 Verbal', color: '#43E97B' },
+    { key: 'interview', label: '🎤 Interview', color: '#AB47BC' },
+    { key: 'companies', label: '🏢 Companies', color: '#29B6F6' },
+    { key: 'jobs', label: '💼 Jobs', color: '#FF6584' },
   ];
 
   const dsaTopics = [...new Set(DSA_PROBLEMS.map(p => p.topic))];
@@ -325,81 +397,81 @@ export default function Placement() {
   const activeTab = TABS.find(t => t.key === tab);
 
   return (
-    <div style={{ maxWidth:1050 }}>
-      <h1 style={{ fontWeight:900, fontSize:28, marginBottom:6 }}>💼 Placement Preparation</h1>
-      <p style={{ color:'#7A7A9D', marginBottom:24, fontSize:15 }}>
+    <div style={{ maxWidth: 1050 }}>
+      <h1 style={{ fontWeight: 900, fontSize: 28, marginBottom: 6 }}>💼 Placement Preparation</h1>
+      <p style={{ color: '#7A7A9D', marginBottom: 24, fontSize: 15 }}>
         Topic-wise practice with direct links to LeetCode, GFG, IndiaBix, YouTube & more
       </p>
 
       {/* Tabs */}
-      <div style={{ display:'flex', gap:8, marginBottom:28, flexWrap:'wrap' }}>
+      <div style={{ display: 'flex', gap: 8, marginBottom: 28, flexWrap: 'wrap' }}>
         {TABS.map(t => (
           <button key={t.key} onClick={() => { setTab(t.key); setSearch(''); }} style={{
-            padding:'9px 18px', borderRadius:12, border:`2px solid ${t.color}`,
-            background: tab===t.key ? t.color : '#fff',
-            color: tab===t.key ? '#fff' : t.color,
-            fontWeight:800, fontSize:13, cursor:'pointer', transition:'all 0.2s'
+            padding: '9px 18px', borderRadius: 12, border: `2px solid ${t.color}`,
+            background: tab === t.key ? t.color : 'rgba(255,255,255,0.05)',
+            color: tab === t.key ? '#fff' : t.color,
+            fontWeight: 800, fontSize: 13, cursor: 'pointer', transition: 'all 0.2s'
           }}>{t.label}</button>
         ))}
       </div>
 
       {/* ── DSA PROBLEMS ── */}
-      {tab==='dsa' && (
+      {tab === 'dsa' && (
         <div>
           {/* Search + Filter */}
-          <div style={{ display:'flex', gap:12, marginBottom:20, flexWrap:'wrap' }}>
+          <div style={{ display: 'flex', gap: 12, marginBottom: 20, flexWrap: 'wrap' }}>
             <input
               placeholder="🔍 Search problem..."
               value={search}
               onChange={e => setSearch(e.target.value)}
               style={{
-                padding:'10px 16px', borderRadius:12, border:'2px solid #E0E7FF',
-                fontSize:14, fontWeight:600, width:260, outline:'none',
-                fontFamily:'Nunito,sans-serif'
+                padding: '10px 16px', borderRadius: 12, border: '2px solid rgba(255,255,255,0.1)',
+                background: 'rgba(255,255,255,0.05)', color: '#F0F0FF',
+                fontSize: 14, fontWeight: 600, width: 260, outline: 'none',
+                fontFamily: 'Nunito,sans-serif'
               }}
             />
-            <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
               {['All', ...dsaTopics].map(t => (
                 <button key={t} onClick={() => setDsaFilter(t)} style={{
-                  padding:'8px 14px', borderRadius:10, border:'2px solid #FF658444',
-                  background: dsaFilter===t ? '#FF6584' : '#fff',
-                  color: dsaFilter===t ? '#fff' : '#FF6584',
-                  fontWeight:700, fontSize:12, cursor:'pointer', transition:'all 0.2s'
+                  padding: '8px 14px', borderRadius: 10, border: '2px solid #FF658444',
+                  background: dsaFilter === t ? '#FF6584' : 'rgba(255,255,255,0.05)',
+                  color: dsaFilter === t ? '#fff' : '#FF6584',
+                  fontWeight: 700, fontSize: 12, cursor: 'pointer', transition: 'all 0.2s'
                 }}>{t}</button>
               ))}
             </div>
           </div>
 
           {/* Problem list */}
-          <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {filteredDSA.length === 0 ? (
-              <div style={{ textAlign:'center', padding:40, color:'#7A7A9D' }}>
+              <div style={{ textAlign: 'center', padding: 40, color: '#7A7A9D' }}>
                 No problems found for "{search}"
               </div>
             ) : filteredDSA.map((p, i) => (
               <div key={p.name} style={{
-                background:'#fff', borderRadius:16, padding:'14px 20px',
-                boxShadow:'0 3px 12px rgba(0,0,0,0.06)',
-                border:'2px solid #FF658411',
-                display:'flex', alignItems:'center',
-                justifyContent:'space-between', gap:12, flexWrap:'wrap'
+                background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: '14px 20px',
+                border: '1px solid rgba(255,255,255,0.08)',
+                display: 'flex', alignItems: 'center',
+                justifyContent: 'space-between', gap: 12, flexWrap: 'wrap'
               }}>
-                <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                   <div style={{
-                    width:32, height:32, borderRadius:8, background:'#FF658418',
-                    display:'flex', alignItems:'center', justifyContent:'center',
-                    fontWeight:900, fontSize:13, color:'#FF6584', flexShrink:0
-                  }}>{i+1}</div>
+                    width: 32, height: 32, borderRadius: 8, background: '#FF658418',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: 13, color: '#FF6584', flexShrink: 0
+                  }}>{i + 1}</div>
                   <div>
-                    <div style={{ fontWeight:800, fontSize:15, color:'#2D2D2D' }}>{p.name}</div>
-                    <div style={{ fontSize:12, color:'#7A7A9D', fontWeight:600 }}>{p.topic}</div>
+                    <div style={{ fontWeight: 800, fontSize: 15, color: '#F0F0FF' }}>{p.name}</div>
+                    <div style={{ fontSize: 12, color: '#7A7A9D', fontWeight: 600 }}>{p.topic}</div>
                   </div>
                 </div>
-                <div style={{ display:'flex', gap:8, flexWrap:'wrap' }}>
-                  <SourceBtn href={p.lc}  icon="🟨" label="LeetCode"   color="#F89F1B" />
-                  <SourceBtn href={p.gfg} icon="🟩" label="GFG"         color="#2F8D46" />
-                  <SourceBtn href={p.hr}  icon="⬛" label="HackerRank"  color="#1BA94C" />
-                  <SourceBtn href={p.yt}  icon="🔴" label="▶ Video"     color="#FF0000" />
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  <SourceBtn href={p.lc} icon="🟨" label="LeetCode" color="#F89F1B" />
+                  <SourceBtn href={p.gfg} icon="🟩" label="GFG" color="#2F8D46" />
+                  <SourceBtn href={p.hr} icon="⬛" label="HackerRank" color="#1BA94C" />
+                  <SourceBtn href={p.yt} icon="🔴" label="▶ Video" color="#FF0000" />
                 </div>
               </div>
             ))}
@@ -408,28 +480,28 @@ export default function Placement() {
       )}
 
       {/* ── APTITUDE ── */}
-      {tab==='aptitude' && (
+      {tab === 'aptitude' && (
         <div>
-          <p style={{ color:'#7A7A9D', marginBottom:16, fontSize:14 }}>
+          <p style={{ color: '#7A7A9D', marginBottom: 16, fontSize: 14 }}>
             Click any topic to go directly to that practice page
           </p>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:12 }}>
-            {APTITUDE_TOPICS.map((t,i) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 12 }}>
+            {APTITUDE_TOPICS.map((t, i) => (
               <div key={t.name} style={{
-                background:'#fff', borderRadius:16, padding:'14px 18px',
-                boxShadow:'0 3px 12px rgba(0,0,0,0.06)', border:'2px solid #6C63FF11'
+                background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: '14px 18px',
+                border: '1px solid rgba(255,255,255,0.08)'
               }}>
-                <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
                   <div style={{
-                    width:30, height:30, borderRadius:8, background:'#6C63FF18',
-                    display:'flex', alignItems:'center', justifyContent:'center',
-                    fontWeight:900, fontSize:12, color:'#6C63FF', flexShrink:0
-                  }}>{i+1}</div>
-                  <span style={{ fontWeight:800, fontSize:14, color:'#2D2D2D' }}>{t.name}</span>
+                    width: 30, height: 30, borderRadius: 8, background: '#6C63FF18',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: 12, color: '#6C63FF', flexShrink: 0
+                  }}>{i + 1}</div>
+                  <span style={{ fontWeight: 800, fontSize: 14, color: '#F0F0FF' }}>{t.name}</span>
                 </div>
-                <div style={{ display:'flex', gap:6 }}>
+                <div style={{ display: 'flex', gap: 6 }}>
                   <SourceBtn href={t.indiabix} icon="📘" label="IndiaBix" color="#6C63FF" />
-                  <SourceBtn href={t.yt}        icon="🔴" label="YouTube"  color="#FF0000" />
+                  <SourceBtn href={t.yt} icon="🔴" label="YouTube" color="#FF0000" />
                 </div>
               </div>
             ))}
@@ -438,28 +510,28 @@ export default function Placement() {
       )}
 
       {/* ── LOGICAL ── */}
-      {tab==='logical' && (
+      {tab === 'logical' && (
         <div>
-          <p style={{ color:'#7A7A9D', marginBottom:16, fontSize:14 }}>
+          <p style={{ color: '#7A7A9D', marginBottom: 16, fontSize: 14 }}>
             Click any topic to go directly to that reasoning practice page
           </p>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:12 }}>
-            {LOGICAL_TOPICS.map((t,i) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 12 }}>
+            {LOGICAL_TOPICS.map((t, i) => (
               <div key={t.name} style={{
-                background:'#fff', borderRadius:16, padding:'14px 18px',
-                boxShadow:'0 3px 12px rgba(0,0,0,0.06)', border:'2px solid #F9A82511'
+                background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: '14px 18px',
+                border: '1px solid rgba(255,255,255,0.08)'
               }}>
-                <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
                   <div style={{
-                    width:30, height:30, borderRadius:8, background:'#F9A82518',
-                    display:'flex', alignItems:'center', justifyContent:'center',
-                    fontWeight:900, fontSize:12, color:'#F9A825', flexShrink:0
-                  }}>{i+1}</div>
-                  <span style={{ fontWeight:800, fontSize:14, color:'#2D2D2D' }}>{t.name}</span>
+                    width: 30, height: 30, borderRadius: 8, background: '#F9A82518',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: 12, color: '#F9A825', flexShrink: 0
+                  }}>{i + 1}</div>
+                  <span style={{ fontWeight: 800, fontSize: 14, color: '#F0F0FF' }}>{t.name}</span>
                 </div>
-                <div style={{ display:'flex', gap:6 }}>
+                <div style={{ display: 'flex', gap: 6 }}>
                   <SourceBtn href={t.indiabix} icon="📘" label="IndiaBix" color="#F9A825" />
-                  <SourceBtn href={t.yt}        icon="🔴" label="YouTube"  color="#FF0000" />
+                  <SourceBtn href={t.yt} icon="🔴" label="YouTube" color="#FF0000" />
                 </div>
               </div>
             ))}
@@ -468,28 +540,28 @@ export default function Placement() {
       )}
 
       {/* ── VERBAL ── */}
-      {tab==='verbal' && (
+      {tab === 'verbal' && (
         <div>
-          <p style={{ color:'#7A7A9D', marginBottom:16, fontSize:14 }}>
+          <p style={{ color: '#7A7A9D', marginBottom: 16, fontSize: 14 }}>
             Click any topic to practice directly on IndiaBix or watch tutorials
           </p>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(280px,1fr))', gap:12 }}>
-            {VERBAL_TOPICS.map((t,i) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))', gap: 12 }}>
+            {VERBAL_TOPICS.map((t, i) => (
               <div key={t.name} style={{
-                background:'#fff', borderRadius:16, padding:'14px 18px',
-                boxShadow:'0 3px 12px rgba(0,0,0,0.06)', border:'2px solid #43E97B11'
+                background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: '14px 18px',
+                border: '1px solid rgba(255,255,255,0.08)'
               }}>
-                <div style={{ display:'flex', alignItems:'center', gap:10, marginBottom:10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
                   <div style={{
-                    width:30, height:30, borderRadius:8, background:'#43E97B18',
-                    display:'flex', alignItems:'center', justifyContent:'center',
-                    fontWeight:900, fontSize:12, color:'#43E97B', flexShrink:0
-                  }}>{i+1}</div>
-                  <span style={{ fontWeight:800, fontSize:14, color:'#2D2D2D' }}>{t.name}</span>
+                    width: 30, height: 30, borderRadius: 8, background: '#43E97B18',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: 12, color: '#43E97B', flexShrink: 0
+                  }}>{i + 1}</div>
+                  <span style={{ fontWeight: 800, fontSize: 14, color: '#F0F0FF' }}>{t.name}</span>
                 </div>
-                <div style={{ display:'flex', gap:6 }}>
+                <div style={{ display: 'flex', gap: 6 }}>
                   <SourceBtn href={t.indiabix} icon="📘" label="IndiaBix" color="#43E97B" />
-                  <SourceBtn href={t.yt}        icon="🔴" label="YouTube"  color="#FF0000" />
+                  <SourceBtn href={t.yt} icon="🔴" label="YouTube" color="#FF0000" />
                 </div>
               </div>
             ))}
@@ -498,29 +570,29 @@ export default function Placement() {
       )}
 
       {/* ── INTERVIEW ── */}
-      {tab==='interview' && (
+      {tab === 'interview' && (
         <div>
-          <p style={{ color:'#7A7A9D', marginBottom:16, fontSize:14 }}>
+          <p style={{ color: '#7A7A9D', marginBottom: 16, fontSize: 14 }}>
             Prepare for HR and behavioral interviews with direct resources
           </p>
-          <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
-            {INTERVIEW_RESOURCES.map((r,i) => (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {INTERVIEW_RESOURCES.map((r, i) => (
               <div key={r.name} style={{
-                background:'#fff', borderRadius:16, padding:'14px 20px',
-                boxShadow:'0 3px 12px rgba(0,0,0,0.06)', border:'2px solid #AB47BC11',
-                display:'flex', alignItems:'center', justifyContent:'space-between',
-                gap:12, flexWrap:'wrap'
+                background: 'rgba(255,255,255,0.03)', borderRadius: 16, padding: '14px 20px',
+                border: '1px solid rgba(255,255,255,0.08)',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                gap: 12, flexWrap: 'wrap'
               }}>
-                <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                   <div style={{
-                    width:32, height:32, borderRadius:8, background:'#AB47BC18',
-                    display:'flex', alignItems:'center', justifyContent:'center',
-                    fontWeight:900, fontSize:13, color:'#AB47BC', flexShrink:0
-                  }}>{i+1}</div>
-                  <span style={{ fontWeight:800, fontSize:15, color:'#2D2D2D' }}>{r.name}</span>
+                    width: 32, height: 32, borderRadius: 8, background: '#AB47BC18',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontWeight: 900, fontSize: 13, color: '#AB47BC', flexShrink: 0
+                  }}>{i + 1}</div>
+                  <span style={{ fontWeight: 800, fontSize: 15, color: '#F0F0FF' }}>{r.name}</span>
                 </div>
-                <div style={{ display:'flex', gap:8 }}>
-                  <SourceBtn href={r.yt} icon="🔴" label="YouTube"      color="#FF0000" />
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <SourceBtn href={r.yt} icon="🔴" label="YouTube" color="#FF0000" />
                   <SourceBtn href={r.ib} icon="💡" label="InterviewBit" color="#AB47BC" />
                 </div>
               </div>
@@ -530,51 +602,51 @@ export default function Placement() {
       )}
 
       {/* ── COMPANIES ── */}
-      {tab==='companies' && (
+      {tab === 'companies' && (
         <div>
-          <p style={{ color:'#7A7A9D', marginBottom:16, fontSize:14 }}>
+          <p style={{ color: '#7A7A9D', marginBottom: 16, fontSize: 14 }}>
             Company-specific preparation — rounds, tips and direct links
           </p>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(300px,1fr))', gap:16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(300px,1fr))', gap: 16 }}>
             {COMPANIES.map(c => (
               <div key={c.name} style={{
-                background:'#fff', borderRadius:20, padding:22,
-                boxShadow:'0 4px 20px rgba(0,0,0,0.07)', border:'2px solid #29B6F611'
+                background: 'rgba(255,255,255,0.03)', borderRadius: 20, padding: 22,
+                border: '1px solid rgba(255,255,255,0.08)'
               }}>
-                <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:14 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
                   <div style={{
-                    width:44, height:44, borderRadius:12, background:'#29B6F618',
-                    display:'flex', alignItems:'center', justifyContent:'center', fontSize:24
+                    width: 44, height: 44, borderRadius: 12, background: '#29B6F618',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24
                   }}>{c.logo}</div>
                   <div>
-                    <div style={{ fontWeight:900, fontSize:18, color:'#2D2D2D' }}>{c.name}</div>
-                    <div style={{ fontSize:12, color:'#7A7A9D', fontWeight:600 }}>
+                    <div style={{ fontWeight: 900, fontSize: 18, color: '#F0F0FF' }}>{c.name}</div>
+                    <div style={{ fontSize: 12, color: '#7A7A9D', fontWeight: 600 }}>
                       {c.rounds.length} interview rounds
                     </div>
                   </div>
                 </div>
 
                 {/* Rounds */}
-                <div style={{ marginBottom:14 }}>
-                  {c.rounds.map((r,i) => (
+                <div style={{ marginBottom: 14 }}>
+                  {c.rounds.map((r, i) => (
                     <div key={r} style={{
-                      display:'flex', alignItems:'center', gap:8,
-                      padding:'6px 0', borderBottom:'1px solid #F0F0FF'
+                      display: 'flex', alignItems: 'center', gap: 8,
+                      padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.05)'
                     }}>
                       <span style={{
-                        width:22, height:22, borderRadius:6, background:'#29B6F618',
-                        display:'flex', alignItems:'center', justifyContent:'center',
-                        fontSize:11, fontWeight:900, color:'#29B6F6', flexShrink:0
-                      }}>R{i+1}</span>
-                      <span style={{ fontSize:13, fontWeight:700, color:'#2D2D2D' }}>{r}</span>
+                        width: 22, height: 22, borderRadius: 6, background: '#29B6F618',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        fontSize: 11, fontWeight: 900, color: '#29B6F6', flexShrink: 0
+                      }}>R{i + 1}</span>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: '#F0F0FF' }}>{r}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Links */}
-                <div style={{ display:'flex', gap:8 }}>
-                  <SourceBtn href={c.prep} icon="🟩" label="GFG Prep"  color="#2F8D46" />
-                  <SourceBtn href={c.yt}   icon="🔴" label="YouTube"   color="#FF0000" />
+                <div style={{ display: 'flex', gap: 8 }}>
+                  <SourceBtn href={c.prep} icon="🟩" label="GFG Prep" color="#2F8D46" />
+                  <SourceBtn href={c.yt} icon="🔴" label="YouTube" color="#FF0000" />
                 </div>
               </div>
             ))}
@@ -583,31 +655,31 @@ export default function Placement() {
       )}
 
       {/* ── JOBS ── */}
-      {tab==='jobs' && jobs && (
-        <div style={{ maxWidth:600 }}>
+      {tab === 'jobs' && jobs && (
+        <div style={{ maxWidth: 600 }}>
           <div style={{
-            background:'linear-gradient(135deg,#29B6F6,#81d4fa)',
-            borderRadius:20, padding:24, color:'#fff', marginBottom:20
+            background: 'linear-gradient(135deg,#29B6F6,#81d4fa)',
+            borderRadius: 20, padding: 24, color: '#fff', marginBottom: 20
           }}>
-            <h2 style={{ fontWeight:900, fontSize:20, marginBottom:4 }}>
+            <h2 style={{ fontWeight: 900, fontSize: 20, marginBottom: 4 }}>
               💼 Recommended for: {jobs.career_domain}
             </h2>
-            <p style={{ opacity:0.85, fontSize:14 }}>Entry-level roles matching your career profile</p>
+            <p style={{ opacity: 0.85, fontSize: 14 }}>Entry-level roles matching your career profile</p>
           </div>
-          <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {jobs.recommended_roles.map(r => (
               <div key={r} style={{
-                display:'flex', alignItems:'center', justifyContent:'space-between',
-                padding:'14px 18px', background:'#fff', borderRadius:14,
-                boxShadow:'0 3px 12px rgba(0,0,0,0.06)', border:'2px solid #29B6F611'
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                padding: '14px 18px', background: 'rgba(255,255,255,0.03)', borderRadius: 14,
+                border: '1px solid rgba(255,255,255,0.08)'
               }}>
-                <div style={{ display:'flex', gap:12, alignItems:'center' }}>
-                  <span style={{ fontSize:22 }}>💼</span>
-                  <span style={{ fontWeight:800, fontSize:15 }}>{r}</span>
+                <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                  <span style={{ fontSize: 22 }}>💼</span>
+                  <span style={{ fontWeight: 800, fontSize: 15, color: '#F0F0FF' }}>{r}</span>
                 </div>
-                <div style={{ display:'flex', gap:8 }}>
+                <div style={{ display: 'flex', gap: 8 }}>
                   <SourceBtn href={`https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(r)}`} icon="🔵" label="LinkedIn" color="#0077B5" />
-                  <SourceBtn href={`https://www.naukri.com/${r.toLowerCase().replace(/ /g,'-')}-jobs`}        icon="🟠" label="Naukri"   color="#FF7555" />
+                  <SourceBtn href={`https://www.naukri.com/${r.toLowerCase().replace(/ /g, '-')}-jobs`} icon="🟠" label="Naukri" color="#FF7555" />
                 </div>
               </div>
             ))}

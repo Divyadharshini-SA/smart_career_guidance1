@@ -23,8 +23,10 @@ class ProfileUpdateSchema(BaseModel):
 
 # ── Assessment ────────────────────────────────────────────────
 class SubmitSchema(BaseModel):
-    type   : str
-    answers: Dict[str, str]   # {question_id: chosen_option}
+    type      : str
+    answers   : Dict[str, str]   # {question_id: chosen_option}
+    test_index: Optional[int]    = None
+    topic     : Optional[str]    = None
 
 class AddQuestionSchema(BaseModel):
     test_type: str

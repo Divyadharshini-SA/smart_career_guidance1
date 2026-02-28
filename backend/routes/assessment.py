@@ -104,7 +104,7 @@ def get_questions(
     if total_db == 0:
         raise HTTPException(status_code=404, detail='No questions found. Please upload questions first.')
 
-    if topic != 'all' and skip > 0:
+    if topic != 'all':
         sliced   = all_qs[skip: skip + count]
         selected = sliced if sliced else all_qs[:count]
     else:
@@ -137,6 +137,7 @@ def submit_assessment(
 
     topic_correct, topic_total = {}, {}
     correct = 0
+    review_data = []
 
     for qid_str, user_ans in data.answers.items():
         qid = int(qid_str)
@@ -148,6 +149,13 @@ def submit_assessment(
         if user_ans.strip() == q.answer.strip():
             correct += 1
             topic_correct[q.topic] += 1
+            
+        review_data.append({
+            'question': q.question,
+            'chosen'  : user_ans,
+            'correct' : q.answer,
+            'options' : [q.option_a, q.option_b, q.option_c, q.option_d]
+        })
 
     total      = len(data.answers)
     percentage = round((correct / total) * 100, 2)
@@ -155,6 +163,11 @@ def submit_assessment(
         t: round((topic_correct.get(t, 0) / topic_total[t]) * 100, 1)
         for t in topic_total
     }
+
+    if data.topic:
+        topic_pct['_topic'] = data.topic
+    if data.test_index is not None:
+        topic_pct['_test_index'] = data.test_index
 
     db.add(Assessment(
         user_id     = current_user.id,
@@ -177,7 +190,13 @@ def submit_assessment(
         )
 
     db.commit()
-    return {'score': correct, 'total': total, 'percentage': percentage, 'topic_scores': topic_pct}
+    return {
+        'score': correct, 
+        'total': total, 
+        'percentage': percentage, 
+        'topic_scores': topic_pct,
+        'review': review_data
+    }
 
 
 # ── STUDENT: History ──────────────────────────────────────────
