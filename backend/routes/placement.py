@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
+from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import get_db
 from models import UserProfile, CareerRecommendation, User
@@ -76,3 +77,34 @@ def resources(category: str, current_user: User = Depends(get_current_user)):
     if category not in RESOURCES:
         raise HTTPException(status_code=404, detail=f'Category not found. Available: {list(RESOURCES.keys())}')
     return {'category': category, 'resources': RESOURCES[category]}
+
+class MarkDoneSchema(BaseModel):
+    problem_name: str
+
+@router.post('/mark-done')
+def mark_done(data: MarkDoneSchema, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    from models import Progress
+    progress = db.query(Progress).filter(Progress.user_id == current_user.id).first()
+    if not progress:
+        progress = Progress(user_id=current_user.id, completed_dsa_problems=[])
+        db.add(progress)
+        db.commit()
+    
+    completed = progress.completed_dsa_problems if progress.completed_dsa_problems is not None else []
+    
+    if data.problem_name not in completed:
+        # Create a new list to ensure SQLAlchemy detects the change to the JSON column
+        new_completed = list(completed)
+        new_completed.append(data.problem_name)
+        progress.completed_dsa_problems = new_completed
+        db.commit()
+        
+    return {"status": "success", "completed_count": len(progress.completed_dsa_problems)}
+
+@router.get('/completed-dsa')
+def get_completed_dsa(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    from models import Progress
+    progress = db.query(Progress).filter(Progress.user_id == current_user.id).first()
+    if not progress or not progress.completed_dsa_problems:
+        return {"completed": []}
+    return {"completed": progress.completed_dsa_problems}

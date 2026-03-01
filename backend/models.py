@@ -106,6 +106,7 @@ class Progress(Base):
     roadmap_completion      = Column(Float, default=0)
     placement_readiness     = Column(Float, default=0)
     completed_roadmap_steps = Column(JSON, default=list)
+    completed_dsa_problems  = Column(JSON, default=list)
     updated_at              = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     user = relationship('User', back_populates='progress')

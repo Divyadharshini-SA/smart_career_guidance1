@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from models import UserProfile, Assessment, Resume, CareerRecommendation, User
 from dependencies import get_current_user
-from ml.career_engine import CareerEngine
+from ml.career_engine import CareerEngineV2
 
 router = APIRouter()
 
@@ -19,13 +19,14 @@ def recommend(current_user: User = Depends(get_current_user), db: Session = Depe
     tech_rec = db.query(Assessment).filter(Assessment.user_id == uid, Assessment.type == 'technical')\
                  .order_by(Assessment.taken_at.desc()).first()
 
-    engine = CareerEngine()
+    engine = CareerEngineV2()
     result = engine.predict(
         skills         = profile.skills    if profile  else {},
         interests      = profile.interests if profile  else [],
         aptitude_score = apt_rec.percentage if apt_rec else 0,
         resume_skills  = resume.extracted_skills if resume else [],
-        tech_score     = tech_rec.percentage if tech_rec else 0
+        tech_score     = tech_rec.percentage if tech_rec else 0,
+        branch         = current_user.branch, # Add branch to fix the domain issue
     )
 
     db.add(CareerRecommendation(
@@ -45,7 +46,10 @@ def history(current_user: User = Depends(get_current_user), db: Session = Depend
                 .filter(CareerRecommendation.user_id == current_user.id)\
                 .order_by(CareerRecommendation.generated_at.desc()).all()
     return [{
-        'top_careers'     : r.top_careers,
-        'confidence_score': r.confidence_score,
-        'generated_at'    : r.generated_at.isoformat()
+        'top_careers'         : r.top_careers,
+        'skill_match_score'   : r.skill_match_score,
+        'aptitude_score'      : r.aptitude_score,
+        'interest_match_score': r.interest_match_score,
+        'confidence_score'    : r.confidence_score,
+        'generated_at'        : r.generated_at.isoformat()
     } for r in records]
