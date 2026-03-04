@@ -181,17 +181,43 @@ const IMPORTANCE_CONFIG = {
 export default function SkillGap() {
   const [domain, setDomain] = useState('Software Engineer');
   const [profileSkills, setProfileSkills] = useState([]);
+  const [resumeSkills, setResumeSkills] = useState([]);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('gap');   // gap | plan | market
   const [searchSkill, setSearchSkill] = useState('');
   const [expandedSkill, setExpandedSkill] = useState(null);
 
   useEffect(() => {
+    // Fetch profile skills
     API.get('/profile/').then(res => {
       const skills = res.data?.skills || {};
       setProfileSkills(Object.keys(skills));
     }).catch(() => { });
+
+    // Fetch resume skills
+    API.get('/resume/latest').then(res => {
+      const skills = res.data?.extracted_skills || [];
+      setResumeSkills(skills);
+    }).catch(() => { });
   }, []);
+
+  const markAsLearned = async (skillName) => {
+    try {
+      // Create a map matching the expected backend signature 
+      // where keys are skills and values are confidence (e.g. default to 5)
+      const currentSkillsObj = [...profileSkills, ...resumeSkills].reduce((acc, sk) => {
+        acc[sk] = 5;
+        return acc;
+      }, {});
+      currentSkillsObj[skillName] = 5;
+
+      await API.put('/profile/', { skills: currentSkillsObj });
+      setProfileSkills(prev => [...prev, skillName]);
+      toast.success(`Marked ${skillName} as learned! 🎉`);
+    } catch (error) {
+      toast.error('Failed to mark skill as learned.');
+    }
+  };
 
   const domainData = DOMAIN_SKILLS[domain];
   const allRequired = [
@@ -201,7 +227,9 @@ export default function SkillGap() {
   ];
 
   // Normalize for matching (case-insensitive partial)
-  const normalizedProfile = profileSkills.map(s => s.toLowerCase());
+  // Combine profile constraints and resume extractions
+  const combinedSkills = [...new Set([...profileSkills, ...resumeSkills])];
+  const normalizedProfile = combinedSkills.map(s => s.toLowerCase());
   const hasSkill = (skill) => normalizedProfile.some(p =>
     p.includes(skill.toLowerCase().split('/')[0].split('(')[0].trim()) ||
     skill.toLowerCase().split('/')[0].split('(')[0].trim().includes(p)
@@ -427,6 +455,18 @@ export default function SkillGap() {
                                 🆓 Free Course
                               </a>
                             </div>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); markAsLearned(skill); }}
+                              style={{
+                                marginTop: 12, width: '100%', padding: '8px',
+                                borderRadius: 8, background: 'rgba(6,214,160,0.1)',
+                                border: '1px solid rgba(6,214,160,0.3)',
+                                color: '#06D6A0', fontWeight: 700, fontSize: 12,
+                                cursor: 'pointer', outline: 'none'
+                              }}
+                            >
+                              ✓ Mark as Learned
+                            </button>
                           </div>
                         )}
                       </div>

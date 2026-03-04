@@ -29,7 +29,7 @@ export default function Career() {
       const res = await API.get('/career/recommend');
       setResult(res.data);
       toast.success('Career prediction complete! 🎯');
-    } catch { toast.error('Complete your profile & assessments first.'); }
+    } catch { toast.error('Complete your profile or upload a resume and assessments first.'); }
     finally { setLoading(false); }
   };
 
@@ -83,7 +83,7 @@ export default function Career() {
           <div style={{ fontSize: 64, marginBottom: 20 }}>🔮</div>
           <h3 style={{ fontFamily: 'Space Grotesk,sans-serif', fontWeight: 800, fontSize: 20, color: '#F0F0FF', marginBottom: 12 }}>Ready for your prediction?</h3>
           <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 14, lineHeight: 1.7 }}>
-            Complete your profile, take assessments, fill in the Big Five personality survey, and upload your resume for the most accurate results.
+            Complete your profile or upload your resume, take assessments, and fill in the Big Five personality survey for the most accurate results.
           </p>
         </div>
       )}

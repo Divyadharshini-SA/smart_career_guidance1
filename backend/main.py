@@ -18,7 +18,7 @@ from routes.roadmap    import router as roadmap_router
 from routes.placement  import router as placement_router
 from routes.chatbot    import router as chatbot_router
 from routes.progress   import router as progress_router
-
+from routes.skill_gap  import router as skill_gap_router
 # ── Create FastAPI app ────────────────────────────────────────
 app = FastAPI(
     title       = "Smart Career Guidance API",
@@ -31,7 +31,7 @@ app = FastAPI(
 # ── CORS ──────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins     = ["http://localhost:3000", "*"],
+    allow_origins     = ["http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials = True,
     allow_methods     = ["*"],
     allow_headers     = ["*"],
@@ -55,6 +55,9 @@ app.include_router(roadmap_router,    prefix="/api/roadmap",    tags=["Roadmap"]
 app.include_router(placement_router,  prefix="/api/placement",  tags=["Placement"])
 app.include_router(chatbot_router,    prefix="/api/chatbot",    tags=["Chatbot"])
 app.include_router(progress_router,   prefix="/api/progress",   tags=["Progress"])
+# app.include_router(skill_gap_router,  prefix='/skill-gap',      tags=['Skill Gap'])
+# Change this line in main.py:
+app.include_router(skill_gap_router,  prefix='/api/skill-gap', tags=['Skill Gap'])
 
 # ── Health check ──────────────────────────────────────────────
 @app.get("/", tags=["Health"])

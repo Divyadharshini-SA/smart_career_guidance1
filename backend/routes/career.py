@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db
 from models import UserProfile, Assessment, Resume, CareerRecommendation, User
@@ -27,8 +27,12 @@ def _compute_assessment_trend(records: list) -> str:
 def recommend(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     uid     = current_user.id
     profile = db.query(UserProfile).filter(UserProfile.user_id == uid).first()
+    
     resume  = db.query(Resume).filter(Resume.user_id == uid)\
                 .order_by(Resume.uploaded_at.desc()).first()
+
+    if not profile and not resume:
+        raise HTTPException(status_code=400, detail="Profile or Resume is required to generate recommendations.")
 
     apt_recs  = db.query(Assessment)\
                   .filter(Assessment.user_id == uid, Assessment.type == 'aptitude')\
@@ -41,22 +45,20 @@ def recommend(current_user: User = Depends(get_current_user), db: Session = Depe
     tech_score = tech_recs[0].percentage if tech_recs else 0
     apt_trend  = _compute_assessment_trend(apt_recs)
 
-    personality_scores = {}
-    if profile:
-        personality_scores = {
-            "openness"         : profile.personality_openness          or 0,
-            "conscientiousness": profile.personality_conscientiousness or 0,
-            "extraversion"     : profile.personality_extraversion      or 0,
-            "agreeableness"    : profile.personality_agreeableness     or 0,
-            "neuroticism"      : profile.personality_neuroticism       or 0,
-        }
+    personality_scores = {
+        "openness"         : 0,
+        "conscientiousness": 0,
+        "extraversion"     : 0,
+        "agreeableness"    : 0,
+        "neuroticism"      : 0,
+    }
 
     engine = CareerEngineV2()
     result = engine.predict(
-        skills           = profile.skills    if profile else {},
-        interests        = profile.interests if profile else [],
+        skills           = profile.skills    if profile and profile.skills else {},
+        interests        = profile.interests if profile and profile.interests else [],
         aptitude_score   = apt_score,
-        resume_skills    = resume.extracted_skills if resume else [],
+        resume_skills    = resume.extracted_skills if resume and resume.extracted_skills else [],
         tech_score       = tech_score,
         assessment_trend = apt_trend,
     )
