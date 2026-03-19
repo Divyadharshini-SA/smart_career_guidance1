@@ -32,6 +32,14 @@ const EMOJI_NAV = [
   { to: '/dashboard/profile', emoji: '👤', label: 'Profile' },
 ];
 
+const ADMIN_NAV = [
+  { to: '/dashboard/admin/overview', emoji: '📊', label: 'Overview' },
+  { to: '/dashboard/admin/students', emoji: '👥', label: 'Students' },
+  { to: '/dashboard/admin/upload', emoji: '📤', label: 'Upload Questions' },
+  { to: '/dashboard/admin/questions', emoji: '📝', label: 'Question Bank' },
+  { to: '/dashboard/admin/model', emoji: '🤖', label: 'Model Metrics' },
+];
+
 export default function Layout() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -83,7 +91,7 @@ export default function Layout() {
 
         {/* Nav */}
         <nav style={{ flex: 1, padding: '16px 10px', display: 'flex', flexDirection: 'column', gap: 3, overflowY: 'auto' }}>
-          {EMOJI_NAV.map(n => (
+          {user?.role !== 'admin' && EMOJI_NAV.map(n => (
             <NavLink key={n.to} to={n.to} end={n.to === '/dashboard'} style={({ isActive }) => ({
               display: 'flex', alignItems: 'center',
               gap: 12, padding: '11px 12px', borderRadius: 12,
@@ -106,20 +114,27 @@ export default function Layout() {
 
           {/* Admin */}
           {user?.role === 'admin' && (
-            <NavLink to="/dashboard/admin" style={({ isActive }) => ({
-              display: 'flex', alignItems: 'center',
-              gap: 12, padding: '11px 12px', borderRadius: 12,
-              textDecoration: 'none', fontWeight: 700, fontSize: 14,
-              color: isActive ? '#FFD93D' : 'rgba(255,217,61,0.5)',
-              background: isActive ? 'rgba(255,217,61,0.1)' : 'transparent',
-              border: '1px solid rgba(255,217,61,0.2)',
-              marginTop: 8, transition: 'all 0.2s',
-              whiteSpace: 'nowrap', overflow: 'hidden',
-              justifyContent: open ? 'flex-start' : 'center',
-            })}>
-              <span style={{ fontSize: 18 }}>⚙️</span>
-              {open && 'Admin Panel'}
-            </NavLink>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 3, marginTop: 8, paddingTop: 8, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+              <div style={{ fontSize: 10, fontWeight: 800, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: 1, padding: '0 12px', marginBottom: 4, display: open ? 'block' : 'none' }}>
+                Admin Panel
+              </div>
+              {ADMIN_NAV.map(n => (
+                <NavLink key={n.to} to={n.to} style={({ isActive }) => ({
+                  display: 'flex', alignItems: 'center',
+                  gap: 12, padding: '11px 12px', borderRadius: 12,
+                  textDecoration: 'none', fontWeight: isActive ? 700 : 500, fontSize: 14,
+                  color: isActive ? '#FFD93D' : 'rgba(255,217,61,0.5)',
+                  background: isActive ? 'rgba(255,217,61,0.1)' : 'transparent',
+                  borderLeft: isActive ? '2px solid #FFD93D' : '2px solid transparent',
+                  transition: 'all 0.2s',
+                  whiteSpace: 'nowrap', overflow: 'hidden',
+                  justifyContent: open ? 'flex-start' : 'center',
+                })}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }}>{n.emoji}</span>
+                  {open && <span>{n.label}</span>}
+                </NavLink>
+              ))}
+            </div>
           )}
         </nav>
 

@@ -85,115 +85,115 @@ export default function Roadmap() {
     <div style={{ fontFamily: 'Inter,sans-serif' }}>
       <h1 className="page-title">Learning Roadmap</h1>
       <p className="page-sub">Personalized step-by-step career preparation plan</p>
-
-      {/* Generator */}
-      <div className="card" style={{ marginBottom: 24, maxWidth: 600 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 16 }}>
-          ⚙️ Generate Roadmap
-        </div>
-        <div style={{ display: 'flex', gap: 12 }}>
-          <select value={domain} onChange={e => setDomain(e.target.value)} style={{ flex: 1 }}>
-            {DOMAINS.map(d => <option key={d}>{d}</option>)}
-          </select>
-          <button className="btn btn-primary" onClick={generate} disabled={loading} style={{ flexShrink: 0 }}>
-            {loading ? '⏳' : '🚀 Generate'}
-          </button>
-          {data?.roadmap?.steps && (
-            <button className="btn btn-secondary" onClick={() => {
-              generateRoadmapPDF(data.roadmap?.career_domain || domain, data.roadmap.steps, done);
-              toast.success('Roadmap downloaded! 📥');
-            }} style={{ flexShrink: 0 }}>
-              📥 Download
+      <div style={{ width: '100%' }}>
+        {/* Generator */}
+        <div className="card" style={{ marginBottom: 24, width: '100%', maxWidth: 800 }}>
+          <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 16 }}>
+            ⚙️ Generate Roadmap
+          </div>
+          <div style={{ display: 'flex', gap: 12 }}>
+            <select value={domain} onChange={e => setDomain(e.target.value)} style={{ flex: 1 }}>
+              {DOMAINS.map(d => <option key={d}>{d}</option>)}
+            </select>
+            <button className="btn btn-primary" onClick={generate} disabled={loading} style={{ flexShrink: 0 }}>
+              {loading ? '⏳' : '🚀 Generate'}
             </button>
-          )}
-        </div>
-      </div>
-
-      {/* Progress header */}
-      {totalSteps > 0 && (
-        <div style={{
-          marginBottom: 24, padding: '18px 24px', borderRadius: 18,
-          background: 'linear-gradient(135deg,rgba(124,92,252,0.15),rgba(6,214,160,0.08))',
-          border: '1px solid rgba(124,92,252,0.2)',
-          display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap'
-        }}>
-          <div>
-            <div style={{ fontFamily: 'Space Grotesk,sans-serif', fontSize: 32, fontWeight: 900, color: '#F0F0FF' }}>{pct}%</div>
-            <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>{doneCount}/{totalSteps} steps done</div>
-          </div>
-          <div style={{ flex: 1, minWidth: 200 }}>
-            <div style={{ height: 8, background: 'rgba(255,255,255,0.06)', borderRadius: 8 }}>
-              <div style={{ height: '100%', borderRadius: 8, background: 'linear-gradient(90deg,#7C5CFC,#06D6A0)', width: `${pct}%`, transition: 'width 1s', boxShadow: '0 0 12px rgba(124,92,252,0.4)' }} />
-            </div>
+            {data?.roadmap?.steps && (
+              <button className="btn btn-secondary" onClick={() => {
+                generateRoadmapPDF(data.roadmap?.career_domain || domain, data.roadmap.steps, done);
+                toast.success('Roadmap downloaded! 📥');
+              }} style={{ flexShrink: 0 }}>
+                📥 Download
+              </button>
+            )}
           </div>
         </div>
-      )}
 
-      {/* Skill gap */}
-      {data?.skill_gap && (
-        <div style={{
-          marginBottom: 24, padding: 20, borderRadius: 18,
-          background: 'rgba(255,107,107,0.06)', border: '1px solid rgba(255,107,107,0.15)'
-        }}>
-          <div style={{ fontWeight: 800, color: '#FF6B6B', fontSize: 15, marginBottom: 14 }}>
-            📊 Skill Gap — {data.skill_gap.career_domain || domain}
-          </div>
-          <div style={{ display: 'flex', gap: 20, alignItems: 'center', marginBottom: 12, flexWrap: 'wrap' }}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: 30, fontWeight: 900, color: '#FF6B6B' }}>{data.skill_gap.gap_percentage?.toFixed(1)}%</div>
-              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>Gap</div>
+        {/* Progress header */}
+        {totalSteps > 0 && (
+          <div style={{
+            marginBottom: 24, padding: '18px 24px', borderRadius: 18,
+            background: 'linear-gradient(135deg,rgba(124,92,252,0.15),rgba(6,214,160,0.08))',
+            border: '1px solid rgba(124,92,252,0.2)',
+            display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap'
+          }}>
+            <div>
+              <div style={{ fontFamily: 'Space Grotesk,sans-serif', fontSize: 32, fontWeight: 900, color: '#F0F0FF' }}>{pct}%</div>
+              <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', fontWeight: 600 }}>{doneCount}/{totalSteps} steps done</div>
             </div>
-            <div style={{ flex: 1, minWidth: 180 }}>
+            <div style={{ flex: 1, minWidth: 200 }}>
               <div style={{ height: 8, background: 'rgba(255,255,255,0.06)', borderRadius: 8 }}>
-                <div style={{ height: '100%', borderRadius: 8, background: '#06D6A0', width: `${100 - (data.skill_gap.gap_percentage || 0)}%`, transition: 'width 1s' }} />
-              </div>
-              <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginTop: 4 }}>
-                {(100 - (data.skill_gap.gap_percentage || 0)).toFixed(1)}% matched
+                <div style={{ height: '100%', borderRadius: 8, background: 'linear-gradient(90deg,#7C5CFC,#06D6A0)', width: `${pct}%`, transition: 'width 1s', boxShadow: '0 0 12px rgba(124,92,252,0.4)' }} />
               </div>
             </div>
           </div>
-          {data.skill_gap.missing_skills?.length > 0 && (
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-              {data.skill_gap.missing_skills.map(s => (
-                <span key={s} style={{ padding: '4px 12px', borderRadius: 20, background: 'rgba(255,107,107,0.12)', border: '1px solid rgba(255,107,107,0.25)', color: '#FF6B6B', fontSize: 12, fontWeight: 700 }}>{s}</span>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
+        )}
 
-      {/* Steps by level */}
-      {data?.roadmap?.steps && Object.entries(data.roadmap.steps).map(([level, steps]) => {
-        const cfg = LEVEL_CONFIG[level] || { color: '#7C5CFC', icon: '📌', label: level };
-        const levelDone = steps.filter(s => done.includes(s.title)).length;
-        return (
-          <div key={level} style={{ marginBottom: 28 }}>
-            <div style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              marginBottom: 14, flexWrap: 'wrap', gap: 8
-            }}>
-              <h2 style={{ fontFamily: 'Space Grotesk,sans-serif', fontWeight: 800, color: cfg.color, fontSize: 18 }}>
-                {cfg.icon} {cfg.label} Level
-              </h2>
-              <span style={{
-                padding: '4px 14px', borderRadius: 20,
-                background: `${cfg.color}18`, border: `1px solid ${cfg.color}33`,
-                color: cfg.color, fontSize: 13, fontWeight: 700
-              }}>{levelDone}/{steps.length} done</span>
+        {/* Skill gap */}
+        {data?.skill_gap && (
+          <div style={{
+            marginBottom: 24, padding: 20, borderRadius: 18,
+            background: 'rgba(255,107,107,0.06)', border: '1px solid rgba(255,107,107,0.15)'
+          }}>
+            <div style={{ fontWeight: 800, color: '#FF6B6B', fontSize: 15, marginBottom: 14 }}>
+              📊 Skill Gap — {data.skill_gap.career_domain || domain}
             </div>
+            <div style={{ display: 'flex', gap: 20, alignItems: 'center', marginBottom: 12, flexWrap: 'wrap' }}>
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 30, fontWeight: 900, color: '#FF6B6B' }}>{data.skill_gap.gap_percentage?.toFixed(1)}%</div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>Gap</div>
+              </div>
+              <div style={{ flex: 1, minWidth: 180 }}>
+                <div style={{ height: 8, background: 'rgba(255,255,255,0.06)', borderRadius: 8 }}>
+                  <div style={{ height: '100%', borderRadius: 8, background: '#06D6A0', width: `${100 - (data.skill_gap.gap_percentage || 0)}%`, transition: 'width 1s' }} />
+                </div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginTop: 4 }}>
+                  {(100 - (data.skill_gap.gap_percentage || 0)).toFixed(1)}% matched
+                </div>
+              </div>
+            </div>
+            {data.skill_gap.missing_skills?.length > 0 && (
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {data.skill_gap.missing_skills.map(s => (
+                  <span key={s} style={{ padding: '4px 12px', borderRadius: 20, background: 'rgba(255,107,107,0.12)', border: '1px solid rgba(255,107,107,0.25)', color: '#FF6B6B', fontSize: 12, fontWeight: 700 }}>{s}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, maxWidth: 700 }}>
-              {steps.map((stepObj, i) => {
-                const title = stepObj.title || stepObj; // handle backward compat
-                const url = stepObj.url;
-                const isDone = done.includes(title);
-                return (
-                  <div key={i} style={{
-                    display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px', borderRadius: 14,
-                    background: isDone ? `${cfg.color}0A` : 'rgba(255,255,255,0.03)',
-                    border: `1px solid ${isDone ? cfg.color + '33' : 'rgba(255,255,255,0.06)'}`,
-                    transition: 'all 0.2s'
-                  }}>
+        {/* Steps by level */}
+        {data?.roadmap?.steps && Object.entries(data.roadmap.steps).map(([level, steps]) => {
+          const cfg = LEVEL_CONFIG[level] || { color: '#7C5CFC', icon: '📌', label: level };
+          const levelDone = steps.filter(s => done.includes(s.title)).length;
+          return (
+            <div key={level} style={{ marginBottom: 28 }}>
+              <div style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                marginBottom: 14, flexWrap: 'wrap', gap: 8
+              }}>
+                <h2 style={{ fontFamily: 'Space Grotesk,sans-serif', fontWeight: 800, color: cfg.color, fontSize: 18 }}>
+                  {cfg.icon} {cfg.label} Level
+                </h2>
+                <span style={{
+                  padding: '4px 14px', borderRadius: 20,
+                  background: `${cfg.color}18`, border: `1px solid ${cfg.color}33`,
+                  color: cfg.color, fontSize: 13, fontWeight: 700
+                }}>{levelDone}/{steps.length} done</span>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+                {steps.map((stepObj, i) => {
+                  const title = stepObj.title || stepObj; // handle backward compat
+                  const url = stepObj.url;
+                  const isDone = done.includes(title);
+                  return (
+                    <div key={i} style={{
+                      display: 'flex', alignItems: 'center', gap: 14, padding: '14px 18px', borderRadius: 14,
+                      background: isDone ? `${cfg.color}0A` : 'rgba(255,255,255,0.03)',
+                      border: `1px solid ${isDone ? cfg.color + '33' : 'rgba(255,255,255,0.06)'}`,
+                      transition: 'all 0.2s'
+                    }}>
                     <div style={{
                       width: 30, height: 30, borderRadius: '50%', flexShrink: 0,
                       background: isDone ? cfg.color : 'rgba(255,255,255,0.06)',
@@ -240,6 +240,7 @@ export default function Roadmap() {
           <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: 14 }}>Select a career domain and generate your personalized roadmap.</p>
         </div>
       )}
+      </div>
     </div>
   );
 }

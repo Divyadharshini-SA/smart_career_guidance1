@@ -66,39 +66,106 @@ def skill_matches(user_skill: str, required_skill: str) -> bool:
 
 @router.get('/analyze')
 def analyze_skill_gap(
-    career_domain: str,
-    current_user : User    = Depends(get_current_user),
-    db           : Session = Depends(get_db)
+    career_domain : str,
+    hours_per_day : int = 2,
+    current_user  : User    = Depends(get_current_user),
+    db            : Session = Depends(get_db)
 ):
-    # 1. Get profile skills
+    # 1. Get profile skills (dict with levels)
     profile = db.query(UserProfile).filter(
         UserProfile.user_id == current_user.id
     ).first()
-    profile_skills = list((profile.skills or {}).keys()) if profile else []
+    user_skill_dict = profile.skills if profile and profile.skills else {}
+    profile_skills = list(user_skill_dict.keys())
 
     # 2. Get resume skills (latest resume)
     resume = db.query(Resume).filter(
         Resume.user_id == current_user.id
     ).order_by(Resume.uploaded_at.desc()).first()
-    resume_skills = resume.extracted_skills or [] if resume else []
+    resume_skills = resume.extracted_skills if resume and resume.extracted_skills else []
 
-    # 3. Merge all user skills (no duplicates)
-    all_user_skills = list({s.lower().strip() for s in profile_skills + resume_skills})
-
-    # 4. Get domain requirements
+    # 3. Get domain requirements
     domain_data = DOMAIN_SKILLS.get(career_domain, DOMAIN_SKILLS['Software Engineer'])
     core_skills      = domain_data['core']
     important_skills = domain_data['important']
     all_required     = core_skills + important_skills
 
-    # 5. Find matches and gaps
-    matched  = [r for r in all_required if any(skill_matches(u, r) for u in all_user_skills)]
-    missing  = [r for r in all_required if not any(skill_matches(u, r) for u in all_user_skills)]
-    core_missing     = [r for r in core_skills      if r in missing]
-    important_missing= [r for r in important_skills if r in missing]
+    def get_user_lvl(req_skill):
+        for k, v in user_skill_dict.items():
+            if skill_matches(k, req_skill):
+                try: return int(v) * 10
+                except: return 50
+        for r in resume_skills:
+            if skill_matches(r, req_skill):
+                return 40 # Default level if found only in resume
+        return 0
+
+    skill_gap_details = []
+    matched = []
+    missing = []
+    core_missing = []
+    important_missing = []
+    total_gap_points = 0
+
+    for req in all_required:
+        is_core = req in core_skills
+        req_lvl = 80 if is_core else 60
+        user_lvl = get_user_lvl(req)
+        
+        gap = max(0, req_lvl - user_lvl)
+        if gap == 0:
+            status = 'good'
+            matched.append(req)
+        else:
+            total_gap_points += gap
+            if user_lvl == 0:
+                status = 'missing'
+                missing.append(req)
+                if is_core: core_missing.append(req)
+                else: important_missing.append(req)
+            elif gap <= 20: 
+                status = 'average'
+                matched.append(req) # Counted as matched if they are at least average
+            else:
+                status = 'weak'
+                missing.append(req)
+                if is_core: core_missing.append(req)
+                else: important_missing.append(req)
+
+        skill_gap_details.append({
+            'skill': req,
+            'your_level': user_lvl,
+            'required_level': req_lvl,
+            'gap': gap,
+            'status': status,
+            'is_core': is_core
+        })
 
     match_pct = round(len(matched) / max(len(all_required), 1) * 100, 1)
     gap_pct   = round(100 - match_pct, 1)
+
+    # Time to ready: Assume 1% gap point = 1.5 hours of focused learning
+    total_hours_needed = total_gap_points * 1.5
+    weeks_needed = total_hours_needed / (max(hours_per_day, 1) * 7)
+    
+    if weeks_needed <= 0:
+        time_msg = "You are placement ready!"
+        t_label = "Ready"
+    elif weeks_needed < 4:
+        time_msg = "Almost there! Just a few weeks of focused prep."
+        t_label = "Short prep"
+    elif weeks_needed < 12:
+        time_msg = "Moderate gaps. A solid 2-3 month plan is needed."
+        t_label = "Medium prep"
+    else:
+        time_msg = "Significant gaps. Start a long-term learning journey."
+        t_label = "Long prep"
+
+    time_to_ready = {
+        'weeks': round(weeks_needed, 1),
+        'label': t_label,
+        'message': time_msg
+    }
 
     return {
         'career_domain'      : career_domain,
@@ -109,6 +176,8 @@ def analyze_skill_gap(
         'missing_skills'     : missing,
         'core_missing'       : core_missing,
         'important_missing'  : important_missing,
+        'skill_gap_details'  : skill_gap_details,
+        'time_to_ready'      : time_to_ready,
         'profile_skills_used': profile_skills,
         'resume_skills_used' : resume_skills,
         'skill_source'       : 'profile + resume' if resume_skills else 'profile only',

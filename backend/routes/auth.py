@@ -22,7 +22,8 @@ def register(data: RegisterSchema, db: Session = Depends(get_db)):
         password_hash = hashed,
         college       = data.college,
         branch        = data.branch,
-        year          = data.year
+        year          = data.year,
+        cgpa          = data.cgpa
     )
     db.add(user)
     db.flush()   # get user.id before commit

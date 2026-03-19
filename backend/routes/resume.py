@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from database import get_db
 from models import Resume, Progress, User
 from dependencies import get_current_user
+from schemas import MatchJDSchema
 from services.resume_service import ResumeService
 
 router      = APIRouter()
@@ -74,6 +75,29 @@ def latest_resume(current_user: User = Depends(get_current_user), db: Session = 
         'resume_score'    : resume.resume_score,
         'uploaded_at'     : resume.uploaded_at.isoformat(),
         'feedback'        : feedback,
+    }
+
+@router.post('/match-jd')
+def match_jd(data: MatchJDSchema, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    resume = db.query(Resume).filter(Resume.user_id == current_user.id)\
+               .order_by(Resume.uploaded_at.desc()).first()
+    if not resume:
+        raise HTTPException(status_code=404, detail='No resume found. Please upload one first.')
+    
+    service = ResumeService()
+    text = resume.extracted_text or ''
+    
+    match_score = service.tfidf_match(text, data.job_description)
+    jd_skills = service.extract_skills(data.job_description.lower())
+    resume_skills = set([s.lower() for s in (resume.extracted_skills or [])])
+    
+    matched_skills = [s for s in jd_skills if s.lower() in resume_skills]
+    missing_skills = [s for s in jd_skills if s.lower() not in resume_skills]
+    
+    return {
+        'match_score'   : match_score,
+        'matched_skills': matched_skills,
+        'missing_skills': missing_skills
     }
 
 # import os

@@ -9,6 +9,7 @@ class RegisterSchema(BaseModel):
     college : Optional[str] = None
     branch  : Optional[str] = None
     year    : Optional[int] = None
+    cgpa    : Optional[float] = None
 
 class LoginSchema(BaseModel):
     email   : EmailStr
@@ -46,9 +47,12 @@ class AddQuestionSchema(BaseModel):
     answer   : str
     source   : Optional[str] = 'manual'
 
-# ── Career ────────────────────────────────────────────────────
+# ── Career & Resume ───────────────────────────────────────────
 class CareerSchema(BaseModel):
     career_domain: Optional[str] = 'Software Engineer'
+
+class MatchJDSchema(BaseModel):
+    job_description: str
 
 # ── Roadmap ───────────────────────────────────────────────────
 class RoadmapSchema(BaseModel):

@@ -105,7 +105,7 @@ class ResumeService:
         words = len(text.split())
         length_score = min(words / 400, 1.0) * 20
 
-        total = round(skill_score + section_score + length_score, 2)
+        total = float(f"{skill_score + section_score + length_score:.2f}")
         return total
 
 
@@ -167,7 +167,8 @@ class ResumeService:
         ats_tips = []
         common_ats_keywords = ['data structures', 'algorithms', 'rest api', 'agile', 'git', 'sql',
                                 'python', 'java', 'javascript', 'react', 'node', 'machine learning']
-        missing_ats = [k for k in common_ats_keywords if k not in text][:4]
+        missing_ats_full = [k for k in common_ats_keywords if k not in text]
+        missing_ats = [missing_ats_full[i] for i in range(min(4, len(missing_ats_full)))]
         if missing_ats:
             ats_tips.append(f'Add ATS keywords: {", ".join(missing_ats).title()}')
         ats_tips.append('Use standard section headings (Skills, Projects, Education, Experience)')
@@ -203,7 +204,7 @@ class ResumeService:
             vectorizer = TfidfVectorizer(stop_words='english')
             tfidf = vectorizer.fit_transform([resume_text, job_description])
             sim = cosine_similarity(tfidf[0:1], tfidf[1:2])[0][0]
-            return round(float(sim) * 100, 2)
+            return float(f"{float(sim) * 100:.2f}")
         except Exception:
             return 0.0
         

@@ -19,6 +19,9 @@ export default function Career() {
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState(null); // expanded career card index
 
+  const [questions, setQuestions] = useState(null);
+  const [qLoading, setQLoading] = useState(false);
+
   useEffect(() => {
     API.get('/career/history').then(r => { if (r.data?.length) setResult(r.data[0]); }).catch(() => { });
   }, []);
@@ -36,10 +39,20 @@ export default function Career() {
   const trend = result?.assessment_trend || 'stable';
   const ti = TREND_INFO[trend];
 
+  const generateQuestions = async () => {
+    setQLoading(true);
+    try {
+      const res = await API.get('/career/interview-questions');
+      setQuestions(res.data.questions);
+      toast.success('Interview questions generated! 🎤');
+    } catch { toast.error('Error generating questions. Ensure API Key is set.'); }
+    finally { setQLoading(false); }
+  };
+
   return (
-    <div style={{ fontFamily: 'Inter,sans-serif', maxWidth: 860 }}>
-      <h1 className="page-title">Career Prediction</h1>
-      <p className="page-sub">LightGBM-inspired AI engine — based on IEEE ICAISS 2025 paper</p>
+    <div style={{ width: '100%', fontFamily: 'Inter,sans-serif' }}>
+      <h1 className="page-title">Career Pathfinder</h1>
+      {/* <p className="page-sub">LightGBM-inspired AI engine — based on IEEE ICAISS 2025 paper</p> */}
 
       {/* Controls row */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 28, flexWrap: 'wrap' }}>
@@ -47,6 +60,12 @@ export default function Career() {
           style={{ fontSize: 15, padding: '13px 28px' }}>
           {loading ? '⏳ Predicting...' : '🔮 Get AI Recommendations'}
         </button>
+        {result && (
+          <button className="btn" onClick={generateQuestions} disabled={qLoading}
+            style={{ fontSize: 13, padding: '10px 20px', background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 20, cursor: 'pointer', fontWeight: 700, transition: 'all 0.2s' }}>
+            {qLoading ? '⏳ Generating...' : '🎤 Interview Prep'}
+          </button>
+        )}
         {result && (
           <div style={{
             display: 'flex', alignItems: 'center', gap: 8, padding: '8px 16px',
@@ -247,6 +266,23 @@ export default function Career() {
               {result.algorithm || 'LightGBM-Inspired Gradient Boosting Ensemble'} · {result.total_skills_provided || 0} skills analysed
             </p>
           </div>
+          
+          {/* Mock Interview Questions */}
+          {questions && (
+            <div className="card" style={{ padding: 28, background: 'rgba(124,92,252,0.06)', border: '1px solid rgba(124,92,252,0.15)' }}>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#7C5CFC', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 16 }}>
+                🎤 Mock Interview Questions for {result.top_careers[0]?.domain}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                {questions.map((q, i) => (
+                  <div key={i} style={{ padding: '12px 16px', borderRadius: 12, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', fontSize: 14, color: '#F0F0FF', lineHeight: 1.6 }}>
+                    <span style={{ color: '#7C5CFC', fontWeight: 800, marginRight: 8 }}>Q{i + 1}.</span> {q}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
         </div>
       )}
     </div>

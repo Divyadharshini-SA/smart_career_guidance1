@@ -13,6 +13,7 @@ class User(Base):
     college       = Column(String(150))
     branch        = Column(String(100))
     year          = Column(Integer)
+    cgpa          = Column(Float, nullable=True)
     role          = Column(String(20), default='student')
     created_at    = Column(DateTime, default=datetime.utcnow)
 
@@ -105,6 +106,10 @@ class Progress(Base):
     resume_score            = Column(Float, default=0)
     roadmap_completion      = Column(Float, default=0)
     placement_readiness     = Column(Float, default=0)
+    readiness_history       = Column(JSON, default=list)
+    streak_days             = Column(Integer, default=0)
+    best_streak             = Column(Integer, default=0)
+    last_test_date          = Column(DateTime, nullable=True)
     completed_roadmap_steps = Column(JSON, default=list)
     completed_dsa_problems  = Column(JSON, default=list)
     updated_at              = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)

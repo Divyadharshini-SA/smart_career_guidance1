@@ -62,6 +62,7 @@ export default function App() {
             <Route path="profile" element={<Profile />} />
             <Route path="skillgap" element={<SkillGap />} />
             <Route path="admin" element={<AdminRoute><Admin /></AdminRoute>} />
+            <Route path="admin/:tab" element={<AdminRoute><Admin /></AdminRoute>} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" />} />

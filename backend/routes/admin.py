@@ -1,16 +1,5 @@
-"""
-routes/admin.py
-===============
-Secure admin-only routes authenticated via JWT + role check (not a hardcoded password).
-Fixes the AdminLogin.js security vulnerability from the original code.
-
-Endpoints:
-  GET  /api/admin/stats        — platform overview stats
-  GET  /api/admin/users        — list all students
-  GET  /api/admin/model-metrics — LightGBM model accuracy display (IEEE paper comparison)
-  POST /api/admin/create-admin  — create a new admin user (superadmin only)
-"""
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from database import get_db
@@ -18,10 +7,11 @@ from models import User, Assessment, CareerRecommendation, Resume, Progress, Que
 from schemas import CreateAdminSchema
 from dependencies import get_admin_user, get_current_user
 from passlib.context import CryptContext
+import csv
+import io
 
 router  = APIRouter()
 pwd_ctx = CryptContext(schemes=['bcrypt'], deprecated='auto')
-
 
 # ── Platform overview stats ───────────────────────────────────
 @router.get('/stats')
@@ -42,12 +32,14 @@ def admin_stats(admin: User = Depends(get_admin_user), db: Session = Depends(get
 
     # Top 5 career domains predicted
     recs = db.query(CareerRecommendation).order_by(CareerRecommendation.generated_at.desc()).limit(200).all()
-    domain_counter = {}
+    domain_counter: dict[str, int] = {}
     for r in recs:
         if r.top_careers:
             top = r.top_careers[0].get('domain', 'Unknown')
             domain_counter[top] = domain_counter.get(top, 0) + 1
-    top_domains = sorted(domain_counter.items(), key=lambda x: x[1], reverse=True)[:5]
+    
+    top_entries = sorted(domain_counter.items(), key=lambda x: x[1], reverse=True)
+    top_domains = [top_entries[i] for i in range(min(5, len(top_entries)))]
 
     return {
         'total_students'        : total_users,
@@ -55,7 +47,7 @@ def admin_stats(admin: User = Depends(get_admin_user), db: Session = Depends(get
         'total_career_predictions': total_careers,
         'total_resumes_uploaded': total_resumes,
         'total_questions'       : total_questions,
-        'avg_placement_readiness': round(float(avg_readiness), 1),
+        'avg_placement_readiness': float(f"{float(avg_readiness):.1f}"),
         'questions_by_type'     : q_counts,
         'top_predicted_domains' : [{'domain': d, 'count': c} for d, c in top_domains],
     }
@@ -84,20 +76,43 @@ def list_users(
             'placement_readiness': prog.placement_readiness if prog else 0,
             'aptitude_score'     : prog.aptitude_score      if prog else 0,
             'skill_score'        : prog.skill_score         if prog else 0,
+            'resume_score'       : prog.resume_score        if prog else 0,
             'joined'             : u.created_at.isoformat(),
         })
     total = db.query(User).filter(User.role == 'student').count()
     return {'users': result, 'total': total}
 
 
+# ── Export Students as CSV ────────────────────────────────────
+@router.get('/export-users')
+def export_users(admin: User = Depends(get_admin_user), db: Session = Depends(get_db)):
+    users = db.query(User).filter(User.role == 'student').all()
+    output = io.StringIO()
+    writer = csv.writer(output)
+    writer.writerow(['id', 'name', 'email', 'college', 'branch', 'year', 'cgpa', 'skill_score', 'aptitude_score', 'resume_score', 'placement_readiness', 'joined'])
+    
+    for u in users:
+        prog = db.query(Progress).filter(Progress.user_id == u.id).first()
+        writer.writerow([
+            u.id, u.name, u.email, u.college, u.branch, u.year, u.cgpa,
+            prog.skill_score if prog else 0,
+            prog.aptitude_score if prog else 0,
+            prog.resume_score if prog else 0,
+            prog.placement_readiness if prog else 0,
+            u.created_at.isoformat()
+        ])
+    
+    output.seek(0)
+    return StreamingResponse(
+        iter([output.getvalue()]),
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=users_export.csv"}
+    )
+
+
 # ── Model performance metrics (IEEE paper comparison) ─────────
 @router.get('/model-metrics')
 def model_metrics(admin: User = Depends(get_admin_user), db: Session = Depends(get_db)):
-    """
-    Returns model accuracy data for Admin dashboard display.
-    Values sourced from IEEE paper Table 1 (Comparative Analysis).
-    Your system uses CareerEngineV2 (LightGBM-inspired ensemble).
-    """
     return {
         'paper_reference': 'ICAISS 2025, DOI: 10.1109/ICAISS61471.2025.11041827',
         'algorithm_used' : 'LightGBM-Inspired Gradient Boosting Ensemble (CareerEngineV2)',

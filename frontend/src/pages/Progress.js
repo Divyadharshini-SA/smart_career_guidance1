@@ -159,8 +159,8 @@ export default function Progress() {
   const bestScore = totalTests ? Math.max(...history.map(h => h.percentage || 0)) : 0;
 
   return (
-    <div style={{ maxWidth: 1050 }}>
-      <h1 style={{ fontWeight: 900, fontSize: 28, marginBottom: 4 }}>📊 Progress Tracker</h1>
+    <div style={{ width: '100%' }}>
+      <h1 className="page-title">Learning Progress</h1>
       <p style={{ color: '#7A7A9D', marginBottom: 28, fontSize: 15 }}>
         Your complete placement readiness analytics
       </p>

@@ -69,7 +69,7 @@ def complete_step(
         all_steps = (rm.steps.get('beginner', []) +
                      rm.steps.get('intermediate', []) +
                      rm.steps.get('advanced', []))
-        prog.roadmap_completion = round(len(completed) / max(len(all_steps), 1) * 100, 2)
+        prog.roadmap_completion = round(float(len(completed) / max(len(all_steps), 1) * 100), 2)
 
     db.commit()
     return {'roadmap_completion': prog.roadmap_completion}

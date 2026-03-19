@@ -34,8 +34,8 @@ export default function Profile() {
   const SKILL_COLORS = ['#7C5CFC', '#FF6B6B', '#06D6A0', '#FFD93D', '#4ECDC4', '#A29BFE', '#FD79A8', '#74B9FF', '#55EFC4', '#FDCB6E'];
 
   return (
-    <div style={{ maxWidth: 820, fontFamily: 'Inter,sans-serif' }}>
-      <h1 className="page-title">Profile Setup</h1>
+    <div style={{ width: '100%', fontFamily: 'Inter,sans-serif' }}>
+      <h1 className="page-title">Your Profile</h1>
       <p className="page-sub">Tell us about yourself for accurate AI career predictions</p>
 
       {/* ── Interests ── */}

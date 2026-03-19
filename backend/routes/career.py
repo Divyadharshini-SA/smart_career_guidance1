@@ -4,6 +4,10 @@ from database import get_db
 from models import UserProfile, Assessment, Resume, CareerRecommendation, User
 from dependencies import get_current_user
 from ml.career_engine import CareerEngineV2
+import os
+import json
+import urllib.request
+import urllib.error
 
 router = APIRouter()
 
@@ -61,6 +65,7 @@ def recommend(current_user: User = Depends(get_current_user), db: Session = Depe
         resume_skills    = resume.extracted_skills if resume and resume.extracted_skills else [],
         tech_score       = tech_score,
         assessment_trend = apt_trend,
+        cgpa             = current_user.cgpa,
     )
 
     result["assessment_trend"]   = apt_trend
@@ -93,6 +98,54 @@ def history(current_user: User = Depends(get_current_user), db: Session = Depend
         'confidence_score'    : r.confidence_score,
         'generated_at'        : r.generated_at.isoformat()
     } for r in records]
+
+@router.get('/interview-questions')
+def interview_questions(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    rec = db.query(CareerRecommendation)\
+            .filter(CareerRecommendation.user_id == current_user.id)\
+            .order_by(CareerRecommendation.generated_at.desc()).first()
+
+    if not rec or not rec.top_careers:
+        raise HTTPException(status_code=400, detail="Generate career recommendations first.")
+
+    domain = rec.top_careers[0]['domain']
+    missing_critical = rec.top_careers[0].get('missing_critical_skills', [])
+    api_key = os.getenv("GEMINI_API_KEY", "").strip()
+    
+    fallback_questions = [
+        f"Tell me about a time you solved a difficult problem in {domain}.",
+        f"Explain a core concept in {domain} to someone with no technical background.",
+        "What are your biggest strengths and weaknesses?",
+        "Where do you see yourself in 5 years?",
+        "Why should we hire you for this role?"
+    ]
+
+    if not api_key or api_key == "your_gemini_api_key_here":
+        return {"domain": domain, "questions": fallback_questions}
+
+    missing_str = ", ".join(missing_critical) if missing_critical else "none"
+    prompt = f"You are an expert technical interviewer. The candidate is interviewing for a {domain} role. They are missing these critical skills: {missing_str}. Provide exactly 5 technical and 2 HR mock interview questions. Format as a clean JSON array of strings, nothing else."
+    
+    payload = json.dumps({
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.7,
+            "responseMimeType": "application/json",
+        }
+    }).encode("utf-8")
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    req = urllib.request.Request(url, data=payload, headers={"Content-Type": "application/json"}, method="POST")
+
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = json.loads(resp.read())
+            text = data["candidates"][0]["content"]["parts"][0]["text"]
+            questions = json.loads(text)
+            return {"domain": domain, "questions": questions}
+    except Exception as e:
+        print(f"Gemini error generating questions: {e}")
+        return {"domain": domain, "questions": fallback_questions}
 
 
 # from fastapi import APIRouter, Depends

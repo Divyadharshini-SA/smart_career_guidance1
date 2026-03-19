@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 import random, csv, io
+from datetime import datetime, date, timedelta
 from database import get_db
 from models import Assessment, Progress, Question, User
 from schemas import SubmitSchema, AddQuestionSchema
@@ -104,6 +105,28 @@ def submit_assessment(data: SubmitSchema, current_user: User = Depends(get_curre
         prog.placement_readiness = round(
             (prog.skill_score * 0.40) + (prog.aptitude_score * 0.30) +
             (prog.resume_score * 0.20) + (prog.roadmap_completion * 0.10), 2)
+            
+        # Streak logic
+        from datetime import date, datetime
+        today = date.today()
+        if prog.last_test_date:
+            delta = (today - prog.last_test_date.date()).days
+            if delta == 1:
+                prog.streak_days = (prog.streak_days or 0) + 1
+            elif delta > 1:
+                prog.streak_days = 1
+            # streak stays same if same day
+        else:
+            prog.streak_days = 1
+        if (prog.streak_days or 0) > (prog.best_streak or 0):
+            prog.best_streak = prog.streak_days
+        prog.last_test_date = datetime.utcnow()
+
+        # Readiness history — keep last 60 entries
+        history = list(prog.readiness_history or [])
+        history.append({"date": today.isoformat(), "score": round(prog.placement_readiness, 1)})
+        prog.readiness_history = history[-60:]
+
     db.commit()
     total_taken = db.query(Assessment).filter(Assessment.user_id == current_user.id,
                     Assessment.type == data.type).count()

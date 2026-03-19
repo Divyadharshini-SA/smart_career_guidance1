@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from database import get_db
-from models import UserProfile, CareerRecommendation, User
+from models import UserProfile, CareerRecommendation, User, Progress
 from dependencies import get_current_user
 
 router = APIRouter()
@@ -47,6 +47,18 @@ JOBS_BY_DOMAIN = {
     "AI/ML Engineer"   : ["ML Researcher","AI Engineer Trainee","NLP Engineer"],
     "Cloud Engineer"   : ["Cloud Support Intern","DevOps Trainee","AWS/GCP/Azure Associate"],
 }
+COMPANY_REQUIREMENTS = {
+    "TCS": ["Aptitude", "Java", "Python", "DBMS", "Software Engineering basics"],
+    "Infosys": ["Reasoning", "Verbal", "Pseudocode", "Python", "Java"],
+    "Wipro": ["Aptitude", "Written Communication", "Basic Coding", "Logic"],
+    "Cognizant": ["Aptitude", "Automata Fix", "SQL", "OOPs"],
+    "Accenture": ["Cognitive Ability", "Communication", "Coding", "Cloud Basics"],
+    "Google": ["Advanced DSA", "System Design", "Graphs", "Dynamic Programming"],
+    "Amazon": ["DSA", "System Design", "Problem Solving", "Trees"],
+    "Microsoft": ["Arrays", "Strings", "System Design", "Object Oriented Design"],
+    "Zoho": ["C", "C++", "Java", "Data Structures", "Puzzles"],
+    "Freshworks": ["Web Technologies", "Ruby", "Python", "DSA"]
+}
 
 @router.get('/preparation')
 def preparation(current_user: User = Depends(get_current_user)):
@@ -77,6 +89,37 @@ def resources(category: str, current_user: User = Depends(get_current_user)):
     if category not in RESOURCES:
         raise HTTPException(status_code=404, detail=f'Category not found. Available: {list(RESOURCES.keys())}')
     return {'category': category, 'resources': RESOURCES[category]}
+
+@router.get('/company-requirements/{company_name}')
+def company_requirements(company_name: str, current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    reqs = COMPANY_REQUIREMENTS.get(company_name, ["Aptitude", "Basic Coding", "Core Subjects"])
+    
+    profile = db.query(UserProfile).filter(UserProfile.user_id == current_user.id).first()
+    user_skills = set(profile.skills.keys() if profile and profile.skills else [])
+    
+    reqs_lower = [r.lower() for r in reqs]
+    user_skills_lower = [s.lower() for s in user_skills]
+    
+    missing_skills = []
+    matched_skills = []
+    
+    for idx, r in enumerate(reqs_lower):
+        found = False
+        for s in user_skills_lower:
+            if r in s or s in r or r == s:
+                found = True
+                break
+        if found:
+            matched_skills.append(reqs[idx])
+        else:
+            missing_skills.append(reqs[idx])
+
+    return {
+        "company": company_name,
+        "requirements": reqs,
+        "matched_skills": matched_skills,
+        "missing_skills": missing_skills
+    }
 
 class MarkDoneSchema(BaseModel):
     problem_name: str

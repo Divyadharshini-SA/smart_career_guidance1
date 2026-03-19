@@ -258,7 +258,7 @@ export default function SkillGap() {
   );
 
   return (
-    <div style={{ maxWidth: 960, fontFamily: 'inherit' }}>
+    <div style={{ width: '100%', fontFamily: 'inherit' }}>
 
       {/* ── Page header ── */}
       <div style={{ marginBottom: 24 }}>
@@ -414,7 +414,7 @@ export default function SkillGap() {
                     {skills.filter(hasSkill).length}/{skills.length} acquired
                   </span>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(200px,1fr))', gap: 8 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 8 }}>
                   {filtered.map(skill => {
                     const have = hasSkill(skill);
                     const isExpanded = expandedSkill === skill;

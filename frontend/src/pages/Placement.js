@@ -792,18 +792,19 @@ const TOPIC_COLOR = {
   Graphs: '#FD79A8', 'Dynamic Programming': '#0984E3', Backtracking: '#E84393',
 };
 
-function LinkBtn({ href, icon, label, color }) {
+function LinkBtn({ href, icon, label, color, style = {} }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        display: 'inline-flex', alignItems: 'center', gap: 5,
+        display: 'inline-flex', alignItems: 'center', gap: 5, justifyContent: 'center',
         padding: '5px 11px', borderRadius: 8, textDecoration: 'none',
         background: `${color}14`, border: `1.5px solid ${color}44`,
         color, fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap',
         transition: 'background 0.15s, color 0.15s',
+        ...style
       }}
       onMouseEnter={e => { e.currentTarget.style.background = color; e.currentTarget.style.color = '#fff'; }}
       onMouseLeave={e => { e.currentTarget.style.background = `${color}14`; e.currentTarget.style.color = color; }}
@@ -862,7 +863,7 @@ export default function Placement() {
   ];
 
   return (
-    <div style={{ maxWidth: 1080, fontFamily: 'Nunito,sans-serif' }}>
+    <div style={{ width: '100%', fontFamily: 'Nunito,sans-serif' }}>
       <h1 style={{ fontWeight: 900, fontSize: 28, marginBottom: 4, color: '#F0F0FF' }}>
         💼 Placement Preparation
       </h1>
@@ -1243,22 +1244,26 @@ function AptitudeTab() {
       {APTITUDE_SECTIONS.map(sec => (
         <div key={sec.title}>
           <h2 style={{ fontSize: 17, fontWeight: 900, marginBottom: 14, paddingLeft: 14, borderLeft: `4px solid ${sec.color}`, color: '#F0F0FF' }}>{sec.title}</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(270px,1fr))', gap: 10 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))', gap: 14 }}>
             {sec.topics.map((t, i) => (
               <div key={t.name} style={{
-                background: 'rgba(255,255,255,0.03)', borderRadius: 14, padding: '12px 16px',
-                border: '1px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                background: 'rgba(255,255,255,0.02)', borderRadius: 16, padding: '18px',
+                border: '1px solid rgba(255,255,255,0.06)', display: 'flex', flexDirection: 'column', gap: 16,
+                transition: 'all 0.2s', cursor: 'default'
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.border = `1px solid ${sec.color}40`; }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = 'none'; e.currentTarget.style.border = '1px solid rgba(255,255,255,0.06)'; }}
+              >
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
                   <div style={{
-                    width: 26, height: 26, borderRadius: 7, background: `${sec.color}18`,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 11, color: sec.color, flexShrink: 0
+                    width: 28, height: 28, borderRadius: 8, background: `${sec.color}18`,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 12, color: sec.color, flexShrink: 0, marginTop: 2
                   }}>{i + 1}</div>
-                  <span style={{ fontWeight: 700, fontSize: 13, color: '#F0F0FF' }}>{t.name}</span>
+                  <span style={{ fontWeight: 800, fontSize: 14, color: '#F0F0FF', lineHeight: 1.4 }}>{t.name}</span>
                 </div>
-                <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
-                  <LinkBtn href={t.ib} icon="📘" label="Practice" color={sec.color} />
-                  <LinkBtn href={t.yt} icon="▶" label="YouTube" color="#FF0000" />
+                <div style={{ display: 'flex', gap: 8, marginTop: 'auto' }}>
+                  <LinkBtn href={t.ib} icon="📘" label="Practice" color={sec.color} style={{ flex: 1 }} />
+                  <LinkBtn href={t.yt} icon="▶" label="YouTube" color="#FF0000" style={{ flex: 1 }} />
                 </div>
               </div>
             ))}
@@ -1316,33 +1321,95 @@ const COMPANIES = [
 ];
 
 function CompaniesTab() {
+  const [activeCompany, setActiveCompany] = useState(null);
+  const [gapData, setGapData] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const checkGap = async (companyName) => {
+    setActiveCompany(companyName);
+    setGapData(null);
+    setLoading(true);
+    try {
+      const res = await API.get(`/placement/company-requirements/${companyName}`);
+      setGapData(res.data);
+    } catch {
+      console.error('Failed to fetch company requirements');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div>
       <p style={{ color: '#7A7A9D', marginBottom: 18, fontSize: 14 }}>Interview rounds, preparation guides and YouTube search for each company</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(290px,1fr))', gap: 16 }}>
-        {COMPANIES.map(c => (
-          <div key={c.name} style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 20, padding: 20, border: '1px solid rgba(255,255,255,0.08)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-              <div style={{ width: 46, height: 46, borderRadius: 14, background: 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26 }}>{c.emoji}</div>
-              <div>
-                <div style={{ fontWeight: 900, fontSize: 17, color: '#F0F0FF' }}>{c.name}</div>
-                <div style={{ fontSize: 12, color: '#7A7A9D' }}>{c.rounds.length} interview rounds</div>
-              </div>
-            </div>
-            <div style={{ marginBottom: 14 }}>
-              {c.rounds.map((r, i) => (
-                <div key={r} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                  <span style={{ width: 22, height: 22, borderRadius: 6, background: 'rgba(162,155,254,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 900, color: '#A29BFE', flexShrink: 0 }}>R{i + 1}</span>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: '#F0F0FF' }}>{r}</span>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(290px,1fr))', gap: 16 }}>
+        {COMPANIES.map(c => {
+          const isExpanded = activeCompany === c.name;
+          return (
+            <div key={c.name} style={{ background: 'rgba(255,255,255,0.03)', borderRadius: 20, padding: 20, border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
+                <div style={{ width: 46, height: 46, borderRadius: 14, background: 'rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26 }}>{c.emoji}</div>
+                <div>
+                  <div style={{ fontWeight: 900, fontSize: 17, color: '#F0F0FF' }}>{c.name}</div>
+                  <div style={{ fontSize: 12, color: '#7A7A9D' }}>{c.rounds.length} interview rounds</div>
                 </div>
-              ))}
+              </div>
+              <div style={{ marginBottom: 14 }}>
+                {c.rounds.map((r, i) => (
+                  <div key={r} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <span style={{ width: 22, height: 22, borderRadius: 6, background: 'rgba(162,155,254,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 10, fontWeight: 900, color: '#A29BFE', flexShrink: 0 }}>R{i + 1}</span>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: '#F0F0FF' }}>{r}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <LinkBtn href={c.gfg} icon="🟩" label="GFG Guide" color="#2F8D46" />
+                <LinkBtn href={c.yt} icon="▶" label="YouTube" color="#FF0000" />
+                <button 
+                  onClick={() => isExpanded ? setActiveCompany(null) : checkGap(c.name)}
+                  style={{
+                    padding: '5px 11px', borderRadius: 8, background: 'rgba(124,92,252,0.1)', border: '1.5px solid rgba(124,92,252,0.4)',
+                    color: '#A29BFE', fontSize: 12, fontWeight: 800, cursor: 'pointer', transition: 'all 0.2s', whiteSpace: 'nowrap'
+                  }}>
+                  {loading && isExpanded ? '⏳...' : isExpanded ? 'Hide Gap' : '🎯 Skill Gap'}
+                </button>
+              </div>
+
+              {isExpanded && gapData && gapData.company === c.name && (
+                <div style={{ marginTop: 14, paddingTop: 14, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                  <div style={{ fontSize: 12, fontWeight: 800, color: '#F0F0FF', marginBottom: 8 }}>🎯 Required Skills</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 10 }}>
+                     {gapData.requirements.map(req => (
+                       <span key={req} style={{ padding: '3px 8px', background: 'rgba(255,255,255,0.05)', borderRadius: 6, fontSize: 11, color: '#A29BFE', fontWeight: 700 }}>{req}</span>
+                     ))}
+                  </div>
+
+                  {gapData.missing_skills.length > 0 && (
+                    <>
+                      <div style={{ fontSize: 12, fontWeight: 800, color: '#FF6B6B', marginBottom: 8, marginTop: 12 }}>❌ Missing Skills</div>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                         {gapData.missing_skills.map(req => (
+                           <span key={req} style={{ padding: '3px 8px', background: 'rgba(255,107,107,0.1)', borderRadius: 6, fontSize: 11, color: '#FF6B6B', fontWeight: 700 }}>{req}</span>
+                         ))}
+                      </div>
+                    </>
+                  )}
+
+                  {gapData.matched_skills.length > 0 && (
+                    <>
+                      <div style={{ fontSize: 12, fontWeight: 800, color: '#06D6A0', marginBottom: 8, marginTop: 12 }}>✅ Matched Skills</div>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                         {gapData.matched_skills.map(req => (
+                           <span key={req} style={{ padding: '3px 8px', background: 'rgba(6,214,160,0.1)', borderRadius: 6, fontSize: 11, color: '#06D6A0', fontWeight: 700 }}>{req}</span>
+                         ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
             </div>
-            <div style={{ display: 'flex', gap: 8 }}>
-              <LinkBtn href={c.gfg} icon="🟩" label="GFG Guide" color="#2F8D46" />
-              <LinkBtn href={c.yt} icon="▶" label="YouTube" color="#FF0000" />
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
@@ -1359,7 +1426,7 @@ function JobsTab({ jobs }) {
     </div>
   );
   return (
-    <div style={{ maxWidth: 620 }}>
+    <div style={{ width: '100%', maxWidth: 800 }}>
       <div style={{ background: 'linear-gradient(135deg,#7C5CFC,#A29BFE)', borderRadius: 20, padding: 24, marginBottom: 20 }}>
         <div style={{ fontWeight: 900, fontSize: 20, color: '#fff' }}>💼 Recommended for: {jobs.career_domain}</div>
         <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: 13, marginTop: 4 }}>Entry-level roles matching your profile</div>

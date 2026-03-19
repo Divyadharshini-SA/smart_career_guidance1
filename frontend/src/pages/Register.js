@@ -5,7 +5,7 @@ import API from '../api';
 import { useAuth } from '../AuthContext';
 
 export default function Register() {
-  const [form, setForm] = useState({ name: '', email: '', password: '', college: '', branch: '', year: '' });
+  const [form, setForm] = useState({ name: '', email: '', password: '', college: '', branch: '', year: '', cgpa: '' });
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -16,7 +16,12 @@ export default function Register() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await API.post('/auth/register', { ...form, year: parseInt(form.year) });
+      const payload = { 
+        ...form, 
+        year: parseInt(form.year),
+        cgpa: parseFloat(form.cgpa)
+      };
+      const res = await API.post('/auth/register', payload);
       login(res.data.token, { id: res.data.user_id, name: form.name });
       toast.success('Account created! Welcome 🎉');
       navigate('/dashboard');
@@ -109,6 +114,18 @@ export default function Register() {
                 <option value="" style={{ background: '#13131F' }}>Select Year</option>
                 {[1, 2, 3, 4].map(y => <option key={y} value={y} style={{ background: '#13131F' }}>Year {y}</option>)}
               </select>
+            </div>
+            <div>
+              <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.6)', marginBottom: 8 }}>CGPA</label>
+              <input name="cgpa" type="number" step="0.1" min="0" max="10" value={form.cgpa} onChange={handle} placeholder="e.g. 8.5" required
+                style={{
+                  width: '100%', padding: '12px 16px', background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.1)', borderRadius: 12, color: '#fff',
+                  outline: 'none', transition: 'border-color 0.2s, box-shadow 0.2s', fontSize: 14
+                }}
+                onFocus={(e) => { e.target.style.borderColor = '#06D6A0'; e.target.style.boxShadow = '0 0 0 3px rgba(6,214,160,0.15)'; }}
+                onBlur={(e) => { e.target.style.borderColor = 'rgba(255,255,255,0.1)'; e.target.style.boxShadow = 'none'; }}
+              />
             </div>
           </div>
 

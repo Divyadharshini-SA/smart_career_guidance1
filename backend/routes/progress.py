@@ -17,5 +17,9 @@ def get_progress(current_user: User = Depends(get_current_user), db: Session = D
         'resume_score'           : prog.resume_score,
         'roadmap_completion'     : prog.roadmap_completion,
         'placement_readiness'    : prog.placement_readiness,
+        'readiness_history'      : prog.readiness_history or [],
+        'streak_days'            : prog.streak_days,
+        'best_streak'            : prog.best_streak,
+        'last_test_date'         : prog.last_test_date.isoformat() if prog.last_test_date else None,
         'completed_roadmap_steps': prog.completed_roadmap_steps or []
     }
