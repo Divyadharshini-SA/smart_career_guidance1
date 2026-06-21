@@ -103,8 +103,3 @@ smart_career_guidance1/
 │   └── public/         # Static Assets
 └── README.md           # Project Documentation
 ```
-
----
-
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
