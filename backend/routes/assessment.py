@@ -14,7 +14,9 @@ router = APIRouter()
 def upload_questions(file: UploadFile = File(...), admin: User = Depends(get_admin_user), db: Session = Depends(get_db)):
     content = file.file.read().decode('utf-8')
     reader  = csv.reader(io.StringIO(content))
-    added, skipped, errors = 0, 0, []
+    added: int = 0
+    skipped: int = 0
+    errors: list = []
     for i, row in enumerate(reader, 1):
         if i == 1 and row[0].strip().lower() in ['test_type', 'type']:
             continue
@@ -74,8 +76,10 @@ def submit_assessment(data: SubmitSchema, current_user: User = Depends(get_curre
     q_ids = [int(k) for k in data.answers.keys()]
     questions = db.query(Question).filter(Question.id.in_(q_ids)).all()
     q_map = {q.id: q for q in questions}
-    topic_correct, topic_total = {}, {}
-    correct = 0; review_data = []
+    topic_correct: dict = {}
+    topic_total: dict = {}
+    correct: int = 0
+    review_data: list = []
     for qid_str, user_ans in data.answers.items():
         qid = int(qid_str); q = q_map.get(qid)
         if not q: continue
@@ -86,8 +90,8 @@ def submit_assessment(data: SubmitSchema, current_user: User = Depends(get_curre
         review_data.append({'question': q.question, 'chosen': user_ans, 'correct': q.answer,
                              'options': [q.option_a, q.option_b, q.option_c, q.option_d]})
     total = len(data.answers)
-    percentage = round((correct / total) * 100, 2)
-    topic_pct = {t: round((topic_correct.get(t, 0) / topic_total[t]) * 100, 1) for t in topic_total}
+    percentage = round(float(correct / total) * 100.0, 2)
+    topic_pct = {t: round(float(topic_correct.get(t, 0) / topic_total[t]) * 100.0, 1) for t in topic_total}
     if data.topic: topic_pct['_topic'] = data.topic
     if data.test_index is not None: topic_pct['_test_index'] = data.test_index
     db.add(Assessment(user_id=current_user.id, type=data.type, scores=topic_pct,
@@ -102,9 +106,10 @@ def submit_assessment(data: SubmitSchema, current_user: User = Depends(get_curre
             history_count = db.query(Assessment).filter(Assessment.user_id == current_user.id,
                               Assessment.type == 'technical').count()
             prog.skill_score = _rolling_avg(prog.skill_score, percentage, history_count)
-        prog.placement_readiness = round(
+        prog.placement_readiness = round(float(
             (prog.skill_score * 0.40) + (prog.aptitude_score * 0.30) +
-            (prog.resume_score * 0.20) + (prog.roadmap_completion * 0.10), 2)
+            (prog.resume_score * 0.20) + (prog.roadmap_completion * 0.10)
+        ), 2)
             
         # Streak logic
         from datetime import date, datetime
@@ -121,10 +126,9 @@ def submit_assessment(data: SubmitSchema, current_user: User = Depends(get_curre
         if (prog.streak_days or 0) > (prog.best_streak or 0):
             prog.best_streak = prog.streak_days
         prog.last_test_date = datetime.utcnow()
-
         # Readiness history — keep last 60 entries
         history = list(prog.readiness_history or [])
-        history.append({"date": today.isoformat(), "score": round(prog.placement_readiness, 1)})
+        history.append({"date": today.isoformat(), "score": round(float(prog.placement_readiness), 1)})
         prog.readiness_history = history[-60:]
 
     db.commit()
@@ -147,9 +151,9 @@ def topic_counts(test_type: str, db: Session = Depends(get_db)):
     return {t: c for t, c in topics}
 
 def _rolling_avg(current_avg: float, new_score: float, history_count: int) -> float:
-    if history_count <= 1: return round(new_score, 2)
+    if history_count <= 1: return round(float(new_score), 2)
     weight = 0.40 if history_count <= 5 else 0.25
-    return round((1 - weight) * current_avg + weight * new_score, 2)
+    return round(float((1 - weight) * current_avg + weight * new_score), 2)
 
 def _reliability_message(tests_taken: int) -> dict:
     if tests_taken < 3:
@@ -157,6 +161,9 @@ def _reliability_message(tests_taken: int) -> dict:
     if tests_taken < 6:
         return {'level': 'medium', 'message': f'Score based on {tests_taken} tests. Getting more reliable!', 'color': '#FFD93D'}
     return {'level': 'high', 'message': f'Score based on {tests_taken} tests. Highly reliable average.', 'color': '#06D6A0'}
+
+
+
 
 
 # from fastapi import APIRouter, Depends, HTTPException, UploadFile, File

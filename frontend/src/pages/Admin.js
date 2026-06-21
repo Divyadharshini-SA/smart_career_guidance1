@@ -147,7 +147,7 @@ export default function Admin() {
     const fd = new FormData(); fd.append('file', uploadFile);
     setUploading(true);
     try {
-      const res = await API.post('/assessment/upload-questions', fd, { headers:{'Content-Type':'multipart/form-data'} });
+      const res = await API.post('/assessment/upload-questions', fd, { headers: { 'Content-Type': 'multipart/form-data' } });
       toast.success(res.data.message); setUploadResult(res.data); loadTab('questions');
     } catch { toast.error('Upload failed'); }
     finally { setUploading(false); setUploadFile(null); if (fileInputRef.current) fileInputRef.current.value = ''; }
@@ -163,7 +163,7 @@ export default function Admin() {
     finally { setAddingQ(false); }
   };
 
-  const h = e => setSingleQ({...singleQ, [e.target.name]:e.target.value});
+  const h = e => setSingleQ({ ...singleQ, [e.target.name]: e.target.value });
 
   const handleExport = async () => {
     setExporting(true);
@@ -363,7 +363,7 @@ export default function Admin() {
 
       {/* ── UPLOAD QUESTIONS ─────────────────────────────────── */}
       {!loading && tab === 'upload' && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 20, maxWidth: 760 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))', gap: 24, alignItems: 'start' }}>
 
           {/* CSV Upload section */}
           <div style={card}>
@@ -528,7 +528,7 @@ export default function Admin() {
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
                 <thead>
-                  <tr>{['Model', 'Accuracy', 'AUC', 'Precision', 'F1 Score', 'Notes'].map(h => (
+                  <tr>{['Model', 'Accuracy', 'AUC', 'Precision', 'F1 Score'].map(h => (
                     <th key={h} style={{ textAlign: 'left', padding: '10px 12px', color: 'rgba(255,255,255,0.3)', fontWeight: 700, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>{h}</th>
                   ))}</tr>
                 </thead>
@@ -542,7 +542,6 @@ export default function Admin() {
                       <td style={{ padding: '11px 12px', color: 'rgba(255,255,255,0.55)' }}>{row.auc ?? '—'}</td>
                       <td style={{ padding: '11px 12px', color: 'rgba(255,255,255,0.55)' }}>{row.precision ?? '—'}</td>
                       <td style={{ padding: '11px 12px', color: 'rgba(255,255,255,0.55)' }}>{row.f1_score ?? '—'}</td>
-                      <td style={{ padding: '11px 12px', color: 'rgba(255,255,255,0.3)', fontSize: 12 }}>{row.source}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -571,272 +570,3 @@ export default function Admin() {
     </div>
   );
 }
-
-
-// import React, { useState, useEffect } from 'react';
-// import { toast } from 'react-toastify';
-// import API from '../api';
-// import { useAuth } from '../AuthContext';
-// import { useNavigate } from 'react-router-dom';
-
-// const TABS = ['overview', 'users', 'model', 'questions'];
-
-// export default function Admin() {
-//   const { user } = useAuth();
-//   const navigate = useNavigate();
-//   const [tab, setTab] = useState('overview');
-//   const [stats, setStats] = useState(null);
-//   const [users, setUsers] = useState([]);
-//   const [metrics, setMetrics] = useState(null);
-//   const [qStats, setQStats] = useState(null);
-//   const [loading, setLoading] = useState(false);
-
-//   // Role guard — admin role comes from JWT, not a hardcoded password
-//   useEffect(() => {
-//     if (!user || user.role !== 'admin') {
-//       toast.error('Admin access required');
-//       navigate('/dashboard');
-//     }
-//   }, [user, navigate]);
-
-//   useEffect(() => {
-//     if (!user || user.role !== 'admin') return;
-//     load();
-//   }, [tab]);
-
-//   const load = async () => {
-//     setLoading(true);
-//     try {
-//       if (tab === 'overview') {
-//         const r = await API.get('/admin/stats');
-//         setStats(r.data);
-//       } else if (tab === 'users') {
-//         const r = await API.get('/admin/users?limit=50');
-//         setUsers(r.data.users || []);
-//       } else if (tab === 'model') {
-//         const r = await API.get('/admin/model-metrics');
-//         setMetrics(r.data);
-//       } else if (tab === 'questions') {
-//         const r = await API.get('/admin/question-stats');
-//         setQStats(r.data);
-//       }
-//     } catch { toast.error('Failed to load data'); }
-//     finally { setLoading(false); }
-//   };
-
-//   if (!user || user.role !== 'admin') return null;
-
-//   return (
-//     <div style={{ fontFamily: 'Inter,sans-serif' }}>
-//       <h1 className="page-title">Admin Panel</h1>
-//       <p className="page-sub">Manage students, questions, and view model performance</p>
-
-//       {/* Tabs */}
-//       <div style={{ display: 'flex', gap: 8, marginBottom: 28, flexWrap: 'wrap' }}>
-//         {[['overview', '📊 Overview'], ['users', '👥 Students'], ['model', '🤖 Model Metrics'], ['questions', '📝 Questions']].map(([t, label]) => (
-//           <button key={t} onClick={() => setTab(t)} style={{
-//             padding: '10px 20px', borderRadius: 12, border: '1px solid',
-//             borderColor: tab === t ? '#FF6B6B' : 'rgba(255,255,255,0.1)',
-//             background: tab === t ? 'rgba(255,107,107,0.15)' : 'rgba(255,255,255,0.03)',
-//             color: tab === t ? '#FF6B6B' : 'rgba(255,255,255,0.5)',
-//             fontWeight: 700, fontSize: 14, cursor: 'pointer', fontFamily: 'Inter,sans-serif',
-//           }}>{label}</button>
-//         ))}
-//       </div>
-
-//       {loading && (
-//         <div style={{ textAlign: 'center', padding: 60, color: 'rgba(255,255,255,0.3)', fontSize: 14 }}>Loading...</div>
-//       )}
-
-//       {/* ── Overview ── */}
-//       {!loading && tab === 'overview' && stats && (
-//         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-//           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 14 }}>
-//             {[
-//               { label: 'Total Students', val: stats.total_students, icon: '👥', color: '#7C5CFC' },
-//               { label: 'Assessments Taken', val: stats.total_assessments, icon: '📝', color: '#06D6A0' },
-//               { label: 'Career Predictions', val: stats.total_career_predictions, icon: '🔮', color: '#FF6B6B' },
-//               { label: 'Resumes Uploaded', val: stats.total_resumes_uploaded, icon: '📄', color: '#FFD93D' },
-//               { label: 'Questions in DB', val: stats.total_questions, icon: '❓', color: '#A29BFE' },
-//               { label: 'Avg Placement Ready', val: `${stats.avg_placement_readiness}%`, icon: '🎯', color: '#06D6A0' },
-//             ].map(s => (
-//               <div key={s.label} className="card" style={{ textAlign: 'center', padding: 24 }}>
-//                 <div style={{ fontSize: 28, marginBottom: 8 }}>{s.icon}</div>
-//                 <div style={{ fontFamily: 'Space Grotesk,sans-serif', fontSize: 28, fontWeight: 900, color: s.color }}>{s.val}</div>
-//                 <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontWeight: 600, marginTop: 4 }}>{s.label}</div>
-//               </div>
-//             ))}
-//           </div>
-
-//           {/* Top predicted domains */}
-//           {stats.top_predicted_domains?.length > 0 && (
-//             <div className="card" style={{ padding: 24 }}>
-//               <h3 style={{ fontSize: 15, fontWeight: 800, color: '#F0F0FF', marginBottom: 16 }}>🏆 Most Predicted Career Domains</h3>
-//               {stats.top_predicted_domains.map((d, i) => (
-//                 <div key={d.domain} style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10 }}>
-//                   <span style={{ fontSize: 16 }}>{['🥇', '🥈', '🥉', '4️⃣', '5️⃣'][i]}</span>
-//                   <div style={{ flex: 1 }}>
-//                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-//                       <span style={{ fontSize: 14, color: '#F0F0FF', fontWeight: 600 }}>{d.domain}</span>
-//                       <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>{d.count} predictions</span>
-//                     </div>
-//                     <div style={{ height: 6, background: 'rgba(255,255,255,0.06)', borderRadius: 4 }}>
-//                       <div style={{
-//                         height: '100%', background: 'linear-gradient(135deg,#7C5CFC,#06D6A0)', borderRadius: 4,
-//                         width: `${Math.min((d.count / (stats.top_predicted_domains[0]?.count || 1)) * 100, 100)}%`
-//                       }} />
-//                     </div>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           )}
-
-//           {/* Questions by type */}
-//           <div className="card" style={{ padding: 24 }}>
-//             <h3 style={{ fontSize: 15, fontWeight: 800, color: '#F0F0FF', marginBottom: 16 }}>📝 Questions by Type</h3>
-//             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12 }}>
-//               {Object.entries(stats.questions_by_type || {}).map(([type, count]) => (
-//                 <div key={type} style={{ textAlign: 'center', padding: 16, borderRadius: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
-//                   <div style={{ fontSize: 22, fontWeight: 900, color: '#A29BFE' }}>{count}</div>
-//                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>{type.replace('_', ' ')}</div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       )}
-
-//       {/* ── Students ── */}
-//       {!loading && tab === 'users' && (
-//         <div className="card" style={{ padding: 24 }}>
-//           <h3 style={{ fontSize: 15, fontWeight: 800, color: '#F0F0FF', marginBottom: 16 }}>
-//             👥 Student List <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.3)', fontWeight: 500 }}>({users.length} shown)</span>
-//           </h3>
-//           <div style={{ overflowX: 'auto' }}>
-//             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-//               <thead>
-//                 <tr>
-//                   {['Name', 'Email', 'College', 'Branch', 'Yr', 'Aptitude', 'Skill', 'Placement Ready', 'Joined'].map(h => (
-//                     <th key={h} style={{ textAlign: 'left', padding: '8px 12px', color: 'rgba(255,255,255,0.3)', fontWeight: 700, borderBottom: '1px solid rgba(255,255,255,0.06)', whiteSpace: 'nowrap' }}>{h}</th>
-//                   ))}
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 {users.map(u => (
-//                   <tr key={u.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
-//                     <td style={{ padding: '10px 12px', color: '#F0F0FF', fontWeight: 600 }}>{u.name}</td>
-//                     <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.5)' }}>{u.email}</td>
-//                     <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.5)' }}>{u.college || '—'}</td>
-//                     <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.5)' }}>{u.branch || '—'}</td>
-//                     <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.5)', textAlign: 'center' }}>{u.year || '—'}</td>
-//                     <td style={{ padding: '10px 12px', color: '#A29BFE', fontWeight: 700 }}>{u.aptitude_score?.toFixed(0)}%</td>
-//                     <td style={{ padding: '10px 12px', color: '#06D6A0', fontWeight: 700 }}>{u.skill_score?.toFixed(0)}%</td>
-//                     <td style={{ padding: '10px 12px' }}>
-//                       <span style={{
-//                         padding: '3px 10px', borderRadius: 20, fontSize: 12, fontWeight: 700,
-//                         background: u.placement_readiness >= 70 ? 'rgba(6,214,160,0.15)' : u.placement_readiness >= 50 ? 'rgba(255,211,61,0.15)' : 'rgba(255,107,107,0.15)',
-//                         color: u.placement_readiness >= 70 ? '#06D6A0' : u.placement_readiness >= 50 ? '#FFD93D' : '#FF6B6B',
-//                       }}>{u.placement_readiness?.toFixed(0)}%</span>
-//                     </td>
-//                     <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.3)', whiteSpace: 'nowrap' }}>{new Date(u.joined).toLocaleDateString()}</td>
-//                   </tr>
-//                 ))}
-//               </tbody>
-//             </table>
-//           </div>
-//         </div>
-//       )}
-
-//       {/* ── Model Metrics (IEEE paper Table 1) ── */}
-//       {!loading && tab === 'model' && metrics && (
-//         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-//           <div style={{ padding: 16, borderRadius: 14, background: 'rgba(124,92,252,0.08)', border: '1px solid rgba(124,92,252,0.2)' }}>
-//             <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
-//               📄 <strong style={{ color: '#A29BFE' }}>Paper reference:</strong> {metrics.paper_reference}
-//             </div>
-//             <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginTop: 4 }}>
-//               🤖 <strong style={{ color: '#A29BFE' }}>Your algorithm:</strong> {metrics.algorithm_used}
-//             </div>
-//           </div>
-
-//           {/* Comparison table */}
-//           <div className="card" style={{ padding: 24 }}>
-//             <h3 style={{ fontSize: 15, fontWeight: 800, color: '#F0F0FF', marginBottom: 16 }}>
-//               📊 Algorithm Comparison Table <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', fontWeight: 500 }}>(IEEE Paper Table 1)</span>
-//             </h3>
-//             <div style={{ overflowX: 'auto' }}>
-//               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
-//                 <thead>
-//                   <tr>
-//                     {['Model', 'Accuracy', 'AUC', 'Precision', 'F1 Score', 'Notes'].map(h => (
-//                       <th key={h} style={{ textAlign: 'left', padding: '8px 12px', color: 'rgba(255,255,255,0.3)', fontWeight: 700, borderBottom: '1px solid rgba(255,255,255,0.06)' }}>{h}</th>
-//                     ))}
-//                   </tr>
-//                 </thead>
-//                 <tbody>
-//                   {metrics.comparison_table.map(row => (
-//                     <tr key={row.model} style={{
-//                       borderBottom: '1px solid rgba(255,255,255,0.04)',
-//                       background: row.is_paper_model ? 'rgba(255,107,107,0.05)' : row.is_your_model ? 'rgba(124,92,252,0.08)' : 'transparent'
-//                     }}>
-//                       <td style={{ padding: '10px 12px', fontWeight: 700, color: row.is_paper_model ? '#FF6B6B' : row.is_your_model ? '#A29BFE' : '#F0F0FF' }}>
-//                         {row.is_paper_model ? '⭐ ' : row.is_your_model ? '🚀 ' : ''}{row.model}
-//                       </td>
-//                       <td style={{ padding: '10px 12px', color: row.accuracy ? '#06D6A0' : 'rgba(255,255,255,0.3)', fontWeight: 700 }}>{row.accuracy ? `${row.accuracy}%` : '—'}</td>
-//                       <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.6)' }}>{row.auc ?? '—'}</td>
-//                       <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.6)' }}>{row.precision ?? '—'}</td>
-//                       <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.6)' }}>{row.f1_score ?? '—'}</td>
-//                       <td style={{ padding: '10px 12px', color: 'rgba(255,255,255,0.3)', fontSize: 12 }}>{row.source}</td>
-//                     </tr>
-//                   ))}
-//                 </tbody>
-//               </table>
-//             </div>
-//           </div>
-
-//           {/* Engine features */}
-//           <div className="card" style={{ padding: 24 }}>
-//             <h3 style={{ fontSize: 15, fontWeight: 800, color: '#F0F0FF', marginBottom: 16 }}>🔧 CareerEngineV2 Features</h3>
-//             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-//               {Object.entries(metrics.engine_features || {}).map(([k, v]) => (
-//                 <div key={k} style={{ padding: '10px 14px', borderRadius: 10, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
-//                   <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)', fontWeight: 700, marginBottom: 4 }}>{k.replace(/_/g, ' ').toUpperCase()}</div>
-//                   <div style={{ fontSize: 13, color: '#A29BFE', fontWeight: 600 }}>{v}</div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       )}
-
-//       {/* ── Questions ── */}
-//       {!loading && tab === 'questions' && qStats && (
-//         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-//           {Object.entries(qStats).map(([type, data]) => (
-//             <div key={type} className="card" style={{ padding: 24 }}>
-//               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-//                 <h3 style={{ fontSize: 15, fontWeight: 800, color: '#F0F0FF' }}>
-//                   {type === 'aptitude' ? '🧮' : type === 'technical' ? '💻' : '🤝'} {type.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase())}
-//                 </h3>
-//                 <span style={{ fontSize: 20, fontWeight: 900, color: '#7C5CFC' }}>{data.total} Qs</span>
-//               </div>
-//               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-//                 {Object.entries(data.topics || {}).map(([topic, count]) => (
-//                   <div key={topic} style={{ padding: '5px 12px', borderRadius: 12, background: 'rgba(124,92,252,0.1)', border: '1px solid rgba(124,92,252,0.2)', fontSize: 12, fontWeight: 600, color: '#A29BFE' }}>
-//                     {topic} ({count})
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           ))}
-//           <div style={{ textAlign: 'center', padding: 20 }}>
-//             <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: 13 }}>Upload more questions via the Assessment admin upload endpoint</p>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
-

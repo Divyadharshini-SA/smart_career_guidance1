@@ -6,8 +6,6 @@ from schemas import ProfileUpdateSchema
 from dependencies import get_current_user
 
 router = APIRouter()
-
-
 @router.get('/')
 def get_profile(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     p = db.query(UserProfile).filter(UserProfile.user_id == current_user.id).first()
@@ -15,7 +13,7 @@ def get_profile(current_user: User = Depends(get_current_user), db: Session = De
         return {
             'interests'   : [],
             'skills'      : {},
-            'personality' : "",
+            'personality' : {},
             'career_goal' : "",
             'personality_openness'         : 0,
             'personality_conscientiousness': 0,
@@ -74,7 +72,7 @@ def _big_five_label(p: UserProfile) -> str:
     }
     if all(v == 0 for v in scores.values()):
         return "Not assessed yet"
-    dominant = max(scores, key=scores.get)
+    dominant = max(scores, key=lambda k: int(scores[k]))
     labels = {
         'Openness'         : 'Creative & Curious',
         'Conscientiousness': 'Organized & Dependable',
@@ -82,32 +80,7 @@ def _big_five_label(p: UserProfile) -> str:
         'Agreeableness'    : 'Cooperative & Friendly',
         'Neuroticism'      : 'Emotionally Sensitive',
     }
-    return labels[dominant]
-    @router.get('/')
-    def get_profile(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
-        p = db.query(UserProfile).filter(UserProfile.user_id == current_user.id).first()
-        if not p:
-            # Return empty profile instead of 404 — frontend handles missing data
-            return {
-                'interests': [], 'skills': {}, 'personality': {}, 'career_goal': '',
-                'personality_openness': 0, 'personality_conscientiousness': 0,
-                'personality_extraversion': 0, 'personality_agreeableness': 0,
-                'personality_neuroticism': 0, 'personality_label': 'Not assessed yet',
-            }
-        return {
-            'interests'   : p.interests or [],
-            'skills'      : p.skills    or {},
-            'personality' : p.personality or {},
-            'career_goal' : p.career_goal or '',
-            'personality_openness'         : p.personality_openness          or 0,
-            'personality_conscientiousness': p.personality_conscientiousness or 0,
-            'personality_extraversion'     : p.personality_extraversion      or 0,
-            'personality_agreeableness'    : p.personality_agreeableness     or 0,
-            'personality_neuroticism'      : p.personality_neuroticism       or 0,
-            'personality_label'            : _big_five_label(p),
-        }
-
-# from fastapi import APIRouter, Depends, HTTPException
+    return str(labels[dominant])# from fastapi import APIRouter, Depends, HTTPException
 # from sqlalchemy.orm import Session
 # from database import get_db
 # from models import UserProfile, User

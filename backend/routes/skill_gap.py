@@ -105,7 +105,7 @@ def analyze_skill_gap(
     missing = []
     core_missing = []
     important_missing = []
-    total_gap_points = 0
+    total_gap_points: int = 0
 
     for req in all_required:
         is_core = req in core_skills
@@ -141,8 +141,8 @@ def analyze_skill_gap(
             'is_core': is_core
         })
 
-    match_pct = round(len(matched) / max(len(all_required), 1) * 100, 1)
-    gap_pct   = round(100 - match_pct, 1)
+    match_pct = round(float(len(matched) / max(len(all_required), 1)) * 100.0, 1)
+    gap_pct   = round(float(100.0 - match_pct), 1)
 
     # Time to ready: Assume 1% gap point = 1.5 hours of focused learning
     total_hours_needed = total_gap_points * 1.5
@@ -162,7 +162,7 @@ def analyze_skill_gap(
         t_label = "Long prep"
 
     time_to_ready = {
-        'weeks': round(weeks_needed, 1),
+        'weeks': round(float(weeks_needed), 1),
         'label': t_label,
         'message': time_msg
     }

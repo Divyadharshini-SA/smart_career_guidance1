@@ -182,7 +182,7 @@ If readiness < 50, encourage more practice. If > 70, congratulate and push for i
 
         url = (
             "https://generativelanguage.googleapis.com/v1beta/"
-            f"models/gemini-1.5-flash:generateContent?key={api_key}"
+            f"models/gemini-2.5-flash:generateContent?key={api_key}"
         )
         req = urllib.request.Request(
             url, data=payload,
@@ -196,7 +196,13 @@ If readiness < 50, encourage more practice. If > 70, congratulate and push for i
                 return data["candidates"][0]["content"]["parts"][0]["text"]
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", errors="ignore")
-            print(f"Gemini HTTP {e.code}: {str(body)[:200]}")
+            print(f"Gemini HTTP {e.code}: {body}")
+            if e.code in (400, 403, 404):
+                try:
+                    err_msg = json.loads(body).get("error", {}).get("message", "Unknown API Error")
+                    return f"⚠️ **API Key Error:** {err_msg}\n\nPlease update your `.env` file with a valid key."
+                except Exception:
+                    pass
             return _keyword_fallback(message)
         except Exception as e:
             print(f"Gemini error: {e}")
@@ -217,6 +223,8 @@ If readiness < 50, encourage more practice. If > 70, congratulate and push for i
 
     def get_history(self, uid: int) -> list:
         return self._history.get(uid, [])
+
+
 
 
 # ─────────────────────────────────────────────────────────────

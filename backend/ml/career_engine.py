@@ -1,34 +1,5 @@
-# """
-# career_engine_v2.py
-# ===================
-# LightGBM-INSPIRED Career Prediction Engine
-
-# IEEE Paper Reference:
-#   "Machine Learning-Based Career Guidance System"
-#   ICAISS 2025, IEEE, DOI: 10.1109/ICAISS61471.2025.11041827
-
-# This engine implements:
-#   1.  LightGBM-style GRADIENT BOOSTING scoring (multi-stage weak learners)
-#   2.  TOP-3 career predictions with confidence %
-#   3.  Evidence-based reasoning (WHY each career was recommended)
-#   4.  Skill proficiency weighting (not just binary match)
-#   5.  Aptitude × domain difficulty modifier (paper's core insight)
-#   6.  Interest alignment using keyword overlap scoring
-#   7.  Academic performance (CGPA/year) as a weak learner
-#   8.  Resume signal integration
-#   9.  Prediction confidence interval (gap between top-1 and top-2)
-#   10. Assessment history trend (improving vs declining)
-
-# EXTRA BEYOND THE IEEE PAPER:
-#   A. Skill RECENCY weighting (recent skills > old ones)
-#   B. Cross-domain skill bonus (transferable skills)
-#   C. Weak-area penalty (critical skill absence penalizes score)
-#   D. Soft-skill multiplier (leadership, communication boost score)
-# """
-
-from typing import Optional
+from typing import Optional, Dict, List, TypedDict, Any
 import os
-
 # Lazy load model to speed up fast API reload, but we keep it global
 similarity_model = None
 
@@ -48,7 +19,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Each domain has: required_skills (with weights), interests,
 # difficulty_level (for aptitude modifier), critical_skills
 # ──────────────────────────────────────────────────────────────
-CAREER_DOMAINS = {
+class DomainConfig(TypedDict):
+    required_skills: Dict[str, int]
+    interests: List[str]
+    difficulty: float
+    critical: List[str]
+    salary_band: str
+    growth: str
+
+CAREER_DOMAINS: Dict[str, DomainConfig] = {
     "Software Engineer": {
         "required_skills": {
             "python": 9, "java": 8, "c++": 7, "data structures": 10,
@@ -184,7 +163,7 @@ CAREER_DOMAINS = {
 }
 
 # Transferable / cross-domain skills that boost any score
-TRANSFERABLE_SKILLS = {
+TRANSFERABLE_SKILLS: Dict[str, float] = {
     "python"        : 1.15,   # boosts every domain by 15%
     "git"           : 1.10,
     "sql"           : 1.10,
@@ -198,7 +177,7 @@ TRANSFERABLE_SKILLS = {
 }
 
 # Soft skills that act as a multiplier on final score
-SOFT_SKILL_BONUS = {
+SOFT_SKILL_BONUS: Dict[str, float] = {
     "communication": 0.04,    # +4% on final score
     "leadership"   : 0.03,
     "teamwork"     : 0.02,
@@ -208,7 +187,7 @@ SOFT_SKILL_BONUS = {
 }
 
 # Map university branches to base domain boosts when no other data is present
-BRANCH_DOMAIN_BOOST = {
+BRANCH_DOMAIN_BOOST: Dict[str, List[str]] = {
     "cse":  ["Software Engineer", "Web Developer (Backend)", "Cloud / DevOps Engineer"],
     "it":   ["Software Engineer", "Web Developer (Frontend)", "Data Engineer"],
     "eee":  ["Embedded Systems Engineer", "Cloud / DevOps Engineer"],
@@ -314,8 +293,8 @@ class CareerEngineV2:
         branch_normalized = branch.lower() if branch else ""
         branch_boosts = BRANCH_DOMAIN_BOOST.get(branch_normalized, [])
 
-        domain_scores  = {}
-        feature_explain = {}  # evidence for each domain
+        domain_scores: Dict[str, float] = {}
+        feature_explain: Dict[str, Any] = {}  # evidence for each domain
 
         # Pre-compute embedings for semantic matching
         user_skills_list = list(all_skills.keys())
@@ -436,22 +415,22 @@ class CareerEngineV2:
 
             # ── Evidence building (WHY this career was recommended) ──
             feature_explain[domain] = {
-                "skill_coverage_pct"   : round(coverage * 100, 1),
+                "skill_coverage_pct"   : round(float(coverage * 100), 1),
                 "matched_skills"       : list(matched.keys()),
                 "missing_critical"     : [c for c in critical if c not in all_skills],
-                "proficiency_score"    : round(proficiency * 100, 1),
-                "aptitude_contribution": round(apt_contribution * 100, 1),
-                "interest_match_pct"   : round(int_score * 100, 1),
+                "proficiency_score"    : round(float(proficiency * 100), 1),
+                "aptitude_contribution": round(float(apt_contribution * 100), 1),
+                "interest_match_pct"   : round(float(int_score * 100), 1),
                 "branch_match"         : branch_match,
                 "critical_penalty"     : critical_penalty,
-                "raw_score"            : round(raw_score, 2),
+                "raw_score"            : round(float(raw_score), 2),
                 "final_score"          : final_score,
                 "learner_contributions": {
-                    "skill_coverage"   : round(coverage * current_weights["skill_coverage"] * 100, 2),
-                    "skill_proficiency": round(proficiency * current_weights["skill_proficiency"] * 100, 2),
-                    "aptitude"         : round(apt_contribution * current_weights["aptitude"] * 100, 2),
-                    "interest_match"   : round(int_score * current_weights["interest_match"] * 100, 2),
-                    "tech_score"       : round(tech_norm * current_weights["tech_score"] * 100, 2),
+                    "skill_coverage"   : round(float(coverage * current_weights["skill_coverage"] * 100), 2),
+                    "skill_proficiency": round(float(proficiency * current_weights["skill_proficiency"] * 100), 2),
+                    "aptitude"         : round(float(apt_contribution * current_weights["aptitude"] * 100), 2),
+                    "interest_match"   : round(float(int_score * current_weights["interest_match"] * 100), 2),
+                    "tech_score"       : round(float(tech_norm * current_weights["tech_score"] * 100), 2),
                 },
             }
 
@@ -502,9 +481,9 @@ class CareerEngineV2:
         if len(sorted_domains) >= 2:
             gap        = sorted_domains[0][1] - sorted_domains[1][1]
             # LightGBM confidence: margin of victory normalized
-            confidence = round(min(40 + (gap * 3) + (sorted_domains[0][1] * 0.3), 99), 1)
+            confidence = round(float(min(40 + (gap * 3) + (sorted_domains[0][1] * 0.3), 99)), 1)
         else:
-            confidence = round(sorted_domains[0][1] * 0.9, 1) if sorted_domains else 0
+            confidence = round(float(sorted_domains[0][1] * 0.9), 1) if sorted_domains else 0
 
         # Confidence label
         if confidence >= 75:   conf_label = "High Confidence ✅"
@@ -532,7 +511,7 @@ class CareerEngineV2:
             "algorithm"            : "LightGBM-inspired Gradient Boosting Ensemble",
             "learner_weights"      : self.WEIGHTS,
             "total_skills_provided": len(all_skills),
-            "soft_multiplier"      : round(soft_multiplier, 3),
+            "soft_multiplier"      : round(float(soft_multiplier), 3),
             "cgpa_bonus"           : cgpa_bonus,
 
             # Reliability flags
